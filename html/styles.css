@@ -1,0 +1,207 @@
+html,body { width:100%; height:100%; }
+html,body,form,ul,ol,li,div,p,h1,h2,h3,h4,h5,h6,input,select,textarea { margin:0px; padding:0px; }
+ul,ol { list-style-type:none; }
+li,th,td,div,p,a,h1,h2,h3,h4,h5,input,select,textarea { font-size:11px; line-height:15px; color:#000000; font-family:'Raleway', Arial, sans-serif; font-weight:400; }
+textarea { overflow: auto; }
+img { border:none; margin:0; padding:0;}
+a { color:#008ACB; text-decoration:underline; }
+a:hover { color:#000000; text-decoration:underline; }
+sup { font-family:'Arial', sans-serif; font-size:0.8em; margin-top:0px; }
+body { background-image:url('../html/files/FOND_pierres_2560x1400.jpg');  background-repeat:no-repeat; background-color:#000000; background-position:top; margin:0px auto; }
+#container { width:920px; margin: 0 auto 0px auto; margin-top:0px; }
+/* header ------------------------------------------------------------------------------------- */
+#header { width:920px; height:109px; background-color:#ffffff; }
+#header #header_logo { float:left; width:280px; height:109px;}
+#header #header_logo img { margin-left:0px; }
+#header #header_text { float:left; width:620px; height:109px; padding-right:20px; margin-top:15px; text-align:right; }
+#header #header_text a { color:#000000; font-size:11px; font-weight:400; text-decoration:none; }
+#header #header_text a:hover { color:#c67429; }
+#header #header_text a.active { color:#c67429; }
+#header #header_text h1 { color:#000000; font-size:11px; font-weight:700; margin-top:30px; text-align:right; }
+#header #header_text p { color:#c67429; font-size:22px; font-weight:400; margin-top:5px; text-align:right; }
+#header #facebook  { float:right; margin-left:10px;}
+#header #facebook img { padding-top:0px; margin-top:-4px;}
+/* menu ------------------------------------------------------------------------------------- */
+#menu { width:920px; height:23px; margin-top:0px; background-color:#4b4135; }
+#menu ul { margin-left:210px; margin-top:0px; position:absolute; }
+#menu li { float:left; padding-top:0px; height:20px; padding-top:3px; background-color:#4b4135;}
+#menu li a { font-weight:400; margin-top:0px; margin-left:10px; margin-right:10px; color:#ffffff; text-decoration:none; }
+#menu li.historique:hover { background-color:#416b89; }
+#menu li.forfaits:hover { background-color:#971d2b; }
+#menu li.chambres:hover { background-color:#c67429; }
+#menu li.resto:hover, #menu .resto_active{ background-color:#aec045; }
+#menu li.spa:hover, #menu .spa_active{ background-color:#4b8bc0; }
+#menu li.commodites:hover { background-color:#231f20; }
+#menu li.contact:hover { background-color:#8a9c43; }
+/* sliders -------------------------------------------------------------------------------------  */
+#slider #diapo { height:360px; width:920px; overflow:hidden; }
+#slider #diapo ul { height:360px; width:920px; padding:0; margin:0; }
+#sliderchambres #chambres { height:415px; width:550px; overflow:hidden; }
+#sliderchambres #chambres ul { height:415px; width:550px; padding:0; margin:0; }
+/* mid ------------------------------------------------------------------------------------- */
+#mid { width:920px; height:250px; margin-top:10px; }
+#mid h2 { text-indent:-9999px; margin-top:-15px; }
+#mid #orange { float:left; width:300px; height:250px; margin-top:0px; margin-right:10px; background-color:#c67429; }
+#mid #orange img { margin-top:5px; margin-bottom:10px; }
+#mid #orange h1 { color:#ffffff; font-size:20px; font-weight:700; line-height:20px; margin-top:5px; margin-left:20px; }
+#mid #orange p { width:260px; color:#ffffff; font-size:13px; font-weight:400; line-height:15px; margin-top:5px; margin-left:20px; }
+#mid #vert { float:left; width:300px; height:250px; margin-top:0px; margin-right:10px; background-color:#91a53b; }
+#mid #vert img { margin-top:5px; margin-bottom:10px; }
+#mid #vert  h1 { color:#ffffff; font-size:20px; font-weight:700; line-height:20px; margin-top:5px; margin-left:20px; }
+#mid #vert  p { width:260px; color:#ffffff; font-size:13px; font-weight:400; line-height:15px; margin-top:5px; margin-left:20px; }
+#mid #bleu { float:left; width:300px; height:250px; margin-top:0px; background-color:#4b8bc0; }
+#mid #bleu img { margin-top:5px; margin-bottom:10px; }
+#mid #bleu h1 { color:#ffffff; font-size:20px; font-weight:700; line-height:20px; margin-top:5px; margin-left:20px; }
+#mid #bleu p { width:260px; color:#ffffff; font-size:13px; font-weight:400; line-height:15px; margin-top:5px; margin-left:20px; }
+/* texte ------------------------------------------------------------------------------------- */
+#texte { width:880px; margin-top:10px; margin-bottom:10px; padding:20px; background-color:#ffffff; }
+#texte h1 { color:#4b8bc0; font-size:24px; font-weight:700; line-height:26px; margin-top:0px; }
+#texte p { width:870px; color:#4b4134; font-size:13px; font-weight:400; line-height:15px; margin-top:15px; }
+#texte h2 { color:#c67429; font-size:14px; font-weight:700; line-height:16px; margin-top:15px; }
+/* section footer  ------------------------------------------------------------------------------------- */
+#footer { width:920px; height:60px; padding-top:0px; padding-left:0px; margin-bottom:0px; background-color:#d3c9b4; }
+#footer #copyrights { float:left; width:400px; height:60px; padding-top:0px; margin-left:0px;}
+#footer #copyrights h1 { color:#4b4135; font-size:11px; font-weight:400; margin-left:20px; padding-top:37px; }
+#footer #info { float:left; width:500px; height:60px; margin-left:20px; padding-top:20px; text-align:right; }
+#footer #info a { color:#4b4135; font-size:11px; font-weight:700; text-decoration:none; margin-right:20px; }
+#footer #info a:hover { color:#c67429; }
+#footer #info a.active { color:#c67429; }
+#footer #info p { color:#4b4135; font-size:18px; font-weight:400; margin-top:0px; margin-right:20px; }
+/* END Home page  ------------------------------------------------------------------------------------- */
+/* Page Chambres  ------------------------------------------------------------------------------------- */
+#menu li.chambres_active { background-color:#c67429; }
+#textetop_chambres, #textetop_restaurant { width:880px; margin-top:10px; margin-bottom:10px; padding:20px; background-color:#c67429; }
+#textetop_chambres h1 { color:#ffffff; font-size:24px; font-weight:400; line-height:26px; margin-top:0px; }
+#textetop_chambres p { width:870px; color:#ffffff; font-size:14px; font-weight:400; line-height:15px; margin-top:15px; }
+#textetop_chambres h2 { width:870px; color:#ffffff; font-size:12px; font-weight:400; line-height:15px; margin-top:15px; }
+#textetop_restaurant h2 { width:870px; color:#ffffff; font-size:12px; font-weight:400; line-height:15px; }
+#container_chambres { float:left; width:920px; height:100%; margin-top:0px; margin-bottom:10px; padding:0px; background-color:#ffffff; border-bottom:solid 5px #c67429; }
+#texte_chambres_gauche { float:left; width:370px; padding-left:0px; padding-top:0px; background-color:#ffffff; }
+#texte_chambres_gauche h1 { padding-top:20px; padding-left:20px; color:#c67429; font-size:22px; font-weight:400; line-height:24px; margin-bottom:10px; }
+#texte_chambres_gauche h2 { padding-left:20px; color:#000000; font-size:13px; font-weight:700; line-height:15px; margin-top:0px; }
+#texte_chambres_gauche ul { padding-left:20px;  margin-left:0px; margin-top:10px; margin-bottom:10px; list-style-type:disc; list-style-position:inside; }
+#texte_chambres_gauche li { color:#000000; width:340px; font-size:11px; font-weight:400; line-height:13px; margin-top:0px; margin-left:0px; }
+#texte_chambres_gauche h3 { padding-left:20px; padding-right:20px; color:#c67429; font-size:11px; font-weight:700; line-height:13px; margin-top:10px; }
+#texte_chambres_gauche h4 { margin-left:20px; margin-right:20px;  margin-top:10px;  margin-bottom:15px; color:#000000; font-size:13px; font-weight:700; line-height:13px; border-bottom:solid thin #c67429; }
+#texte_chambres_gauche p { padding-left:20px; padding-right:20px; color:#000000; font-size:11px; font-weight:400; line-height:13px; margin-top:10px; }
+#texte_chambres_gauche a { color:#c67429; font-size:11px; font-weight:700; line-height:13px; text-decoration:underline;}
+#texte_chambres_gauche a:hover { color:#971d2b; text-decoration:none;}
+#texte_chambres_droite { float:left; width:550px; height:450px; padding-left:0px; padding-top:0px; }
+#texte_restaurant_droite { float:left; width:550px; height:415px; padding-left:0px; padding-top:0px; }
+#liens { width:550px; height:35px; padding-left:0px; padding-top:0px;  background-color:#000000; }
+#liens h1 { color:#ffffff;  font-size:15px; font-weight:700; padding-top:10px; }
+#liens a { color:#ffffff;  font-size:15px; font-weight:700; text-decoration:none; }
+#liens a:hover { color:#c67429; }
+a.politique { color:#c67429; font-size:11px; font-weight:700; text-decoration:none; margin-right:0px; }
+a.politique:hover { text-decoration:underline; }
+/* Page Forfaits  ------------------------------------------------------------------------------------- */
+#menu li.forfaits_active { background-color:#971d2b; }
+#textetop_forfaits { width:880px; margin-top:10px; margin-bottom:10px; padding:20px; background-color:#971d2b; }
+#textetop_forfaits h1 { color:#ffffff; font-size:24px; font-weight:400; line-height:26px; margin-top:0px; }
+#textetop_forfaits p { width:870px; color:#ffffff; font-size:14px; font-weight:400; line-height:15px; margin-top:15px; }
+#container_forfaits { float:left; width:920px; height:100%; margin-top:0px; margin-bottom:10px; padding:0px; background-color:#ffffff; border-bottom:solid 5px #c67429; }
+#texte_forfaits_gauche { float:left; width:370px; padding-left:0px; padding-top:0px; background-color:#ffffff; }
+#texte_forfaits_gauche h1 { padding-top:20px; padding-left:20px; color:#c67429; font-size:22px; font-weight:400; line-height:24px; margin-bottom:10px; }
+#texte_forfaits_gauche h2 { padding-left:20px; color:#000000; font-size:16px; font-weight:700; line-height:18px; margin-top:0px; }
+#texte_forfaits_gauche ul { padding-left:20px;  margin-left:0px; margin-top:10px; margin-bottom:10px; }
+#texte_forfaits_gauche li { color:#000000; width:340px; font-size:11px; font-weight:400; line-height:13px; margin-top:0px; margin-left:0px; }
+#texte_forfaits_gauche h3 { padding-left:20px; color:#971d2b; font-size:11px; font-weight:700; line-height:13px; margin-top:10px; }
+#texte_forfaits_gauche p { padding-left:20px; color:#000000; font-size:11px; font-weight:400; line-height:13px; margin-top:10px; }
+#texte_forfaits_gauche a { color:#c67429; font-size:11px; font-weight:400; line-height:13px; margin-top:10px; text-decoration:underline; }
+#texte_forfaits_gauche a:hover { text-decoration:none; }
+#menu_resto { margin-left:0px; }
+#texte_forfaits_droite { float:left; width:550px; height:450px; padding-left:0px; padding-top:0px; }
+#forfaits_liens { width:550px; height:35px; padding-left:0px; padding-top:0px;  background-color:#000000; }
+#forfaits_liens h1 { color:#ffffff;  font-size:15px; font-weight:700; padding-top:10px; }
+#forfaits_liens a { color:#ffffff;  font-size:15px; font-weight:700; text-decoration:none; }
+#forfaits_liens a:hover { color:#c67429; }
+/* Commodites page  ------------------------------------------------------------------------------------- */
+#menu li.commodites_active { background-color:#000000; }
+#textetop_commodites { width:880px; margin-top:10px; margin-bottom:10px; padding:20px; background-color:#4b4134; }
+#textetop_commodites h1 { color:#ffffff; font-size:24px; font-weight:400; line-height:26px; margin-top:0px; }
+#textetop_commodites p { width:870px; color:#ffffff; font-size:14px; font-weight:400; line-height:15px; margin-top:15px; }
+#container_commodites { float:left; width:920px; margin-top:0px; margin-bottom:10px; padding:0px; background-color:#ffffff; border-bottom:solid 5px #c67429; }
+#texte_commodites_droite { float:left; width:550px; height:415px; padding-left:0px; padding-top:0px; }
+/* Historique page  ------------------------------------------------------------------------------------- */
+#menu li.historique_active { background-color:#4e81a9; }
+#textetop_historique { width:880px; margin-top:10px; margin-bottom:10px; padding:20px; background-color:#4e81a9; }
+#textetop_historique h1 { color:#ffffff; font-size:24px; font-weight:400; line-height:26px; margin-top:0px; }
+#textetop_historique p { width:870px; color:#ffffff; font-size:14px; font-weight:400; line-height:15px; margin-top:15px; }
+#container_historique { float:left; width:920px; height:100%; margin-top:0px; margin-bottom:10px; padding:0px; background-color:#ffffff; border-bottom:solid 5px #c67429; }
+#texte_historique_gauche { float:left; width:370px; padding-left:0px; padding-top:0px; background-color:#ffffff; }
+#texte_historique_gauche h1 { padding-top:20px; padding-left:20px; color:#c67429; font-size:22px; font-weight:400; line-height:24px; margin-bottom:10px; }
+#texte_historique_gauche h2 { padding-left:20px; color:#000000; font-size:13px; font-weight:700; line-height:15px; margin-top:0px; }
+#texte_historique_gauche ul { padding-left:20px;  margin-left:0px; margin-top:10px; margin-bottom:10px; list-style-type:disc; list-style-position:inside; }
+#texte_historique_gauche li { color:#000000; width:340px; font-size:11px; font-weight:400; line-height:13px; margin-top:0px; margin-left:0px; }
+#texte_historique_gauche h3 { padding-left:20px; padding-right:20px; color:#4e81a9; font-size:11px; font-weight:700; line-height:13px; margin-top:10px; }
+#texte_historique_gauche p { padding-left:20px; padding-right:20px; color:#000000; font-size:11px; font-weight:400; line-height:13px; margin-top:10px; }
+#texte_historique_droite { float:left; width:550px; height:450px; padding-left:0px; padding-top:0px; }
+/* Contact page  ------------------------------------------------------------------------------------- */
+#menu li.contact_active { background-color:#8a9c43; }
+#textetop_contact { width:880px; margin-top:10px; margin-bottom:10px; padding:20px; background-color:#8a9c43; }
+#textetop_contact h1 { color:#ffffff; font-size:24px; font-weight:400; line-height:26px; margin-top:0px; }
+#textetop_contact p { width:870px; color:#ffffff; font-size:14px; font-weight:400; line-height:15px; margin-top:15px; }
+#container_contact { float:left; width:920px; height:100%; margin-top:0px; margin-bottom:10px; padding:0px; background-color:#ffffff; border-bottom:solid 5px #c67429; }
+#texte_contact_gauche { float:left; width:370px; padding-left:0px; padding-top:0px; background-color:#ffffff; }
+#texte_contact_gauche h1 { padding-top:20px; padding-left:20px; color:#c67429; font-size:22px; font-weight:400; line-height:24px; margin-bottom:10px; }
+#texte_contact_gauche h2 { padding-left:20px; color:#000000; font-size:16px; font-weight:700; line-height:15px; margin-top:20px; }
+#texte_contact_gauche h4 { padding-left:20px; color:#8a9c43; font-size:13px; font-weight:700; line-height:15px; margin-top:10px; margin-bottom:5px;  margin-bottom:-5px; }
+#texte_contact_gauche ul { padding-left:20px;  margin-left:0px; margin-top:10px; margin-bottom:10px; list-style-type:disc; list-style-position:inside; }
+#texte_contact_gauche h3 { padding-left:20px; padding-right:10px; color:#8a9c43; font-size:11px; font-weight:700; line-height:13px; margin-top:10px; margin-bottom:15px; }
+#texte_contact_gauche p { padding-left:20px; padding-right:10px; color:#000000; font-size:11px; font-weight:400; line-height:13px; margin-top:10px; }
+input { width:330px; display:block; border:1px solid #000; height:20px; margin-bottom:0px;}
+textarea { width:330px; border:1px solid #000; height:75px; }
+input.button { width:100px; left:20px; bottom:20px; background:#8a9c43; color:#ffffff; font-size:14px; font-weight:700; height:30px; border: 1p solid #999; }
+input.button:hover { background:#aec045; }
+#texte_contact_droite { float:left; width:550px; height:450px; padding-left:0px; padding-top:0px; }
+/* stuff below not used so far -------------------------------------------------------------------------------------
+height:450px; overflow-y:auto; overflow-x:hidden; list-style-type:disc; list-style-position:inside; */
+/*restaurant page -------------------------------------------------------------------------------------------------*/
+#res_table td{color: #000000;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    margin-top: 0;
+    padding-left: 20px;}
+#slidermenu {
+	width: 100%;
+	height: auto;
+	list-style: none;
+	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
+	overflow-y: hidden;
+	overflow-x: hidden;
+	margin-top:0px;
+}
+/*spa page -------------------------------------------------------------------------------------------------*/
+#spa_textbox{
+  width: 500px;
+  margin: 0 auto;
+}
+#spa_textbox h1{
+  color: #c67429;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+#spa_table {
+  width: 100%;
+  margin-bottom: 40px;
+}
+#spa_table td {
+  font-size: 14px;
+}
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+#rest-menu{
+	width: 723px;
+	background: #ffffff url("files/blank-menu.png") no-repeat 0 0; margin:0 auto;
+}
+#rest-menu a { color:#000000; text-decoration:none; font-size:100%; }
+#rest-menu a:hover { color:#c67429; text-decoration:underline; }
+#rest-menu a.active { color:#c67429; }
