@@ -16,6 +16,8 @@ body {
 
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 #container {
@@ -41,4 +43,92 @@ a {
 .btn {
     cursor: pointer;
     border: none;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 8.25px;
+    right: 1rem;
+    flex-direction: column;
+}
+
+.bar {
+    display: block;
+    background-color: #F2F2F2;
+    width: 33px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/** SIDE MENU (MOBILE) **/
+
+.sideMenu {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 90%;
+    min-height: 100%;
+    height: auto;
+    background-color: #131313;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 140px 40px 80px 0px;
+    gap: 32px;
+    z-index: 99;
+}
+
+.sideMenu.active {
+    display: flex;
+}
+
+.cross-container {
+    position: absolute;
+    top: 43px;
+    width: 33px;
+    height: 33px;
+  }
+  
+  .cross {
+    position: absolute;
+    width: 100%;
+    height: 2.75px;
+    background: #F2F2F2;
+    transform-origin: center center;
+  }
+  
+  .cross:first-child {
+    transform: rotate(45deg);
+  }
+  
+  .cross:last-child {
+    transform: rotate(-45deg);
+  }
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* rest of css fron container--links is in index.css file */
+.sideMenu .container--links {
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 170%;
+    /* identical to box height, or 41px */
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #BDBDBD;
+}
+
+/* Screen that are 768px or more */
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
 }
