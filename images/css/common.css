@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    min-height: 100%;
+    min-width: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    min-height: calc(100vh)
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+#container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    max-width: 100%;
+}
+
+#header, #menu, #slider {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 32px;
+    right: 1rem;
+    flex-direction: column;
+}
+
+.bar {
+    display: block;
+    background-color: #F2F2F2;
+    width: 33px;
+    height: 3px;
+    margin: 10px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/***** HEADER CARDS ****/
+.card--header {
+    padding: 80px 24px 100px;
+    background-size: cover !important;
+    height: auto;
+    /*background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos/spa_8.jpg");*/
+    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/header1.png");
+    background-repeat: no-repeat;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+/**LOCATION CARD ***/
+.card--location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 24px;
+    gap: 16px;
+    background: #FFFAF2;
+    color: #2B0000;
+    margin-top: 80px;
+}
+
+/****BEGINNING HOTEL ROOMS *****/
+
+.container--rooms {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 4px 8px;
+}
+
+.container--rooms.first {
+    padding-top: 8px;
+}
+
+
+.room {
+    height: 300px;
+    width: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 170%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.room span {
+    font-weight: 600;
+}
+
+.standardGuest {
+    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/standardGuestRoom.png");
+}
+
+.deluxeGuest {
+    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/deluxeGuest.png");
+}
+
+.suiteFireplace {
+    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/suiteFireplace.png");
+}
+
+.queenSuite {
+    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/queenSuite.png");
+}
+
+.royalSuite {
+    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/royalSuite.png");
+}
+
+/****END HOTEL ROOMS *****/
+
+/** SIDE MENU (MOBILE) **/
+
+.sideMenu {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 90%;
+    min-height: 100%;
+    height: auto;
+    background-color: #131313;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 140px 40px 80px 0px;
+    gap: 32px;
+    z-index: 99;
+}
+
+.sideMenu.active {
+    display: flex;
+}
+
+.cross-container {
+    position: absolute;
+    top: 43px;
+    width: 33px;
+    height: 33px;
+  }
+  
+  .cross {
+    position: absolute;
+    width: 100%;
+    height: 2.75px;
+    background: #F2F2F2;
+    transform-origin: center center;
+  }
+  
+  .cross:first-child {
+    transform: rotate(45deg);
+  }
+  
+  .cross:last-child {
+    transform: rotate(-45deg);
+  }
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.card--reservation {
+    background-color: #2B0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.card--reservation {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 170%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 80px 24px;
+    color: #FFFFFF;
+}
+
+.sideMenu .container--links {
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 170%;
+    /* identical to box height, or 41px */
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #BDBDBD;
+}
+
+/***********END SIDE MENU MOBILE *******************/
+
+.btnCheckAvail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 48px;
+    background: #F2C94C;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+    margin-top: 24px;
+}
+
+
+div a b {
+    color: #FFF;
+}
+
+/***FOOTER ***/
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 24px 60px;
+    gap: 24px;
+    width: 100%;
+    background: #131313;
+}
+
+.container--links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    text-transform: uppercase;
+    color: #E0E0E0;
+}
+
+.contact--infos {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    color: #E0E0E0;
+}
+
+/**** END FOOTER ****/
+
+/* Screen that are 768px or more */
+@media screen and (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
