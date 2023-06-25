@@ -1,0 +1,60 @@
+.card--header.allStartedIn {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/photos2.0/allStartedIn.png");
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 84px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: 'Helvetica';
+}
+
+.card.card--staying {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 80px 32px;
+    color: var(--brown-80, #2B0000);
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
+    line-height: 150%;
+}
+
+.card--history {
+    color: #2B0000;
+    padding-bottom: 40px;
+}
+
+.history--title {
+    font-size: 32px;
+    line-height: 54px;
+    font-weight: 300;
+    padding-top: 40px;
+    margin-left: -24px;
+
+}
+
+.history--text--container {
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap:16px;
+    padding: 16px;
+}
+
+p.bold {
+    font-weight: 700;
+}
+
+.card--today {
+    background: url("../images/photos2.0/historyToday.png");
+}
