@@ -160,7 +160,7 @@ function generateFooter() {
 		<a href="${linkContact}">${labelContact}</a>
 		<a href="https://www.facebook.com/ManoirRamezay" target="_blank">FACEBOOK</a>
 	</div>
-	<img class="" alt="manoirRamezayLogo" src="./images/photos2.0/manoirRamezay.png">
+	<img class="" alt="manoirRamezayLogo" src="../images/photos2.0/manoirRamezay.png">
 	<div class="contact--infos">
 		<p>${labelPhone}: 450 460 3251</p>
 		<p>TOLL FREE: 1 866 460 3251</p>

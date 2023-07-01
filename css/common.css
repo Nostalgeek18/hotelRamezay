@@ -95,21 +95,11 @@ a {
 
 /****BEGINNING HOTEL ROOMS *****/
 
-.container--rooms {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 4px 8px;
-}
-
-.container--rooms.first {
-    padding-top: 8px;
-}
 
 
 .room {
     height: 300px;
-    width: auto;
+    width: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -168,8 +158,10 @@ a {
 }
 
 .cross-container {
+    cursor: pointer;
     position: absolute;
-    top: 43px;
+    top: 48px;
+    right: 48px;
     width: 33px;
     height: 33px;
   }
@@ -238,7 +230,9 @@ a {
     line-height: 18px;
     text-align: center;
     color: #000000;
-    margin-top: 24px;
+    margin: 0 auto;
+    margin-top: 20px;
+    
 }
 
 
@@ -280,9 +274,205 @@ div a b {
 
 /**** END FOOTER ****/
 
+/**LOCATION BANNER **/
+
+.card--location span {
+    font-size: 56px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #2B0000;
+}
+
+.locationInfos {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 170%;
+}
+
+
+.locationIcon {
+    max-width: 30px;
+}
+
+.discover .btnCheckAvail {
+    display: none;
+}
+
+.wrapper--allRooms {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
-    .hamburger {
+
+    .card--location {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card--location .text--wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .locationInfos {
+        max-width: 70%;
+    }
+
+    #footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+    }
+
+    #footer .facebook {
         display: none;
     }
+
+    .contact--infos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .footerLogo {
+        order: 0;
+    }
+
+    .container--links, .contact--infos {
+        order: 1;
+    }
+
+
+    /* rooms options */
+
+    .rooms--wrapper {
+        display:flex;
+        padding: 80px 71px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .wrapper--allRooms {
+        padding-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0px auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: unset;
+        flex-direction: row;
+    }
+
+
+    .wrapper--allRooms .room {
+        width: 100%;
+        max-height: 352px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 300px;
+    }
+
+    .btnCheckAvail.top {
+        display: block;
+        display: flex;
+        width: 250px;
+        height: 56px;
+        padding: 20px 24px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 38px;
+    }
+
+    .btnCheckAvail.bottom {
+        display: none;
+    }
+
+    .rooms--wrapper {
+        padding-bottom: 0;
+    }
+
+    .discover {
+        display: flex;
+        gap: 24px;
+    }
+
+    .discover--text {
+        font-size: 56px;
+        font-weight: 300;
+        letter-spacing: 2.8px;
+        width: 40%;
+    }
+
+    .discover--text span {
+        font-weight: 700;
+    }
+
+    /* Make reservation section */
+
+    .reservation--section{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #FFF;
+    }
+    
+    .reservation--row {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        gap: 8px;
+    }
+    
+    .phone--section {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .card--reservation {
+        justify-content: center;
+    }
+
+    .phone--section {
+        display: none;
+    }
+
+    .reservationOptions--container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 32px;
+    }
+
+    .reservation--section {
+        width: 250px;
+    }
+
+    .sideMenu {
+        width: 100%;
+        align-items: center;
+    }
+
 }

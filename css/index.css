@@ -27,32 +27,6 @@
 
 }
 
-.reservation--section{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding-bottom: 3px;
-    border-bottom: 2px solid #FFF;
-}
-
-.reservation--row {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    gap: 8px;
-}
-
-.phone--section {
-    font-weight: 400;
-    font-size: 18px;
-}
-
 .card--relax {
     background: linear-gradient(0deg, rgba(59, 89, 112, 0.4), rgba(59, 89, 112, 0.4)), url("../images/photos2.0/relax.png");
 }
@@ -135,17 +109,39 @@
     padding: 48px 20px 20px;
 }
 
-.card--location span {
-    font-size: 56px;
-    line-height: 150%;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #2B0000;
-}
+/* Screen that are 768px or more */
+@media screen and (min-width: 768px) {
+    .card--header.index {
+        background: url("../images/photos2.0/headerDesktop.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 250px;
+    }
+    
+    .word-per-line {
+        color: #FFF;
+        text-align: center;
+        font-size: 56px;
+        font-weight: 300;
+        line-height: 150%;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+    }
 
-.locationInfos {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 170%;
-}
+    .options--wrapper {
+        display: flex;
+        padding: 100px 40px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        align-self: stretch;
+    }
 
+    .card--desc {
+        height: 574px;
+        width: 600px;
+    }
+
+}

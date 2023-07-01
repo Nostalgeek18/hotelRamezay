@@ -24,3 +24,13 @@
     font-weight: 300;
     line-height: 150%;
 }
+
+@media screen and (min-width: 768px) {
+    .card--header.roomSuite {
+        background: url(../images/photos2.0/roomSuiteHeaderDesktop.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 250px;
+    }
+}
