@@ -12,7 +12,7 @@
 
 /***** HEADER CARDS ****/
 .card--header.index {
-    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/header1.png");
+    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/headerIndex.png");
 }
 
 .card--header p {
@@ -51,12 +51,12 @@
     background-repeat: no-repeat;
 }
 
-.card--desc span,
+.card--desc span:not(.roomAndSuite),
 .card--desc p {
   display: block; /* or inline-block */
 }
 
-.card--desc span {
+.card--desc span:not(.roomAndSuite) {
     font-weight: 300;
     font-size: 56px;
     line-height: 68px;

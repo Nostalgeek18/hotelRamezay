@@ -317,6 +317,7 @@ div a b {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        margin-top: 0px;
     }
 
     .card--location .text--wrapper {
@@ -385,6 +386,7 @@ div a b {
         background-repeat: no-repeat;
         background-size: cover;
         max-width: 300px;
+        cursor: pointer;
     }
 
     .btnCheckAvail.top {

@@ -58,3 +58,99 @@ p.bold {
 .card--today {
     background: url("../images/photos2.0/historyToday.png");
 }
+
+.card--today.desktop {
+    display: none;
+}
+
+/* Screen that are 768px or more */
+@media screen and (min-width: 768px) {
+    .card--header.allStartedIn {
+        background: url("../images/photos2.0/headerDesktopHistory.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 250px;
+    }
+    
+    .allStartedIn b::before {
+        content: "\A";
+        white-space: pre;
+        border-bottom: #B1602C 11px solid;
+    }
+
+    .card--history {
+        display: flex;
+        width: 100%;
+        padding: 80px 120px;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 32px;
+    }
+
+    .history--text--container {
+        align-items: baseline;
+        padding: 0px;
+    }
+
+    .card--today.mobile {
+        display:none;
+    }
+    
+    .card--today.desktop > * {
+        flex-basis: 100%;
+    }
+
+
+    .img.history--today img {
+       
+    }
+
+    .card--desc.card--today.desktop {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        display:flex;
+        background: none;
+        align-items: center;
+        padding: 0;
+    }
+
+    .history--today_text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .roomAndSuite {
+        text-decoration: underline;
+    }
+
+    .history--today_text > * {
+        max-width: 380px;
+    }
+
+    .history--today_text > span.today {
+        color: var(--black, #131313);
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 170%;
+        letter-spacing: 2.8px;
+    }
+
+    .history--today_text p {
+        color: var(--black, #131313);
+        font-family: Helvetica;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 170%;
+    }
+
+    .btnCheckAvail {
+        margin: 0;
+    }
+
+}
