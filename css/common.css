@@ -64,6 +64,17 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+/* MANOIR LOGO */
+.logoManoirRamezay {
+    position: absolute;
+    left: 24px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/photos2.0/manoirRamezay.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /***** HEADER CARDS ****/
 .card--header {
@@ -107,6 +118,7 @@ a {
     line-height: 170%;
     text-align: center;
     color: #FFFFFF;
+    position: relative;
 }
 
 .room span {
@@ -114,26 +126,88 @@ a {
 }
 
 .standardGuest {
-    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/standardGuestRoom.png");
+    background: url("../images/photos2.0/standardGuestRoom.png");
 }
 
 .deluxeGuest {
-    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/deluxeGuest.png");
+    background: url("../images/photos2.0/deluxeGuest.png");
 }
 
 .suiteFireplace {
-    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/suiteFireplace.png");
+    background: url("../images/photos2.0/suiteFireplace.png");
 }
 
 .queenSuite {
-    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/queenSuite.png");
+    background: url("../images/photos2.0/queenSuite.png");
 }
 
 .royalSuite {
-    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/royalSuite.png");
+    background: url("../images/photos2.0/royalSuite.png");
 }
 
+.roomBannerClick {
+    position: absolute;
+    bottom: 0;
+    background: var(--gray-6, #F2F2F2);
+    left:0;
+    right: 0;
+    display: flex;
+    width: 374px;
+    padding: 24px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--brown-80, #2B0000);
+    font-family: Helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 170%; /* 30.6px */
+    cursor: pointer;
+}
 /****END HOTEL ROOMS *****/
+
+
+/** RESERVATION CARD **/
+
+.reservationContainers {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+}
+
+.reservation--section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reservation--section > div:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.8;
+    
+}
+
+.reservation--row {
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 2px solid;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.reservation--row img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    margin-bottom: 8px;
+}
 
 /** SIDE MENU (MOBILE) **/
 
@@ -187,7 +261,7 @@ a {
 }
 
 .card--reservation {
-    background-color: #2B0000;
+    background-color: #22312E;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,7 +273,6 @@ a {
     font-size: 20px;
     line-height: 170%;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
     padding: 80px 24px;
     color: #FFFFFF;
 }
@@ -223,13 +296,13 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px 48px;
-    background: #F2C94C;
+    padding: 20px 92px;
+    background: #B25C11;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
     text-align: center;
-    color: #000000;
+    color: #FFF;
     margin: 0 auto;
     margin-top: 20px;
     
@@ -303,12 +376,22 @@ div a b {
     padding: 8px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 24px;
     justify-content: center;
     width: 100%;
     flex-direction: column;
 }
 
+.phone--section {
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* 27.2px */
+    text-transform: uppercase;
+}
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
