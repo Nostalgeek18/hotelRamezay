@@ -59,8 +59,22 @@ p.bold {
     background: url("../images/photos2.0/historyToday.png");
 }
 
+.card--desc.card--today {
+    height: auto;
+}
+
 .card--today.desktop {
     display: none;
+}
+
+.word-per-line b {
+    border-bottom: 11px solid #B1602C;
+}
+
+
+.roomAndSuite {
+    text-decoration: underline;
+    font-weight: 700;
 }
 
 /* Screen that are 768px or more */
@@ -123,9 +137,6 @@ p.bold {
         gap: 40px;
     }
 
-    .roomAndSuite {
-        text-decoration: underline;
-    }
 
     .history--today_text > * {
         max-width: 380px;
