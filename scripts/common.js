@@ -122,17 +122,24 @@ function toggleMenu() {
 	
 }
 
+function getLanguage() {
+	//Get page's name from url
+	const page 	 		  = window.location.pathname.split('/').pop();
+	const pattern 		  = /(_e|-e)/;
+	const language 		  = pattern.test(page) ? "en" : "fr";
+
+	return language;
+}
+
 /*
 	Generates customized HTML for the footer
 */
 function generateFooter() {
 
-	//Get page's name from url
-	const page 	 		  = window.location.pathname.split('/').pop();
+
+	const language = getLanguage();
 
 	const footerContainer = $('#footer');
-	const pattern 		  = /(_e|-e)/;
-	const language 		  = pattern.test(page) ? "en" : "fr";
 
 	const contactLink = language == "en" ? "contact_e.html" : "contact.html";
 
@@ -172,11 +179,89 @@ function generateFooter() {
 	footerContainer.html(footerInnerHTML);
 }
 
-$(document).ready(function() {
+function goBack(intent = 'back') {
+	const language = getLanguage();
+
+	const link = language == "fr" ? "/index.html" : "/index_e.html";
+
+	if(intent == "back") {
+		window.location.href = link;
+	}
+}
+
+function getRoomsImgs(roomName) {
+
+	const roomsHtml = {
+		'standard' : `
+		<div class="card card--header standardRoom"></div>
+		<div class="card card--header standardRoom"></div>
+		<div class="card card--header standardRoom"></div>
+		`
+	}
+
+	return roomsHtml[roomName];
+}
+
+function expandImages(roomName = 'standard') {
+
+	const goBackIcon = `
+	<div onclick="toggleRoomWrapper()" class="arrowBack roomWrapper">
+	<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+		<g filter="url(#filter0_d_111_756)">
+		<rect x="10" y="6" width="44" height="44" rx="22" fill="white"/>
+		<path d="M33.8332 20.6667L27.7962 26.7036C27.0803 27.4196 27.0803 28.5804 27.7962 29.2964L33.8332 35.3333" stroke="#2B0000" stroke-width="2.5" stroke-linecap="round"/>
+		</g>
+		<defs>
+		<filter id="filter0_d_111_756" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+		<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+		<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+		<feOffset dy="4"/>
+		<feGaussianBlur stdDeviation="5"/>
+		<feComposite in2="hardAlpha" operator="out"/>
+		<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+		<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_111_756"/>
+		<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_111_756" result="shape"/>
+		</filter>
+		</defs>
+		</svg>
+</div>`
+
+		const roomImgs = getRoomsImgs(roomName);
+
+		//Check first if sideMenu doesnt exist in the page, hidden
+		if($(".wrapper--allImg").length == 0) {
+			const wrapperRooms = `
+			<div class="wrapper--allImg">
+			 ${goBackIcon}
+			 ${roomImgs}
+			</div>
+		`
+	
+		$('body').append(wrapperRooms);
+	
+		}
+
+		$('#container').hide();
+		$('.wrapper--allImg').addClass('active');
+
+}
+
+function toggleRoomWrapper() {
+	$('.wrapper--allImg').removeClass('active');
+	$('#container').show();
+}
+
+function generateMenu(){
 	const hamburgerMenu = $('.hamburger');
 	hamburgerMenu.click(() => {
 	  appendMenuHTML();
 	});
+}
+
+$(document).ready(function() {
+	
+	generateMenu();
 
 	generateFooter();
+
   });

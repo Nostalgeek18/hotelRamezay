@@ -2,7 +2,7 @@
 
 /***** HEADER CARDS ****/
 .card--header.index {
-    background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/headerIndex.png");
+    background:  url("../images/photos2.0/headerIndex.png");
 }
 
 .card--header p {
@@ -27,6 +27,22 @@
 .card--cozy.card--desc,
 .card--allStarted.card--desc {
     height: 560px;
+}
+
+.index .word-per-line b {
+    position: relative;
+    z-index: 2;
+}
+
+.index .word-per-line b::after {
+    content:'';
+    position: absolute;
+    width: 110%;
+    height:18px;
+    top:40%;
+    left: -5%;
+    background-color: #B1602C;
+    z-index: -1;
 }
 
 
