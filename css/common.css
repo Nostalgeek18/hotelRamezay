@@ -52,6 +52,7 @@ a {
     top: 32px;
     right: 1rem;
     flex-direction: column;
+    z-index: 1;
 }
 
 .bar {
@@ -142,6 +143,10 @@ a {
 
 .standardGuest {
     background: url("../images/photos2.0/standardGuestRoom.png");
+}
+
+.desktop .standardGuest {
+    background: url("../images/photos2.0/standardRoomDesktop.png");
 }
 
 .deluxeGuest {
@@ -409,13 +414,17 @@ div a b {
 }
 
 .wrapper--allRooms {
-    padding: 8px;
+    padding: 40px 80px 80px 80px;
     display: flex;
     align-items: center;
     gap: 104px;
     justify-content: center;
     width: 100%;
     flex-direction: column;
+}
+
+.wrapper--allRooms.desktop {
+    display: none;
 }
 
 .phone--section {
@@ -453,6 +462,20 @@ div a b {
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
+
+    /** CARD RESERVATION WRAPPER **/
+
+    .cardActivities--wrapper {
+        display: flex;
+        flex-direction: row;
+        padding: 80px 72px;
+        gap: 10px;
+    }
+
+    .cardActivities--wrapper .card--desc {
+        height: 560px;
+    }
+
 
     .card--location {
         flex-direction: row;
@@ -508,26 +531,20 @@ div a b {
         flex-wrap: wrap;
     }
 
-    .wrapper--allRooms {
-        padding-top: 8px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin: 0px auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: unset;
-        flex-direction: row;
+    .wrapper--allRooms.mobile {
+        display: none;
     }
 
+    .wrapper--allRooms.desktop {
+        display:block;
+    }
 
     .wrapper--allRooms .room {
         width: 100%;
         max-height: 352px;
         background-repeat: no-repeat;
         background-size: cover;
-        max-width: 300px;
-        cursor: pointer;
+        max-width: 600px;
     }
 
     .btnCheckAvail.top {
@@ -590,16 +607,24 @@ div a b {
     }
     
     .phone--section {
+        display: flex;
+        gap: 48px;
         font-weight: 400;
         font-size: 18px;
+        position: relative;
+    }
+    
+    .phone--section div:first-child::after {
+        content:'.';
+        position: absolute;
+        top: -24%;
+        right: 50%;
+        font-weight: 700;
+        font-size:18px;
     }
 
     .card--reservation {
         justify-content: center;
-    }
-
-    .phone--section {
-        display: none;
     }
 
     .reservationOptions--container {
@@ -616,6 +641,62 @@ div a b {
     .sideMenu {
         width: 100%;
         align-items: center;
+    }
+
+    .reservationContainers {
+        flex-direction: row;
+    
+    }
+
+    .room--wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+        background: #FFF;
+        box-shadow: 0px 10px 30px 0px rgba(42, 0, 0, 0.10);
+    }
+
+    .roomCardDescription {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        width: 100%;
+    }
+
+    .roomTitle {
+        color: var(--brown-80, #2B0000);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 120%; /* 38.4px */
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+    }
+
+    .roomDescription {
+        color: var(--brown-80, #2B0000);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 170%; /* 30.6px */
+    }
+
+    .roomView {
+        display: flex;
+        width: 150px;
+        height: 48px;
+        padding: 20px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid var(--brown-80, #2B0000);
+        background: rgba(255, 255, 255, 0.50);
+        font-weight: 700;
+        cursor: pointer;
     }
 
 }
