@@ -1,13 +1,16 @@
 .card--header.roomSuite {
     background: url("../images/photos2.0/roomSuiteHeader.png");
     font-weight: 300;
-    font-size: 56px;
+    font-size: 40px;
     line-height: 150%;
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #FFFFFF;
     height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card.card--staying {
@@ -29,9 +32,7 @@
 @media screen and (min-width: 768px) {
     .card--header.roomSuite {
         background: url(../images/photos2.0/roomSuiteHeaderDesktop.png);
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 250px;
+        font-size: 56px;
     }
 }

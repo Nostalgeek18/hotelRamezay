@@ -79,14 +79,14 @@ a {
 
 /***** HEADER CARDS ****/
 .card--header {
-    padding: 80px 24px 100px;
+    height: 700px;
     background-size: cover !important;
-    height: auto;
+    padding: 0 32px;
     /*background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos/spa_8.jpg");*/
     background: linear-gradient(0deg, rgba(42, 0, 0, 0.4), rgba(42, 0, 0, 0.4)), url("../images/photos2.0/header1.png");
     background-repeat: no-repeat;
-    font-weight: 300;
-    font-size: 48px;
+    font-weight: 700;
+    font-size: 40px;
     line-height: 150%;
     text-align: center;
     color: #FFF;
@@ -176,7 +176,7 @@ a {
     left:0;
     right: 0;
     display: flex;
-    width: 374px;
+    width:374px;
     padding: 24px;
     align-items: center;
     justify-content: space-between;
@@ -186,7 +186,6 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 170%; /* 30.6px */
     cursor: pointer;
 }
 
@@ -384,6 +383,12 @@ div a b {
     font-size: 12px;
     line-height: 170%;
     color: #E0E0E0;
+    display:flex;
+    flex-direction: column;
+}
+
+.contact--infos .adresse {
+    margin: 10px 0;
 }
 
 /**** END FOOTER ****/
@@ -415,6 +420,7 @@ div a b {
 
 .wrapper--allRooms {
     padding: 40px 80px 80px 80px;
+    padding: 40px 8px 80px;
     display: flex;
     align-items: center;
     gap: 104px;
@@ -460,7 +466,19 @@ div a b {
     z-index: 1;
 }
 
-/* Screen that are 768px or more */
+.card--location .text--wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footerLogo {
+    order: 0;
+    width: 86x;
+    height: 61px;
+}
+
+/* Screen that are 768px or more (desktop) */
 @media screen and (min-width: 768px) {
 
     /** CARD RESERVATION WRAPPER **/
@@ -482,12 +500,6 @@ div a b {
         align-items: center;
         justify-content: center;
         margin-top: 0px;
-    }
-
-    .card--location .text--wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
     }
 
     .locationInfos {
@@ -537,6 +549,7 @@ div a b {
 
     .wrapper--allRooms.desktop {
         display:block;
+        padding: 40px 80px 80px 80px;
     }
 
     .wrapper--allRooms .room {

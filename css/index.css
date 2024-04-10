@@ -63,12 +63,11 @@
   display: block; /* or inline-block */
 }
 
-.card--desc span:not(.roomAndSuite) {
+.activityTitle {
     font-weight: 300;
-    font-size: 56px;
-    line-height: 68px;
+    font-size: 48px;
+    line-height: 58px;
     /* identical to box height */
-    letter-spacing: 0.05em;
     color: #FFFFFF;
     }
 
@@ -104,6 +103,10 @@
     background: rgba(0, 0, 0, 0.50);
     color: #FFF;
 }
+
+.discover--text span {
+    font-weight: 700;
+}
 /************END INDEX CARDS***********/
 
 
@@ -115,6 +118,7 @@
     color: #2B0000;
     padding: 48px 20px 20px;
 }
+
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {

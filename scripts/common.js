@@ -167,13 +167,14 @@ function generateFooter() {
 		<a href="${linkContact}">${labelContact}</a>
 		<a class="facebook" href="https://www.facebook.com/ManoirRamezay" target="_blank">FACEBOOK</a>
 	</div>
-	<img class="footerLogo" alt="manoirRamezayLogo" src="./images/photos2.0/manoirRamezay.png">
 	<div class="contact--infos">
 		<p>${labelPhone}: 450 460 3251</p>
 		<p>TOLL FREE: 1 866 460 3251</p>
-		<p>492, rue Claude de Ramezay (Route 227) Marieville (Québec) J3M 1J6</p>
+		<p class="adresse">492, rue Claude de Ramezay (Route 227) Marieville (Québec) J3M 1J6</p>
 		<p>&copy 2023 MANOIR RAMEZAY</p>
 	</div>
+	<img class="footerLogo" alt="manoirRamezayLogo" src="./images/photos2.0/ramezayLogo.jpg">
+
 `
 
 	footerContainer.html(footerInnerHTML);
