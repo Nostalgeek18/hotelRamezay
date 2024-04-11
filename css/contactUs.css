@@ -3,7 +3,7 @@
 .card--header.contactUs {
     background-image: url("../images/photos2.0/ContactUsHeader.png");
     justify-content: center;
-    height: 610px;
+    height: 700px;
 }
 
 .card--header .subtext {
@@ -11,6 +11,8 @@
     font-family: 'Helvetica';
     line-height: 110%;
     text-transform: none;
+    font-weight: 400;
+    padding-top: 16px;
 }
 
 

@@ -478,7 +478,7 @@ div a b {
 .card--location .text--wrapper {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
 }
 
 .footerLogo {
