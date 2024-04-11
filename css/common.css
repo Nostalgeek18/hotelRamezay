@@ -79,6 +79,9 @@ a {
 
 /***** HEADER CARDS ****/
 .card--header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 700px;
     background-size: cover !important;
     padding: 0 32px;
@@ -92,6 +95,14 @@ a {
     color: #FFF;
     text-transform: uppercase;
     position: relative;
+}
+
+.cardTitle {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 58px;
+    /* identical to box height */
+    color: #FFFFFF;
 }
 
 .arrowBack {
@@ -344,8 +355,6 @@ a {
     text-align: center;
     color: #FFF;
     margin: 0 auto;
-    margin-top: 100px;
-    
 }
 
 
