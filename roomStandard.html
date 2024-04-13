@@ -25,12 +25,27 @@
 </head>
 <body>
 	<div id="container">
-		<!-- <div class="hamburger menu">
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</div> -->
-		<div class="card card--header standardRoom">
+		<div class="card card--header standardRoom carousel" data-carousel>
+			<div class="carousel--indicator">
+				<div class="dot" data-active></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
+			<ul data-slides>
+				<li class="slide" data-active>
+					<img src="/images/photos2.0/rooms/standardRoom/standard1.png" alt="room image #1"/>
+				</li>
+				<li class="slide">
+					<img src="/images/photos2.0/rooms/standardRoom/standard2.png" alt="room image #2"/>
+				</li>
+				<li class="slide">
+					<img src="/images/photos2.0/rooms/standardRoom/standard3.png" alt="room image #3"/>
+				</li>
+				<li class="slide">
+					<img src="/images/photos2.0/rooms/standardRoom/standard4.png" alt="room image #4"/>
+				</li>
+			</ul>
 			<div onclick="goBack()" class="arrowBack">
 				<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
 					<g filter="url(#filter0_d_111_756)">

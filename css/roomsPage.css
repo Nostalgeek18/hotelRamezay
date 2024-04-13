@@ -1,5 +1,5 @@
 .card--header.standardRoom {
-    background: url("../images/photos2.0/standardGuestRoom.png");
+    /* background: url("../images/photos2.0/rooms/standardRoom/standard1.png"); */
     font-weight: 300;
     font-size: 56px;
     line-height: 150%;
@@ -99,4 +99,44 @@
     font-weight: 700;
     line-height: 170%; /* 30.6px */
     text-transform: uppercase;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide[data-active] {
+    opacity : 1;
+    transition-delay: 0ms;
+}
+
+.carousel--indicator {
+    z-index: 3;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 100px;
+    width: 86px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.carousel--indicator > .dot {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255,255,255, 0.3);
+    border-radius: 50%;
+}
+
+.carousel--indicator > .dot[data-active] {
+    background-color: white;
 }

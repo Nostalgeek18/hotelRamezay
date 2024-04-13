@@ -128,7 +128,6 @@ a {
     gap: 16px;
     background: #FFFAF2;
     color: #2B0000;
-    margin-top: 80px;
 }
 
 /****BEGINNING HOTEL ROOMS *****/
@@ -354,7 +353,7 @@ a {
     line-height: 18px;
     text-align: center;
     color: #FFF;
-    margin: 0 auto;
+    margin-top: 40px;
 }
 
 
@@ -485,6 +484,10 @@ div a b {
     order: 0;
     width: 86x;
     height: 61px;
+}
+
+.btnCheckAvail.bottom {
+    margin-bottom: 80px;
 }
 
 /* Screen that are 768px or more (desktop) */

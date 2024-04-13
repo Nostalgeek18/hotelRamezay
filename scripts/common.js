@@ -1,4 +1,13 @@
 
+const ROOMS = {
+	standard : 'standard',
+	deluxe : 'deluxe',
+	suiteFireplace : 'suiteFireplace',
+	queenSuite : 'queenSuite',
+	royalSuite : 'royalSuite'
+
+}
+
 /**
  * build HTLM for the menu for the first time and displays it, or display it if already exists.
  */
@@ -203,7 +212,20 @@ function getRoomsImgs(roomName) {
 	return roomsHtml[roomName];
 }
 
-function expandImages(roomName = 'standard') {
+function checkRoom(e){
+	const { id } = e.target || "standard"
+
+	switch (id) {
+		case ROOMS.standard:
+			location.href = 'roomStandard.html'
+			break;
+		default:
+			location.href = 'roomStandard.html'
+	}
+
+}
+
+function expandImages(roomName = ROOMS.standard) {
 
 	const goBackIcon = `
 	<div onclick="toggleRoomWrapper()" class="arrowBack roomWrapper">
@@ -259,10 +281,35 @@ function generateMenu(){
 	});
 }
 
+//************CAROUSEL SCRIPTS **************/
+function triggerCarousel() {
+	if(!document.getElementsByClassName('carousel')[0]) return; //no carousel
+	const slideIndicator = document.getElementsByClassName('carousel--indicator')[0];
+	const slides = slideIndicator.closest("[data-carousel").querySelector("[data-slides]")
+	const dots = document.getElementsByClassName('carousel--indicator')[0];
+
+
+	setInterval(()=>{
+		console.log(slides)
+		const activeSlide = slides.querySelector("[data-active]")
+		const activeDot = dots.querySelector("[data-active]")
+		let newIndex = [...slides.children].indexOf(activeSlide) + 1
+		if(newIndex < 0) newIndex = slides.children.length -1 //go back to last element
+		if(newIndex >= slides.children.length) newIndex = 0; //go back first index 
+
+		slides.children[newIndex].dataset.active = true 
+		dots.children[newIndex].dataset.active = true
+		delete activeSlide.dataset.active
+		delete activeDot.dataset.active
+	},2500)
+}
+
 $(document).ready(function() {
 	
 	generateMenu();
 
 	generateFooter();
+
+	triggerCarousel();
 
   });
