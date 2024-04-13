@@ -1,5 +1,5 @@
 .card--header.standardRoom {
-    /* background: url("../images/photos2.0/rooms/standardRoom/standard1.png"); */
+    background: url("../images/photos2.0/rooms/standardRoom/standard1.png");
     font-weight: 300;
     font-size: 56px;
     line-height: 150%;
@@ -9,6 +9,25 @@
     color: #FFFFFF;
     width: 400px;
     height: 300px;
+}
+
+.card--header.standardRoom.room1 {
+    background: url("../images/photos2.0/rooms/standardRoom/standard1.png");
+}
+.card--header.standardRoom.room2 {
+    background: url("../images/photos2.0/rooms/standardRoom/standard2.png");
+}
+.card--header.standardRoom.room3 {
+    background: url("../images/photos2.0/rooms/standardRoom/standard3.png");
+}
+
+.card--header.standardRoom.room4 {
+    background: url("../images/photos2.0/rooms/standardRoom/standard4.png");
+}
+
+.card--header.standardRoom.room5 {
+    background : white;
+    opacity: 80%;
 }
 
 .card--roomDescription {

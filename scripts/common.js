@@ -201,15 +201,13 @@ function goBack(intent = 'back') {
 
 function getRoomsImgs(roomName) {
 
-	const roomsHtml = {
-		'standard' : `
-		<div class="card card--header standardRoom"></div>
-		<div class="card card--header standardRoom"></div>
-		<div class="card card--header standardRoom"></div>
-		`
+
+	let roomsHtml = '';
+	for (let i =1; i<= 5 ; i ++) {
+		roomsHtml+= `<div class="card card--header ${roomName}Room room${i}"></div>`
 	}
 
-	return roomsHtml[roomName];
+	return roomsHtml;
 }
 
 function checkRoom(e){
@@ -249,14 +247,14 @@ function expandImages(roomName = ROOMS.standard) {
 		</svg>
 </div>`
 
-		const roomImgs = getRoomsImgs(roomName);
+		const roomImgsHTML = getRoomsImgs(roomName);
 
 		//Check first if sideMenu doesnt exist in the page, hidden
 		if($(".wrapper--allImg").length == 0) {
 			const wrapperRooms = `
 			<div class="wrapper--allImg">
 			 ${goBackIcon}
-			 ${roomImgs}
+			 ${roomImgsHTML}
 			</div>
 		`
 	
@@ -290,7 +288,6 @@ function triggerCarousel() {
 
 
 	setInterval(()=>{
-		console.log(slides)
 		const activeSlide = slides.querySelector("[data-active]")
 		const activeDot = dots.querySelector("[data-active]")
 		let newIndex = [...slides.children].indexOf(activeSlide) + 1
