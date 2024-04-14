@@ -20,6 +20,7 @@
 <script type="text/javascript" src="scripts/AnythingSlider/js/jquery.anythingslider.min.js"></script>
 <script type="text/javascript" src="scripts/functions-home.js"></script>
 <script type="text/javascript" src="scripts/common.js"></script>
+<script type="text/javascript" src="scripts/index.js" defer></script>
 </head>
 <body>
 	<div id="container">
@@ -68,10 +69,27 @@
 			<span class="bar"></span>
 			<span class="bar"></span>
 		</div>
-		<div class="card card--header index">
-			<p class="word-per-line">
+		<div class="card card--header index carousel" data-carousel>
+			<p class="carousel--indicator word-per-line">
 				Offrez-vous un séjour dans un lieu <b>historique</b>
 			</p>
+			<ul data-slides>
+				<li class="slide" data-active>
+					<img src="/images/photos2.0/headerDesktop.png" alt="index img #1"/>
+				</li>
+				<li class="slide">
+					<img src="/images/photos2.0/headerDesktop2.png" alt="index img #2"/>
+				</li>
+				<li class="slide">
+					<img src="/images/photos2.0/headerDesktop3.png" alt="index img #3"/>
+				</li>
+				<li class="slide">
+					<img src="/images/photos2.0/headerDesktop4.png" alt="index img #4"/>
+				</li>
+				<li class="slide">
+					<img src="/images/photos2.0/headerDesktop5.png" alt="index img #5"/>
+				</li>
+			</ul>
 		</div>
 		<div class="card card--reservation">
 			<div class="reservation">BOOK YOUR STAY NOW</div>

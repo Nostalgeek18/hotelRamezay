@@ -83,6 +83,7 @@ p.bold {
     font-weight: 700;
 }
 
+
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
     .card--header.allStartedIn {

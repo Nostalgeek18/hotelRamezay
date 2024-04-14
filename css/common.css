@@ -376,8 +376,8 @@ div a b {
 .container--links {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    font-weight: 400;
+    gap: 8px;
+    font-weight: 700;
     font-size: 14px;
     line-height: 170%;
     text-transform: uppercase;
@@ -397,6 +397,14 @@ div a b {
 
 .contact--infos .adresse {
     margin: 10px 0;
+}
+
+.logo--section {
+    gap: 8px;
+}
+
+.establishment {
+    display: none;
 }
 
 /**** END FOOTER ****/
@@ -527,7 +535,7 @@ div a b {
     }
 
     #footer .facebook {
-        display: none;
+        /* display: none; */
     }
 
     .contact--infos {
@@ -724,5 +732,15 @@ div a b {
         font-weight: 700;
         cursor: pointer;
     }
+
+    /* FOOTER */
+    .establishment {
+        font-weight: 400;
+        font-size: 14px;
+        color: #fff;
+        margin-top: 30px;
+        display: block;
+    }
+    
 
 }

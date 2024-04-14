@@ -25,16 +25,19 @@ function appendMenuHTML() {
 	if(language == "en") {
 		linkChambres   = "chambres_e.html";
 		linkHistorique = "historique_e.html";
-		linkContact    = "contact_e.html"
+		linkContact    = "contact_e.html";
+		linkFacebook   = "https://www.facebook.com/ManoirRamezay";
 	}else {
 		linkChambres   = "chambres.html";
 		linkHistorique = "historique.html";
-		linkContact    = "contact.html"
+		linkContact    = "contact.html";
+		linkFacebook   = "https://www.facebook.com/ManoirRamezay";
 	}
 
 	const labelRoomsSuite = getLabel(language, 'rooms_and_suite');
 	const labelHistorique = getLabel(language, 'history');
 	const labelContact    = getLabel(language, 'contact_us');
+	const labelFacebook   = getLabel(language, 'facebook')
 
 
 	//Check first if sideMenu doesnt exist in the page, hidden
@@ -49,7 +52,7 @@ function appendMenuHTML() {
 				<a href="${linkChambres}">${labelRoomsSuite}</a>
 				<a href="${linkHistorique}">${labelHistorique}</a>
 				<a href="${linkContact}">${labelContact}</a>
-				<a href="https://www.facebook.com/ManoirRamezay" target="_blank">FACEBOOK</a>
+				<a href="${linkFacebook}" target="_blank">${labelFacebook}</a>
 				${languageSelectionHTML}
 			</div>
 		</div>
@@ -72,13 +75,15 @@ function getLabel(language, keyLabel) {
 			"rooms_and_suite" : "ROOMS & SUITES",
 			"history" : "HISTORY",
 			"contact_us" : "CONTACT US",
-			"phone"	: "PHONE"
+			"phone"	: "PHONE",
+			"facebook" : "facebook"
  		},
 		"fr" : {
 			"rooms_and_suite": "CHAMBRES & SUITES",
 			"history" : "HISTOIRE",
 			"contact_us" : "NOUS CONTACTER",
-			"phone"	: "TELEPHONE"
+			"phone"	: "TELEPHONE",
+			"facebook" : "facebook"
 		}
 	}
 
@@ -182,7 +187,10 @@ function generateFooter() {
 		<p class="adresse">492, rue Claude de Ramezay (Route 227) Marieville (Québec) J3M 1J6</p>
 		<p>&copy 2023 MANOIR RAMEZAY</p>
 	</div>
-	<img class="footerLogo" alt="manoirRamezayLogo" src="./images/photos2.0/ramezayLogo.jpg">
+	<div class="logo--section">
+		<img class="footerLogo" alt="manoirRamezayLogo" src="./images/photos2.0/ramezayLogo.jpg">
+		<div class="establishment">Establishment number 211094</div>
+	</div>
 
 `
 
@@ -309,4 +317,4 @@ $(document).ready(function() {
 
 	triggerCarousel();
 
-  });
+});
