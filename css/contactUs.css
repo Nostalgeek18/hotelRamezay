@@ -6,6 +6,10 @@
     height: 700px;
 }
 
+.contactUs .word-per-line{
+    font-weight: 700;
+}
+
 .card--header .subtext {
     font-size: 20px;
     font-family: 'Helvetica';
@@ -89,11 +93,14 @@
     text-decoration: none;
 }
 
+.facebook.desktop {
+    display: none;
+}
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
     .card--header.contactUs {
-        background: url("../images/photos2.0/headerContactDesktop.png");
+        background: url("../images/photos2.0/contact/contactDesktop.png");
         display: flex;
         justify-content: center;
         align-items: center;
@@ -104,5 +111,24 @@
     .word-per-line .breakLine::before {
         content:unset;
         white-space:unset
+    }
+
+    .facebook.desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #FFF;
+        width: 744px;
+    }
+
+        
+    .delimiter {
+        width: 100%;
+        background-color: rgba(255,255,255,0.2);
+        height: 1px;
     }
 }

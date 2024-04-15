@@ -139,6 +139,10 @@
     transition-delay: 0ms;
 }
 
+.index.carousel ul[data-slides] {
+    display: none;
+}
+
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
@@ -176,8 +180,8 @@
         width: 600px;
     }
 
-    ul[data-slides] {
-        display: none;
+    .index.carousel ul[data-slides] {
+        display: block;
     }
 
 }
