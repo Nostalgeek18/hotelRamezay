@@ -152,31 +152,27 @@ a {
 }
 
 .standardGuest {
-    background: url("../images/photos2.0/standardGuestRoom.png");
-}
-
-.desktop .standardGuest {
-    background: url("../images/photos2.0/standardRoomDesktop.png");
+    background: url("../images/photos2.0/rooms/standardRoom/standard1.png");
 }
 
 .deluxeGuest {
-    background: url("../images/photos2.0/deluxeGuest.png");
+    background: url("../images/photos2.0/rooms/deluxeRoom/deluxeRoom.png");
 }
 
 .suiteFireplace {
-    background: url("../images/photos2.0/suiteFireplace.png");
+    background: url("../images/photos2.0/rooms/suiteFireplace/suiteFireplace.png");
 }
 
 .queenSuite {
-    background: url("../images/photos2.0/queenSuite2.png");
+    background: url("../images/photos2.0/rooms/queenSuite/queenSuite.png");
 }
 
 .kingSuite {
-    background: url("../images/photos2.0/kingSuite.png");
+    background: url("../images/photos2.0/rooms/royalSuite/royalSuiteBanner.png");
 }
 
 .royalSuite {
-    background: url("../images/photos2.0/royalSuite.png");
+    background: url("../images/photos2.0/rooms/royalSuite/royalSuite.png");
 }
 
 .roomBannerClick {
@@ -569,16 +565,18 @@ div a b {
     }
 
     .wrapper--allRooms.desktop {
-        display:block;
+        display:flex;
+        gap: 32px;
         padding: 40px 80px 80px 80px;
     }
 
     .wrapper--allRooms .room {
         width: 100%;
-        max-height: 352px;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         max-width: 600px;
+        height: 400px;
     }
 
     .btnCheckAvail.top {
@@ -683,11 +681,11 @@ div a b {
     }
 
     .room--wrapper {
+        position: relative;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 64px;
         background: #FFF;
         box-shadow: 0px 10px 30px 0px rgba(42, 0, 0, 0.10);
     }
@@ -699,6 +697,7 @@ div a b {
         align-items: flex-start;
         gap: 32px;
         width: 100%;
+        padding-left: 64px;
     }
 
     .roomTitle {
@@ -732,6 +731,52 @@ div a b {
         font-weight: 700;
         cursor: pointer;
     }
+
+    .bannerStar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #800000;
+        height: 28px;
+        width: 246px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: 700;
+        color: #FFF;
+        font-size: 12px;
+    }
+
+    /** New sets of images for rooms **/
+    .standardGuest {
+        background: url("../images/photos2.0/rooms/standardRoom/standard1.png");
+    }
+    
+     .standardGuest {
+        background: url("../images/photos2.0/rooms/standardRoom/standardRoomDesktop.png");
+    }
+    
+    .deluxeGuest {
+        background: url("../images/photos2.0/rooms/deluxeRoom/deluxeRoomDesktop.png");
+    }
+    
+    .suiteFireplace {
+        background: url("../images/photos2.0/rooms/suiteFireplace/suiteFireplaceDesktop.png");
+    }
+    
+    .queenSuite {
+        background: url("../images/photos2.0/rooms/queenSuite/queenSuiteDesktop.png");
+    }
+    
+    .kingSuite {
+        background: url("../images/photos2.0/rooms/royalSuite/royalSuiteBannerDesktop.png");
+    }
+    
+    .royalSuite {
+        background: url("../images/photos2.0/rooms/royalSuite/royalSuiteDesktop.png");
+    }
+
+    /** END - img romms */
 
     /* FOOTER */
     .establishment {

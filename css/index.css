@@ -103,6 +103,9 @@
 
 
 .discover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 44px;
     line-height: 53px;
     letter-spacing: 0.05em;
@@ -115,9 +118,6 @@
     z-index: 2;
 }
 
-ul[data-slides] {
-    display: none;
-}
 
 .slide {
     position: absolute;
@@ -177,6 +177,7 @@ ul[data-slides] {
     }
 
     ul[data-slides] {
-        display: block;
+        display: none;
     }
+
 }
