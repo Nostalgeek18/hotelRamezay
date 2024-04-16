@@ -36,19 +36,18 @@
     font-size: 32px;
     font-weight: 300;
     padding-top: 40px;
-    padding-left: 16px;
-
+    padding-bottom: 24px;
 }
 
 .history--text--container {
     font-size: 18px;
     line-height: 30px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-direction: column;
     justify-content: center;
     gap:16px;
-    padding: 16px;
+    padding: 48px 16px;
 }
 
 p.bold {
@@ -83,6 +82,11 @@ p.bold {
     font-weight: 700;
 }
 
+.img.desktop {
+    display: none;
+}
+
+
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
@@ -100,17 +104,21 @@ p.bold {
         border-bottom: #B1602C 11px solid;
     }
 
+    .history--title {
+        padding: 0 0 24px 0;
+    }
+
     .card--history {
+        background-color: #F2F2F2;
+        padding: 80px 240px;
+        text-align: justify;
         display: flex;
-        width: 100%;
-        padding: 80px 120px;
-        flex-direction: column;
-        align-items: baseline;
-        gap: 32px;
+        justify-content: center;
+        align-items: center;
     }
 
     .history--text--container {
-        align-items: baseline;
+        max-width: 800px;
         padding: 0px;
     }
 
@@ -169,6 +177,10 @@ p.bold {
 
     .btnCheckAvail {
         margin: 0;
+    }
+
+    .img.desktop {
+        display: block;
     }
 
 }
