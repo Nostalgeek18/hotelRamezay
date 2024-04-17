@@ -1,0 +1,119 @@
+.page--wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 4% 0;
+}
+
+.room-goBack {
+    display: flex; 
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.room-goBack span:hover {
+    border-bottom: 1px solid grey;
+}
+
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.grid-container .grid-item-1 img {
+    height: 100%;
+}
+
+.subgrid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.subgrid-container img {
+    width: 250px;
+}
+
+
+.bookingInfo--wrapper {
+    display:flex;
+}
+
+.bookingInfo--wrapper .card--roomDescription {
+    gap: 0px;
+}
+
+.bookingInfo--wrapper .card.card--roomDescription {
+    padding-top: 0;
+}
+
+.bookingInfo--wrapper .whatOffers {
+    padding-top: 40px;
+}
+
+.bookingInfo--wrapper .card--reservation {
+    order: 1;
+}
+
+.desktop .reservationOptions--container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookingInfo--wrapper {
+    padding: 40px 0;
+}
+
+.bookingInfo--wrapper .phone--section {
+    flex-direction: column;
+    gap: 0px;
+}
+
+.bookingInfo--wrapper .phone--section div:first-child::after {
+    display: none;
+}
+
+.bookingInfo--wrapper .card--reservation.desktop {
+    max-width: 390px;
+    max-height: 480px;
+}
+
+.bookingInfo--wrapper .reservation--section {
+    width: auto;
+}
+
+.bookingInfo--wrapper .btnCheckAvail {
+    margin-top: 0;
+}
+
+.delimiter {
+    width: 120%;
+    height: 1px;
+    background-color: #F2F2F2;
+    margin: 48px -10%;
+}
+
+.bottom--wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section-title {
+    color: #2B0000;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.img--wrapper {
+    display: flex; 
+    gap: 6px;
+    width: 100%;
+}
+
+.img--wrapper img {
+    width: 200px;
+}

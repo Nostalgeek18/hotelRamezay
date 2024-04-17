@@ -637,6 +637,10 @@ div a b {
         line-height: 19px;
         gap: 8px;
     }
+
+    .reservation--section .reservation--row {
+        border-bottom: none;
+    }
     
     .phone--section {
         display: flex;

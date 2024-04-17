@@ -155,8 +155,6 @@ function generateFooter() {
 
 	const footerContainer = $('#footer');
 
-	const contactLink = language == "en" ? "contact_e.html" : "contact.html";
-
 	const labelRoomsSuite = getLabel(language, 'rooms_and_suite');
 	const labelHistorique = getLabel(language, 'history');
 	const labelContact    = getLabel(language, 'contact_us');
@@ -188,7 +186,7 @@ function generateFooter() {
 		<p>&copy 2023 MANOIR RAMEZAY</p>
 	</div>
 	<div class="logo--section">
-		<img class="footerLogo" alt="manoirRamezayLogo" src="./images/photos2.0/ramezayLogo.jpg">
+		<img class="footerLogo" alt="manoirRamezayLogo" src="/images/photos2.0/ramezayLogo.jpg">
 		<div class="establishment">Establishment number 211094</div>
 	</div>
 
@@ -218,18 +216,22 @@ function getRoomsImgs(roomName) {
 	return roomsHtml;
 }
 
-function checkRoom(e){
-	const { id } = e.target || "standard"
+function checkRoom(e, isMobile = true){
 
-	switch (id) {
+
+	const DESKTOP = isMobile ? '' : 'Desktop'
+	const { id : room } = e.target || "standard"
+
+	switch (room) {
 		case ROOMS.standard:
-			location.href = 'roomStandard.html'
+			location.href = `./pages/rooms/${room}/room.html`
 			break;
 		default:
 			location.href = 'roomStandard.html'
 	}
 
 }
+
 
 function expandImages(roomName = ROOMS.standard) {
 
@@ -310,6 +312,7 @@ function triggerCarousel() {
 }
 
 $(document).ready(function() {
+
 	
 	generateMenu();
 
