@@ -22,6 +22,33 @@
     gap: 8px;
 }
 
+.grid-container .grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.grid-container .grid-item img:hover {
+    transition: transform 0.3s ease;
+}  
+
+.image-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity of the shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjust the shadow size and color */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+  }
+  
+  .grid-container .grid-item:hover > .image-shadow {
+    opacity: 1; /* Show the shadow on hover */
+  }
+
 .grid-container .grid-item-1 img {
     height: 100%;
 }

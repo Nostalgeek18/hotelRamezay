@@ -219,21 +219,23 @@ function getRoomsImgs(roomName) {
 function checkRoom(e, isMobile = true){
 
 
-	const DESKTOP = isMobile ? '' : 'Desktop'
+	const terminaison = isMobile ? '' : '_d'
 	const { id : room } = e.target || "standard"
+
+
 
 	switch (room) {
 		case ROOMS.standard:
-			location.href = `./pages/rooms/${room}/room.html`
+			location.href = `./pages/rooms/${room}/room${terminaison}.html`
 			break;
 		default:
-			location.href = 'roomStandard.html'
+			location.href = `./pages/rooms/${room}/room${terminaison}.html`
 	}
 
 }
 
 
-function expandImages(roomName = ROOMS.standard) {
+function expandImages(version, roomName = 'standard') {
 
 	const goBackIcon = `
 	<div onclick="toggleRoomWrapper()" class="arrowBack roomWrapper">
@@ -259,26 +261,42 @@ function expandImages(roomName = ROOMS.standard) {
 
 		const roomImgsHTML = getRoomsImgs(roomName);
 
-		//Check first if sideMenu doesnt exist in the page, hidden
-		if($(".wrapper--allImg").length == 0) {
-			const wrapperRooms = `
-			<div class="wrapper--allImg">
-			 ${goBackIcon}
-			 ${roomImgsHTML}
-			</div>
-		`
+        //Check first if sideMenu doesnt exist in the page, hidden
+        if($(".global--wrapper").length == 0) {
+
+			let wrapperRooms;
+			if(version === "mobile") {
+				wrapperRooms = `
+				<div class="global--wrapper ${version}">
+					<div class="wrapper--allImg">
+					${goBackIcon}
+					${roomImgsHTML}
+					</div>
+				</div>
+				`
+			}else {
+				wrapperRooms = `
+				<div class="global--wrapper ${version}">
+					${goBackIcon}
+					<div class="wrapper--allImg ${version}">
+						${roomImgsHTML}
+					</div>
+				</div>
+				`
 	
-		$('body').append(wrapperRooms);
+			}
 	
+			$('body').append(wrapperRooms);
 		}
 
+
 		$('#container').hide();
-		$('.wrapper--allImg').addClass('active');
+		$('.global--wrapper').addClass('active');
 
 }
 
 function toggleRoomWrapper() {
-	$('.wrapper--allImg').removeClass('active');
+	$('.global--wrapper').removeClass('active');
 	$('#container').show();
 }
 
