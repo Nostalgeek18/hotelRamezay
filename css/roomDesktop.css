@@ -144,3 +144,12 @@
 .img--wrapper img {
     width: 200px;
 }
+
+.wrapper--allImg .card--header {
+    background-position: center !important;
+    height: 533px;
+}
+
+.wrapper--allImg.desktop .card--header:first-child {
+    height: 387px;
+}

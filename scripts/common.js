@@ -13,6 +13,11 @@ const ROOMS = {
  */
 function appendMenuHTML() {
 
+	console.log('menu appended');
+
+	var loc = window.location.pathname;
+	var dir = loc.substring(0, loc.lastIndexOf('/'));
+	console.log('dir : ', dir);
 	//Retrieve page's name
 	const page 	  = window.location.pathname.split('/').pop();
 	const pattern = /(_e|-e)/;
@@ -49,10 +54,10 @@ function appendMenuHTML() {
 				<span class="cross"></span>
 			</div>
 			<div class="container--links">
-				<a href="${linkChambres}">${labelRoomsSuite}</a>
-				<a href="${linkHistorique}">${labelHistorique}</a>
-				<a href="${linkContact}">${labelContact}</a>
-				<a href="${linkFacebook}" target="_blank">${labelFacebook}</a>
+				<a href="/${linkChambres}">${labelRoomsSuite}</a>
+				<a href="/${linkHistorique}">${labelHistorique}</a>
+				<a href="/${linkContact}">${labelContact}</a>
+				<a href="/${linkFacebook}" target="_blank">${labelFacebook}</a>
 				${languageSelectionHTML}
 			</div>
 		</div>
@@ -301,6 +306,7 @@ function toggleRoomWrapper() {
 }
 
 function generateMenu(){
+	console.log('generate ')
 	const hamburgerMenu = $('.hamburger');
 	hamburgerMenu.click(() => {
 	  appendMenuHTML();

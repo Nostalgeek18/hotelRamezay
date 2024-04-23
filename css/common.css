@@ -50,7 +50,7 @@ a {
     cursor: pointer;
     position: absolute;
     top: 32px;
-    right: 1rem;
+    right: 4%;
     flex-direction: column;
     z-index: 1;
 }
@@ -63,6 +63,10 @@ a {
     margin: 10px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+
+.hamburger.dark .bar {
+    background-color: #000;
 }
 
 /* MANOIR LOGO */
@@ -281,7 +285,7 @@ a {
     cursor: pointer;
     position: absolute;
     top: 48px;
-    right: 48px;
+    right: 4%;
     width: 33px;
     height: 33px;
   }
