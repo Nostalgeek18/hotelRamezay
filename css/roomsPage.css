@@ -15,6 +15,7 @@
 }
 
 .card--header.carousel {
+    position: relative;
     background: none;
 }
 
