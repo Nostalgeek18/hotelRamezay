@@ -155,14 +155,12 @@ function getLanguage() {
 function goTo(page) {
 	const language = getLanguage();
 
-	console.log('language is : ', language);
-	return;
-
 	const extension = language == 'fr' ? '' : '_e'
 
 	switch (page) {
 		case 'history' : 
 			window.location.href = `historique${extension}.html`
+			break;
 		default : 
 			window.location.href = `/index${extension}.html`
 	}
@@ -194,9 +192,9 @@ function generateFooter() {
 
 	const footerInnerHTML = `
 	<div class="container--links">
-		<a href="${linkChambres}">${labelRoomsSuite}</a>
-		<a href="${linkHistorique}">${labelHistorique}</a>
-		<a href="${linkContact}">${labelContact}</a>
+		<a href="/${linkChambres}">${labelRoomsSuite}</a>
+		<a href="/${linkHistorique}">${labelHistorique}</a>
+		<a href="/${linkContact}">${labelContact}</a>
 		<a class="facebook" href="https://www.facebook.com/ManoirRamezay" target="_blank">FACEBOOK</a>
 	</div>
 	<div class="contact--infos">
