@@ -187,7 +187,6 @@ a {
     left:0;
     right: 0;
     display: flex;
-    width:374px;
     padding: 24px;
     align-items: center;
     justify-content: space-between;
