@@ -57,7 +57,7 @@ function appendMenuHTML() {
 				<a href="/${linkChambres}">${labelRoomsSuite}</a>
 				<a href="/${linkHistorique}">${labelHistorique}</a>
 				<a href="/${linkContact}">${labelContact}</a>
-				<a href="/${linkFacebook}" target="_blank">${labelFacebook}</a>
+				<a href="${linkFacebook}" target="_blank">${labelFacebook}</a>
 				${languageSelectionHTML}
 			</div>
 		</div>
