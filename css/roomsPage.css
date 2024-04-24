@@ -20,8 +20,7 @@
 
 .carousel ul {
     height: 100%;
-    width: 100vw;
-    position: relative;
+    width: 100%;
 }
 
 .card--header.standardRoom.room1 {
