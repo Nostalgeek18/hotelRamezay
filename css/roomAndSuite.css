@@ -1,5 +1,5 @@
 .card--header.roomSuite {
-    background: url("../images/photos2.0/roomSuiteHeader.png");
+    background: url("../images/photos2.0/roomSuiteHeader.png") center;
     font-weight: 300;
     font-size: 40px;
     line-height: 150%;
@@ -31,7 +31,7 @@
 
 @media screen and (min-width: 768px) {
     .card--header.roomSuite {
-        background: url(../images/photos2.0/roomSuiteHeaderDesktop.png);
+        background: url("../images/photos2.0/roomSuiteHeaderDesktop.png") center;
         padding: 250px;
         font-size: 56px;
     }

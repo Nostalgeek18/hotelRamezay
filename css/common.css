@@ -72,13 +72,14 @@ a {
 /* MANOIR LOGO */
 .logoManoirRamezay {
     position: absolute;
-    left: 24px;
+    left: 4%;
     top: 0px;
     width: 100px;
     height: 100px;
     background-image: url("../images/photos2.0/manoirRamezay.png");
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 10;
 }
 
 /***** HEADER CARDS ****/
