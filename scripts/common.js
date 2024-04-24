@@ -13,11 +13,9 @@ const ROOMS = {
  */
 function appendMenuHTML() {
 
-	console.log('menu appended');
 
 	var loc = window.location.pathname;
 	var dir = loc.substring(0, loc.lastIndexOf('/'));
-	console.log('dir : ', dir);
 	//Retrieve page's name
 	const page 	  = window.location.pathname.split('/').pop();
 	const pattern = /(_e|-e)/;
@@ -102,8 +100,7 @@ function getLabel(language, keyLabel) {
 function getLanguagesLink() {
 
 	//Get page's name from url - If result is blank then it means its the index page. 
-	const page 	= window.location.pathname.split('/').pop() === "" ? 'index.html' : window.location.pathname.split('/').pop() === "";
-
+	const page 	= window.location.pathname.split('/').pop() === "" ? 'index.html' : window.location.pathname.split('/').pop();
 
 	const pattern = /(_e|-e)/;
 	const language = pattern.test(page) ? "en" : "fr";
