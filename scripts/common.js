@@ -26,18 +26,14 @@ function appendMenuHTML() {
 
 	let languageSelectionHTML= getLanguagesLink();
 
-	let linkChambres, linkHistorique, linkContact;
-	if(language == "en") {
-		linkChambres   = "chambres_e.html";
-		linkHistorique = "historique_e.html";
-		linkContact    = "contact_e.html";
-		linkFacebook   = "https://www.facebook.com/ManoirRamezay";
-	}else {
-		linkChambres   = "chambres.html";
-		linkHistorique = "historique.html";
-		linkContact    = "contact.html";
-		linkFacebook   = "https://www.facebook.com/ManoirRamezay";
-	}
+
+	const extension = language == "fr" ? '' : '_e'
+
+	const linkChambres   = `chambres${extension}.html`;
+	const linkHistorique = `historique${extension}.html`;
+	const linkContact    = `contact${extension}.html`;
+	const linkFacebook   = `https://www.facebook.com/ManoirRamezay`;
+	
 
 	const labelRoomsSuite = getLabel(language, 'rooms_and_suite');
 	const labelHistorique = getLabel(language, 'history');
@@ -105,8 +101,9 @@ function getLabel(language, keyLabel) {
  */
 function getLanguagesLink() {
 
-	//Get page's name from url
-	const page 	  = window.location.pathname.split('/').pop();
+	//Get page's name from url - If result is blank then it means its the index page. 
+	const page 	= window.location.pathname.split('/').pop() === "" ? 'index.html' : window.location.pathname.split('/').pop() === "";
+
 
 	const pattern = /(_e|-e)/;
 	const language = pattern.test(page) ? "en" : "fr";
@@ -150,6 +147,28 @@ function getLanguage() {
 	return language;
 }
 
+/**
+ * 
+ * @param {string} page 
+ * @param {string} langage 
+ */
+function goTo(page) {
+	const language = getLanguage();
+
+	console.log('language is : ', language);
+	return;
+
+	const extension = language == 'fr' ? '' : '_e'
+
+	switch (page) {
+		case 'history' : 
+			window.location.href = `historique${extension}.html`
+		default : 
+			window.location.href = `/index${extension}.html`
+	}
+	
+}
+
 /*
 	Generates customized HTML for the footer
 */
@@ -166,16 +185,12 @@ function generateFooter() {
 	const labelPhone      = getLabel(language, 'phone');
 
 	
-	let linkChambres, linkHistorique, linkContact;
-	if(language == "en") {
-		linkChambres   = "chambres_e.html";
-		linkHistorique = "historique_e.html";
-		linkContact    = "contact_e.html"
-	}else {
-		linkChambres   = "chambres.html";
-		linkHistorique = "historique.html";
-		linkContact    = "contact.html"
-	}
+	const extension = language == "fr" ? '' : '_e'
+
+	const linkChambres   = `chambres${extension}.html`;
+	const linkHistorique = `historique${extension}.html`;
+	const linkContact    = `contact${extension}.html`;
+	const linkFacebook   = `https://www.facebook.com/ManoirRamezay`;
 
 	const footerInnerHTML = `
 	<div class="container--links">
