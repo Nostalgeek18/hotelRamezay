@@ -342,7 +342,7 @@ function triggerCarousel() {
 		dots.children[newIndex].dataset.active = true
 		delete activeSlide.dataset.active
 		delete activeDot.dataset.active
-	},2500)
+	},5000)
 }
 
 $(document).ready(function() {
