@@ -1,3 +1,7 @@
+.no--overflow {
+    overflow-x: hidden;
+}
+
 .card--header.standardRoom {
     background: url("../images/photos2.0/rooms/standardRoom/standard1.png");
     font-weight: 300;
@@ -9,6 +13,15 @@
     color: #FFFFFF;
     width: 400px;
     height: 300px;
+}
+
+.card--header.carousel {
+    background: none;
+}
+
+.carousel ul {
+    height: 100%;
+    width: 100%;
 }
 
 .card--header.standardRoom.room1 {
