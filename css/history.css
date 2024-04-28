@@ -32,6 +32,10 @@
     align-items: start;
 }
 
+.card--history img {
+    width: 100%;
+}
+
 .history--title {
     font-size: 32px;
     font-weight: 300;
@@ -40,6 +44,7 @@
 }
 
 .history--text--container {
+    max-width: 100%;
     font-size: 18px;
     line-height: 30px;
     display: flex;
