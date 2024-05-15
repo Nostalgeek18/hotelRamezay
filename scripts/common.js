@@ -14,22 +14,23 @@ const ROOMS = {
 function appendMenuHTML() {
 
 
-	var loc = window.location.pathname;
-	var dir = loc.substring(0, loc.lastIndexOf('/'));
 	//Retrieve page's name
-	const page 	  = window.location.pathname.split('/').pop();
-	const pattern = /(_e|-e)/;
+	const page 	  = window.location.pathname;
+	const pattern = /en/;
 
 	const language = pattern.test(page) ? "en" : "fr";
+	console.log('lang detected in menu : ', language)
+
 
 	let languageSelectionHTML= getLanguagesLink();
 
 
-	const extension = language == "fr" ? '' : '_e'
+	//will go back one folder from hierarchy (../)
+	const previous = language == "fr" ? '' : '..'
 
-	const linkChambres   = `chambres${extension}.html`;
-	const linkHistorique = `historique${extension}.html`;
-	const linkContact    = `contact${extension}.html`;
+	const linkChambres   = `chambres.html`;
+	const linkHistorique = `historique.html`;
+	const linkContact    = `contact.html`;
 	const linkFacebook   = `https://www.facebook.com/ManoirRamezay`;
 	
 
@@ -48,9 +49,9 @@ function appendMenuHTML() {
 				<span class="cross"></span>
 			</div>
 			<div class="container--links">
-				<a href="/${linkChambres}">${labelRoomsSuite}</a>
-				<a href="/${linkHistorique}">${labelHistorique}</a>
-				<a href="/${linkContact}">${labelContact}</a>
+				<a href="${previous}/${linkChambres}">${labelRoomsSuite}</a>
+				<a href="${previous}/${linkHistorique}">${labelHistorique}</a>
+				<a href="${previous}/${linkContact}">${labelContact}</a>
 				<a href="${linkFacebook}" target="_blank">${labelFacebook}</a>
 				${languageSelectionHTML}
 			</div>
@@ -93,33 +94,25 @@ function getLabel(language, keyLabel) {
 
 	return arrayLabels[language][keyLabel];
 }
-
 /*
  This function detects user's page and generate customized redirection links
  */
 function getLanguagesLink() {
 
 	//Get page's name from url - If result is blank then it means its the index page. 
-	const page 	= window.location.pathname.split('/').pop() === "" ? 'index.html' : window.location.pathname.split('/').pop();
+	let page 	= window.location.pathname === "" ? 'index.html' : window.location.pathname
 
-	const pattern = /(_e|-e)/;
-	const language = pattern.test(page) ? "en" : "fr";
+	const language = getLanguage();
+
+
 
 	let languageSelectionHTML="";
 	if(language == "en") {
-		
-		//Convert to French version of files
-		if (page.includes('_e')) {
-			pageFrench = page.replace('_e', '');
-		  } else if (page.includes('-e')) {
-			pageFrench = page.replace('-e', '');
-		  }
-		languageSelectionHTML = `<div><a href="#"><b>EN</b></a> | <a href="${pageFrench}">FR</a></div>`;
+		page = page.replace("/en/", "");
+		languageSelectionHTML = `<div><a href="#"><b>EN</b></a> | <a href="../${page}">FR</a></div>`;
 	}else {
-
 		//Convert to English version of files
-		const pageEnglish = page.replace(/\./, '_e.');
-		languageSelectionHTML = `<div><a href="${pageEnglish}">EN</a> | <a href="#"><b>FR</b></a></div>`;
+		languageSelectionHTML = `<div><a href="/en${page}">EN</a> | <a href="#"><b>FR</b></a></div>`;
 	}
 
 	return languageSelectionHTML;
@@ -137,8 +130,8 @@ function toggleMenu() {
 
 function getLanguage() {
 	//Get page's name from url
-	const page 	 		  = window.location.pathname.split('/').pop();
-	const pattern 		  = /(_e|-e)/;
+	const page 	 		  = window.location.pathname;
+	const pattern 		  = /en/;
 	const language 		  = pattern.test(page) ? "en" : "fr";
 
 	return language;
@@ -152,14 +145,14 @@ function getLanguage() {
 function goTo(page) {
 	const language = getLanguage();
 
-	const extension = language == 'fr' ? '' : '_e'
+	const previous = language == 'fr' ? '' : '..'
 
 	switch (page) {
 		case 'history' : 
-			window.location.href = `historique${extension}.html`
+			window.location.href = `${previous}/historique.html`
 			break;
 		default : 
-			window.location.href = `/index${extension}.html`
+			window.location.href = `${previous}/index.html`
 	}
 	
 }
@@ -180,11 +173,11 @@ function generateFooter() {
 	const labelPhone      = getLabel(language, 'phone');
 
 	
-	const extension = language == "fr" ? '' : '_e'
+	const previous = language == "fr" ? '' : '..'
 
-	const linkChambres   = `chambres${extension}.html`;
-	const linkHistorique = `historique${extension}.html`;
-	const linkContact    = `contact${extension}.html`;
+	const linkChambres   = `${previous}/chambres.html`;
+	const linkHistorique = `${previous}/historique.html`;
+	const linkContact    = `${previous}/contact.html`;
 	const linkFacebook   = `https://www.facebook.com/ManoirRamezay`;
 
 	const footerInnerHTML = `
@@ -192,7 +185,7 @@ function generateFooter() {
 		<a href="/${linkChambres}">${labelRoomsSuite}</a>
 		<a href="/${linkHistorique}">${labelHistorique}</a>
 		<a href="/${linkContact}">${labelContact}</a>
-		<a class="facebook" href="https://www.facebook.com/ManoirRamezay" target="_blank">FACEBOOK</a>
+		<a class="facebook" href="${linkFacebook}" target="_blank">FACEBOOK</a>
 	</div>
 	<div class="contact--infos">
 		<p>${labelPhone}: 450 460 3251</p>
@@ -213,7 +206,8 @@ function generateFooter() {
 function goBack(intent = 'back') {
 	const language = getLanguage();
 
-	const link = language == "fr" ? "/index.html" : "/index_e.html";
+	//Trivial but as long the architecture is flatten, should work
+	const link = "/index.html"
 
 	if(intent == "back") {
 		window.location.href = link;
@@ -317,6 +311,7 @@ function toggleRoomWrapper() {
 
 function generateMenu(){
 	console.log('generate ')
+	console.log('window location pathname : ', window.location.pathname);
 	const hamburgerMenu = $('.hamburger');
 	hamburgerMenu.click(() => {
 	  appendMenuHTML();
