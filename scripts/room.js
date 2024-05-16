@@ -14,7 +14,6 @@ function attachEventsImg() {
     const imgContainers = $('.grid-container .grid-item')
 
     imgContainers.click((container)=> {
-        console.log('click')
         expandImages('desktop')
     })
 }

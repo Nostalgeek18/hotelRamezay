@@ -8,6 +8,31 @@ const ROOMS = {
 
 }
 
+function getDepth() {
+	
+	const page = window.location.pathname === "" ? 'index.html' : window.location.pathname
+
+	const language = getLanguage();
+
+	let previous = '';
+	if(language == "fr") {
+		previous = ''
+	}else {
+		const depth = (page.match(/\//g) || []).length -1; //dont count initial backslash
+		for(let i =0; i< depth ; i++) {
+		
+			if(i == depth -1) {
+				previous += '..'
+			}else {
+				previous += '../'
+			}
+			
+		}
+	}
+
+	return previous
+}
+
 /**
  * build HTLM for the menu for the first time and displays it, or display it if already exists.
  */
@@ -16,6 +41,7 @@ function appendMenuHTML() {
 
 	//Retrieve page's name
 	const page 	  = window.location.pathname;
+	console.log('page is : ', page);
 	const pattern = /en/;
 
 	const language = pattern.test(page) ? "en" : "fr";
@@ -25,8 +51,8 @@ function appendMenuHTML() {
 	let languageSelectionHTML= getLanguagesLink();
 
 
-	//will go back one folder from hierarchy (../)
-	const previous = language == "fr" ? '' : '..'
+
+	const previous = getDepth();
 
 	const linkChambres   = `chambres.html`;
 	const linkHistorique = `historique.html`;
@@ -104,12 +130,13 @@ function getLanguagesLink() {
 
 	const language = getLanguage();
 
-
+	const previous = getDepth();
+	console.log('previous : ', previous)
 
 	let languageSelectionHTML="";
 	if(language == "en") {
 		page = page.replace("/en/", "");
-		languageSelectionHTML = `<div><a href="#"><b>EN</b></a> | <a href="../${page}">FR</a></div>`;
+		languageSelectionHTML = `<div><a href="#"><b>EN</b></a> | <a href="${previous}/${page}">FR</a></div>`;
 	}else {
 		//Convert to English version of files
 		languageSelectionHTML = `<div><a href="/en${page}">EN</a> | <a href="#"><b>FR</b></a></div>`;
@@ -235,10 +262,10 @@ function checkRoom(e, isMobile = true){
 
 	switch (room) {
 		case ROOMS.standard:
-			location.href = `./pages/rooms/${room}/room${terminaison}.html`
+			location.href = `./rooms/${room}/room${terminaison}.html`
 			break;
 		default:
-			location.href = `./pages/rooms/${room}/room${terminaison}.html`
+			location.href = `./rooms/${room}/room${terminaison}.html`
 	}
 
 }
