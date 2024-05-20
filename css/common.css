@@ -80,6 +80,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 10;
+    cursor: pointer;
 }
 
 /***** HEADER CARDS ****/
@@ -181,11 +182,8 @@ a {
 }
 
 .roomBannerClick {
-    position: absolute;
-    bottom: -80px;
+    position: relative;
     background: var(--gray-6, #F2F2F2);
-    left:0;
-    right: 0;
     display: flex;
     padding: 24px;
     align-items: center;
@@ -443,6 +441,10 @@ div a b {
     justify-content: center;
     width: 100%;
     flex-direction: column;
+}
+
+.wrapper-rooom {
+    width: 100%;
 }
 
 .wrapper--allRooms.desktop {
