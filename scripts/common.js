@@ -227,15 +227,24 @@ function generateFooter() {
 	footerContainer.html(footerInnerHTML);
 }
 
-function goBack(intent = 'back') {
+function goBack(page = 'index') {
 	const language = getLanguage();
+	const prev = language == "fr" ? "" : "/en"
 
 	//Trivial but as long the architecture is flatten, should work
-	const link = "/index.html"
+	let link = "/index.html"
 
-	if(intent == "back") {
-		window.location.href = link;
+	switch(page) {
+		case "index" :
+			break;
+		case "chambres":
+			link = `${prev}/chambres.html`
+			break;
+		default :
+			break;
 	}
+	window.location.href = link;
+	
 }
 
 function getRoomsImgs(roomName) {
