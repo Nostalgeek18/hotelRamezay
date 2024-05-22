@@ -402,7 +402,7 @@ function appendLinkLogo() {
 	$('.logoManoirRamezay').on("click", () => {
 		const language = getLanguage();
 
-		window.location.href = language === "fr" ? `index.html` : `/en/index.html`
+		window.location.href = language === "fr" ? `/index.html` : `/en/index.html`
 
 
 	})
