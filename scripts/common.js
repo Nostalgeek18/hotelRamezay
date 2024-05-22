@@ -260,10 +260,8 @@ function getRoomsImgs(roomName) {
 
 function checkRoom(element){
 
-
-	const terminaison = isDesktop() ? '_d' : ''
+	const terminaison = checkDeviceType() === "desktop" ? '_d' : ''
 	const { id : room } = element || "standard"
-
 
 	switch (room) {
 		case ROOMS.standard:
@@ -348,10 +346,35 @@ function generateMenu(){
 	});
 }
 
-//DETECT MOBILE DEVICE
-function isDesktop() {
-    return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
-  }
+function isMobileDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Check for mobile user agents
+    if (/android|avantgo|blackberry|bada|bb|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile|netfront|nokia|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up(\.browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(userAgent)) {
+        return true;
+    }
+
+    // Check for iPad
+    if (/iPad|Macintosh/i.test(userAgent) && 'ontouchend' in document) {
+        return true;
+    }
+
+    // Check for small screen sizes
+    if (window.matchMedia && window.matchMedia('(max-width: 767px)').matches) {
+        return true;
+    }
+
+    return false;
+}
+
+function checkDeviceType() {
+    if (isMobileDevice()) {
+        return "mobile";
+    } else {
+        return "desktop";
+    }
+}
+
 
 //************CAROUSEL SCRIPTS **************/
 function triggerCarousel() {
