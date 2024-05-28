@@ -198,7 +198,6 @@ function generateFooter() {
 
 	
 	const previous = language == "fr" ? '' : '/en'
-	console.log('previous : ', previous)
 
 	const linkChambres   = `${previous}/chambres.html`;
 	const linkHistorique = `${previous}/historique.html`;

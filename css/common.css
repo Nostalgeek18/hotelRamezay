@@ -132,8 +132,9 @@ a {
     align-items: flex-start;
     padding: 80px 24px;
     gap: 16px;
-    background: #FFFAF2;
+    background: #F6F6F9;
     color: #2B0000;
+    order: 1;
 }
 
 /****BEGINNING HOTEL ROOMS *****/
@@ -151,6 +152,7 @@ a {
     text-align: center;
     color: #FFFFFF;
     position: relative;
+    background: center center;
 }
 
 .room span {
@@ -158,27 +160,31 @@ a {
 }
 
 .standardGuest {
-    background: url("../images/photos2.0/rooms/standardRoom/standard1.png");
+    background-image: url("../images/photos2.0/rooms/standardRoom/standard1.png");
 }
 
 .deluxeGuest {
-    background: url("../images/photos2.0/rooms/deluxeRoom/deluxeRoom.png");
+    background-image: url("../images/photos2.0/rooms/deluxeRoom/deluxeRoom.png");
 }
 
 .suiteFireplace {
-    background: url("../images/photos2.0/rooms/suiteFireplace/suiteFireplace.png");
+    background-image: url("../images/photos2.0/rooms/suiteFireplace/suiteFireplace.png");
 }
 
 .queenSuite {
-    background: url("../images/photos2.0/rooms/queenSuite/queenSuite.png");
+    background-image: url("../images/photos2.0/rooms/queenSuite/queenSuite.png");
+}
+
+.familySuite {
+    background-image: url("../images/photos2.0/rooms/familySuite/familySuite.png");
 }
 
 .kingSuite {
-    background: url("../images/photos2.0/rooms/royalSuite/royalSuiteBanner.png");
+    background-image: url("../images/photos2.0/rooms/royalSuite/royalSuiteBanner.png");
 }
 
 .royalSuite {
-    background: url("../images/photos2.0/rooms/royalSuite/royalSuite.png");
+    background-image: url("../images/photos2.0/rooms/royalSuite/royalSuite.png");
 }
 
 .roomBannerClick {
@@ -200,9 +206,9 @@ a {
 .banner--mostBeautiful {
     position: absolute;
     width: 100%;
-    background-color: #2B0000;
+    background-color: #22312E;
     height: 40px;
-    bottom: 0;
+    top: 0;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -210,6 +216,7 @@ a {
     text-transform: uppercase;
     color: #FFF;
     display: flex;
+    gap: 10px;
     align-items: center;
     padding: 16px 24px;
 }
@@ -363,6 +370,7 @@ div a b {
 /***FOOTER ***/
 
 #footer {
+    order: 999;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -493,10 +501,12 @@ div a b {
 
 .breakfast--wrapper {
     display: flex;
+    flex-direction: column;
     background-color: #FFFAF2;
     padding: 40px;
     gap: 40px;
-    margin-bottom: 80px;
+    margin: 0 20px 80px 20px;
+
 }
 
 .breakfast--text {
@@ -514,8 +524,25 @@ div a b {
 .breakfastTitle {
     font-size: 32px;
     font-weight: 300;
+    line-height: 38px;
 }
 
+img.breakfast {
+    width: 250px;
+}
+
+/**mobile history indexWrapper */
+.historyIndexWrapper.mobile {
+    flex-direction: row;
+    gap: 0;
+    padding: 80px 32px;
+
+}
+
+
+.historyIndexWrapper.desktop {
+    display: none;
+}
 .historyIndexWrapper {
     display: flex;
     background-color: #392929;
@@ -531,7 +558,7 @@ div a b {
 }
 
 .historyIndex {
-    width: 600px;
+    width: 326px;
 }
 
 .indexHistoryTitle {
@@ -562,6 +589,7 @@ div a b {
     text-transform: capitalize;
     width: 200px;
     background-color: #392929;
+    margin: 0 auto;
 }
 
 .card.contact--form__wrapper.index {
@@ -650,6 +678,8 @@ div a b {
 /* Screen that are 768px or more (desktop) */
 @media screen and (min-width: 768px) {
 
+    
+
     /** CARD RESERVATION WRAPPER **/
 
     .cardActivities--wrapper {
@@ -665,6 +695,7 @@ div a b {
 
 
     .card--location {
+        order: unset;
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -851,7 +882,7 @@ div a b {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 32px;
+        gap: 16px;
         width: 100%;
         padding-left: 64px;
     }
@@ -889,13 +920,10 @@ div a b {
     }
 
     .bannerStar {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: #800000;
-        height: 28px;
-        width: 246px;
+        background-color: #22312E;
+        padding: 4px 8px;
         display: flex;
+        gap: 10px;
         justify-content: space-around;
         align-items: center;
         font-weight: 700;
@@ -950,6 +978,10 @@ div a b {
     .queenSuite {
         background: url("../images/photos2.0/rooms/queenSuite/queenSuiteDesktop.png");
     }
+
+    .familySuite {
+        background-image: url("../images/photos2.0/rooms/familySuite/familySuiteDesktop.png");
+    }
     
     .kingSuite {
         background: url("../images/photos2.0/rooms/royalSuite/royalSuiteBannerDesktop.png");
@@ -976,5 +1008,33 @@ div a b {
         color: #fff;
         margin-top: 30px;
     }
+
+    .historyIndexWrapper.desktop {
+        display: flex;
+    }
+
+    .historyIndexWrapper.mobile {
+        display: none;
+    }
+
+    .historyIndex {
+        width: 600px;
+    }
+
+    .breakfast--wrapper {
+        flex-direction: row;
+        padding: 40px;
+        gap: 40px;
+        margin: 0 0 80px 0;
+    }
+
+    .img.breakfast {
+        width: 100%;
+    }
+
+    .indexHistoryBtn {
+        margin: unset;
+    }
+
 
 }

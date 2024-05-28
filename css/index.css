@@ -46,7 +46,7 @@
 }
 
 
-.card--desc {
+.card.card--desc {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
