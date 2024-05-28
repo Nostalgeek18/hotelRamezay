@@ -329,8 +329,8 @@ a {
 .sideMenu .container--links {
     align-items: flex-end;
     font-weight: 300;
-    font-size: 24px;
-    line-height: 170%;
+    font-size: 32px;
+    line-height: 200%;
     /* identical to box height, or 41px */
 
     letter-spacing: 0.05em;
@@ -402,7 +402,17 @@ div a b {
     gap: 8px;
 }
 
+/* FOOTER */
 .establishment {
+    font-weight: 400;
+    font-size: 12px;
+    color: #E0E0E0;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.establishment.desktop {
     display: none;
 }
 
@@ -463,6 +473,100 @@ div a b {
     text-transform: uppercase;
 }
 
+.infos--section {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.creditCard {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.registration {
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.breakfast--wrapper {
+    display: flex;
+    background-color: #FFFAF2;
+    padding: 40px;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.breakfast--text {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 16px;
+    font-weight: 400;
+    color: #131313;
+    font-size: 16px;
+    line-height: 27px;
+    flex-direction: column;
+}
+
+.breakfastTitle {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.historyIndexWrapper {
+    display: flex;
+    background-color: #392929;
+    padding: 80px 200px;
+    gap: 80px;
+}
+
+.historyIndexTextWrapper {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.historyIndex {
+    width: 600px;
+}
+
+.indexHistoryTitle {
+    font-weight: 300;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.indexHistoryTitle > span {
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.indexHistoryText {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.indexHistoryBtn {
+    border: 2px solid #FFF;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #FFF;
+    text-transform: capitalize;
+    width: 200px;
+    background-color: #392929;
+}
+
+.card.contact--form__wrapper.index {
+    padding-bottom: 0;
+}
 
 /****** ALL ROOMS DISPLAYED ***********/
 
@@ -503,8 +607,7 @@ div a b {
 
 .footerLogo {
     order: 0;
-    width: 86x;
-    height: 61px;
+    height: 72px;
 }
 
 .btnCheckAvail.bottom {
@@ -857,15 +960,21 @@ div a b {
     }
 
     /** END - img romms */
+    
+    .carousel .word-per-line {
+        font-size: 64px;
+    }
 
-    /* FOOTER */
-    .establishment {
-        font-weight: 400;
+    /** FOOTER **/
+    .establishment.mobile {
+        display: none;
+    }
+
+    .establishment.desktop {
+        display: block;
         font-size: 14px;
         color: #fff;
         margin-top: 30px;
-        display: block;
     }
-    
 
 }

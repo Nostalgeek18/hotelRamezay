@@ -14,7 +14,7 @@
 		
 		foreach ($_REQUEST as $name => $value) 
 		{
-			//echo "Clé : $name; Valeur : $value<br />\n";
+			//echo "Clï¿½ : $name; Valeur : $value<br />\n";
 
 			$tmp = stristr($value,  $str_recherche  );
 			if ( $tmp != FALSE )
@@ -39,7 +39,7 @@ function longeur_texte_mini()
 
 if (   (verifie_http() == FALSE)  OR (longeur_texte_mini() == FALSE )   )
 {
-//print "Désolé, pour des raisons de sécurité, nous n’acceptons pas les URLs dans les messages. Veuillez réessayer. <br><br> ";
+//print "Dï¿½solï¿½, pour des raisons de sï¿½curitï¿½, nous nï¿½acceptons pas les URLs dans les messages. Veuillez rï¿½essayer. <br><br> ";
 // 	print "Desole, pour des raisons de securite, nous n'acceptons pas les URLs dans les messages. Veuillez reessayer. <br><br> "; 
 //	print "Sorry, for security reasons, we cannot accept URLs in messages. Please try again. "; 
 //	exit;
@@ -67,10 +67,10 @@ if (   (verifie_http() == FALSE)  OR (longeur_texte_mini() == FALSE )   )
 //
 $sujet = "WEB SITE - contact us form";
 
-$to = "info@manoirramezay.com";
+$to = "mouzai.n@yahoo.com";
 //$to = "mikemore69@hotmail.com";
 
-$from = "info@manoirramezay.com";
+$from = "choco18@live.ca";
 
 //$to_vide =  "<mailto:info@manoirramezay.com>info@manoirramezay.com";
 

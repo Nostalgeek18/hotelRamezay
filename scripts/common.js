@@ -169,14 +169,14 @@ function getLanguage() {
 function goTo(page) {
 	const language = getLanguage();
 
-	const previous = language == 'fr' ? '' : '..'
+	const extension = language == 'fr' ? '' : '/en'
 
 	switch (page) {
 		case 'history' : 
-			window.location.href = `${previous}/historique.html`
+			window.location.href = `${extension}/historique.html`
 			break;
 		default : 
-			window.location.href = `${previous}/index.html`
+			window.location.href = `${extension}/index.html`
 	}
 	
 }
@@ -197,29 +197,35 @@ function generateFooter() {
 	const labelPhone      = getLabel(language, 'phone');
 
 	
-	const previous = language == "fr" ? '' : '..'
+	const previous = language == "fr" ? '' : '/en'
+	console.log('previous : ', previous)
 
 	const linkChambres   = `${previous}/chambres.html`;
 	const linkHistorique = `${previous}/historique.html`;
 	const linkContact    = `${previous}/contact.html`;
 	const linkFacebook   = `https://www.facebook.com/ManoirRamezay`;
 
+	console.log('linkHistorique : ', linkHistorique);
+
+	const currentYear = new Date().getFullYear();
+
 	const footerInnerHTML = `
 	<div class="container--links">
-		<a href="/${linkChambres}">${labelRoomsSuite}</a>
-		<a href="/${linkHistorique}">${labelHistorique}</a>
-		<a href="/${linkContact}">${labelContact}</a>
+		<a href="${linkChambres}">${labelRoomsSuite}</a>
+		<a href="${linkHistorique}">${labelHistorique}</a>
+		<a href="${linkContact}">${labelContact}</a>
 		<a class="facebook" href="${linkFacebook}" target="_blank">FACEBOOK</a>
 	</div>
 	<div class="contact--infos">
 		<p>${labelPhone}: 450 460 3251</p>
 		<p>TOLL FREE: 1 866 460 3251</p>
 		<p class="adresse">492, rue Claude de Ramezay (Route 227) Marieville (Québec) J3M 1J6</p>
-		<p>&copy 2023 MANOIR RAMEZAY</p>
+		<div class="establishment mobile">REGISTRATION NUMBER 211094</div>
+		<p>&copy ${currentYear} MANOIR RAMEZAY</p>
 	</div>
 	<div class="logo--section">
-		<img class="footerLogo" alt="manoirRamezayLogo" src="/images/photos2.0/ramezayLogo.jpg">
-		<div class="establishment">Establishment number 211094</div>
+		<img class="footerLogo" alt="manoirRamezayLogo" src="/images/photos2.0/ramezayLogo.png">
+		<div class="establishment desktop">REGISTRATION NUMBER 211094</div>
 	</div>
 
 `
@@ -373,6 +379,27 @@ function checkDeviceType() {
     } else {
         return "desktop";
     }
+}
+
+function sendEmail(e){
+	e.preventDefault();
+	console.log('sending email');
+	const formData = new FormData(document.forms.form1);
+            const formObj = {};
+            formData.forEach((value, key) => {
+                formObj[key] = value;
+            });
+
+            fetch('/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formObj)
+            })
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
 }
 
 

@@ -18,9 +18,9 @@
 <script type="text/javascript" src="scripts/AnythingSlider/js/jquery.anythingslider.min.js"></script>
 <script type="text/javascript" src="scripts/functions-interieur.js"> </script>
 <script type="text/javascript" src="scripts/common.js"></script>
-<link rel="stylesheet" href="css/common.css" />
-<link rel="stylesheet" href="css/index.css" />
-<link rel="stylesheet" href="css/contactUs.css" />
+<link rel="stylesheet" href="./css/common.css" />
+<link rel="stylesheet" href="./css/index.css" />
+<link rel="stylesheet" href="./css/contactUs.css" />
 
 </head>
 <body>
@@ -38,8 +38,8 @@
 			<p class="subtext">We're always there to help</p>
 		</div>
 		<div class="card contact--form__wrapper">
-			<div class="form--snippet">Send us an email</div>
-			<form name="form1" class="form--email" method="post" action="/formulaires/envoi.php">
+			<div class="form--snippet">CONTACT US</div>
+			<form name="form1" class="form--email" method="post" onSubmit="sendEmail(event)">
 				<input type="hidden" name="langue" id="langue" value="fr">
 	
 				<label>
@@ -67,7 +67,8 @@
 			</form>
 			<div class="facebook desktop">
 				<div class="delimiter"></div>
-				<a href="https://www.facebook.com/ManoirRamezay" target="_blank">OUR FACEBOOK</a>
+				<img src="./images/photos2.0/facebookLogo.png" alt="facebook_logo" />
+				<a class="facebookLink" href="https://www.facebook.com/ManoirRamezay" target="_blank">We're on Facebook!</a>
 			</div>
 		</div>
 		<div class="card card--reservation">
