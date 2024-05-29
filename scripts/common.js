@@ -2,9 +2,11 @@
 const ROOMS = {
 	standard : 'standard',
 	deluxe : 'deluxe',
-	suiteFireplace : 'suiteFireplace',
 	queenSuite : 'queenSuite',
-	royalSuite : 'royalSuite'
+	suiteFireplace : 'suiteFireplace',
+	familySuite : 'familySuite',
+	royalSuite : 'royalSuite',
+	royalSuiteKitchen : 'royalSuiteKitchen'
 
 }
 
@@ -265,16 +267,20 @@ function getRoomsImgs(roomName) {
 
 function checkRoom(element){
 
+	console.log('check device type : ', checkDeviceType())
 	const terminaison = checkDeviceType() === "desktop" ? '_d' : ''
 	const { id : room } = element || "standard"
 
-	switch (room) {
-		case ROOMS.standard:
-			location.href = `./rooms/${room}/room${terminaison}.html`
-			break;
-		default:
-			location.href = `./rooms/${room}/room${terminaison}.html`
-	}
+
+	location.href = `./rooms/${room}/room${terminaison}.html`
+
+	// switch (room) {
+	// 	case ROOMS.standard:
+	// 		location.href = `./rooms/${room}/room${terminaison}.html`
+	// 		break;
+	// 	default:
+	// 		location.href = `./rooms/${room}/room${terminaison}.html`
+	// }
 
 }
 

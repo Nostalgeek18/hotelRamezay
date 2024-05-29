@@ -92,6 +92,26 @@
 				</li>
 			</ul>
 		</div>
+		<div class="historyIndexWrapper desktop"> <!--History index page-->
+			<div class="historyIndexTextWrapper">
+				<div class="indexHistoryTitle">It all started in <span>1708</span></div>
+				<div class="indexHistoryText">
+					Settlement of the territory began around 1724 under the stewardship of Ramezay’s heirs. By 1797, the Seigneury counted 400 inhabitants.
+				</div>
+				<button class="indexHistoryBtn" onClick="goTo('history')">Our History</button>
+			</div>
+			<img class="historyIndex" src="./images/photos2.0/historyIndex.png" alt="history" />
+		</div>
+		<div class="historyIndexWrapper mobile">
+			<div class="historyIndexTextWrapper">
+				<div class="indexHistoryTitle">It all started in <span>1708</span></div>
+				<img class="historyIndex" src="./images/photos2.0/historyIndex.png" alt="history" />
+				<div class="indexHistoryText">
+					Settlement of the territory began around 1724 under the stewardship of Ramezay’s heirs. By 1797, the Seigneury counted 400 inhabitants.
+				</div>
+				<button class="indexHistoryBtn" onClick="goTo('history')">Our History</button>
+			</div>
+		</div> <!-- End History section-->
 		<div class="card card--reservation">
 			<div class="reservation">MAKE A RESERVATION</div>
 			<div class="reservationOptions--container">
@@ -139,27 +159,7 @@
 				<button onClick="goTo('history')" class="btn btnViewHistory">View history</button>
 			</div>
 		</div> -->
-		<div class="historyIndexWrapper desktop">
-			<div class="historyIndexTextWrapper">
-				<div class="indexHistoryTitle">It all started in <span>1708</span></div>
-				<div class="indexHistoryText">
-					Settlement of the territory began around 1724 under the stewardship of Ramezay’s heirs. By 1797, the Seigneury counted 400 inhabitants.
-				</div>
-				<button class="indexHistoryBtn" onClick="goTo('history')">Our History</button>
-			</div>
-			<img class="historyIndex" src="./images/photos2.0/historyIndex.png" alt="history" />
-		</div>
-		<div class="historyIndexWrapper mobile">
-			<div class="historyIndexTextWrapper">
-				<div class="indexHistoryTitle">It all started in <span>1708</span></div>
-				<img class="historyIndex" src="./images/photos2.0/historyIndex.png" alt="history" />
-				<div class="indexHistoryText">
-					Settlement of the territory began around 1724 under the stewardship of Ramezay’s heirs. By 1797, the Seigneury counted 400 inhabitants.
-				</div>
-				<button class="indexHistoryBtn" onClick="goTo('history')">Our History</button>
-			</div>
-		</div>
-			<div class="discover"><div class="discover--text">DISCOVER <span>OUR ROOMS</span></div> <button class="btn btnCheckAvail top">Check Availibity</button></div>
+			<div class="discover"><div class="discover--text">DISCOVER <span>OUR ROOMS</span></div></div>
 			<div class="wrapper--allRooms mobile">
 				<div class="wrapper-rooom" id="standard" onClick="checkRoom(this)">
 					<div class="room standardGuest"></div>
@@ -222,7 +222,7 @@
 			<div class="roomCardDescription">
 				<div class="roomTitle">STANDARD GUEST ROOM</div>
 				<div class="roomDescription">5 standard guestrooms with one double bed.</div>
-				<button class="roomView" id="standard" onClick="checkRoom(this)">VIEW</button>
+				<button class="roomView" id="standard" onClick="checkRoom(this)">View details</button>
 			</div>
 		</div>
 		<div class="room--wrapper">
@@ -230,7 +230,7 @@
 			<div class="roomCardDescription">
 				<div class="roomTitle">DELUXE GUEST ROOM</div>
 				<div class="roomDescription">5 standard guestrooms with one double bed.</div>
-				<button class="roomView">VIEW</button>
+				<button class="roomView" id="deluxe" onClick="checkRoom(this)">View details</button>
 			</div>
 		</div>
 		<div class="room--wrapper">
@@ -238,32 +238,41 @@
 			<div class="roomCardDescription">
 				<div class="roomTitle">QUEEN SUITE</div>
 				<div class="roomDescription">5 standard guestrooms with one double bed.</div>
-				<button class="roomView">VIEW</button>
+				<button class="roomView" id="queenSuite" onClick="checkRoom(this)">View details</button>
 			</div>
 		</div>
 		<div class="room--wrapper">
 			<div class="room suiteFireplace"></div>
 			<div class="roomCardDescription">
-				<div class="roomTitle">SUITE FIREPLACE ROOM</div>
+				<div class="roomTitle">SUITE WITH FIREPLACE</div>
 				<div class="roomDescription">5 standard guestrooms with one double bed.</div>
-				<button class="roomView">VIEW</button>
+				<button class="roomView" id="suiteFireplace" onClick="checkRoom(this)">View details</button>
 			</div>
 		</div>
 		<div class="room--wrapper">
-			<div class="room royalSuite"></div>
+			<div class="room familySuite"></div>
 			<div class="roomCardDescription">
 				<div class="roomTitle">FAMILY SUITE WITH KITCHEN</div>
 				<div class="roomDescription">5 standard guestrooms with one double bed.</div>
-				<button class="roomView">VIEW</button>
+				<button class="roomView" id="familySuite" onClick="checkRoom(this)">View details</button>
 			</div>
 		</div>
 		<div class="room--wrapper">
 			<div class="room kingSuite"></div>
 			<div class="roomCardDescription">
 				<div class="bannerStar"><img src="./images/icons/star.png"/>One of the most beautiful in Quebec</div>
-				<div class="roomTitle">royal SUITE</div>
+				<div class="roomTitle">ROYAL SUITE</div>
 				<div class="roomDescription">5 standard guestrooms with one double bed.</div>
-				<button class="roomView">VIEW</button>
+				<button class="roomView" id="royalSuite" onClick="checkRoom(this)">View details</button>
+			</div>
+		</div>
+		<div class="room--wrapper">
+			<div class="room royalSuite"></div>
+			<div class="roomCardDescription">
+				<div class="bannerStar"><img src="./images/icons/star.png"/>One of the most beautiful in Quebec</div>
+				<div class="roomTitle">ROYAL SUITE WITH KITCHEN</div>
+				<div class="roomDescription">5 standard guestrooms with one double bed.</div>
+				<button class="roomView" id="royalSuiteKitchen" onClick="checkRoom(this)">View details</button>
 			</div>
 		</div>
 	</div> <!-- end All rooms Desktop -->
@@ -283,7 +292,7 @@
 			</div>
 			<img src="./images/photos2.0/mapRamezay.png" alt="mapRamezay"/>
 		</div>
-		<div class="card contact--form__wrapper index">
+				<div class="card contact--form__wrapper">
 			<div class="form--snippet">CONTACT US</div>
 			<form name="form1" class="form--email" method="post" onSubmit="sendEmail(event)">
 				<input type="hidden" name="langue" id="langue" value="fr">
@@ -311,9 +320,14 @@
 				</label>
 				</p>
 			</form>
-			<div class="facebook desktop">
+			<div class="facebook--contact nodesktop">
 				<div class="delimiter"></div>
+				<div class="facebook--infos">
+					<img src="./images/photos2.0/facebookLogo.png" alt="facebook_logo" />
+					<a class="facebookLink" href="https://www.facebook.com/ManoirRamezay" target="_blank">We're on Facebook!</a>
+				</div>
 			</div>
+			<div class="delimiter--topFooter"></div>
 		</div>
 		<div id="footer">
 			<!-- Generated by JavaScript in common.js file -->
