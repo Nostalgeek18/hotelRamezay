@@ -125,6 +125,11 @@
     gap: 16px;
 }
 
+.form--email.bottom {
+    border-bottom: 1px solid grey;
+    padding-bottom: 24px;
+}
+
 
 
 /* Screen that are 768px or more */

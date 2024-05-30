@@ -1,7 +1,7 @@
 .page--wrapper {
     width: 1024px;
     margin: 0 auto;
-    padding: 5% 0;
+    padding: 5% 0 2%;
 }
 
 .room-goBack {
@@ -105,7 +105,9 @@
 
 .bookingInfo--wrapper .card--reservation.desktop {
     max-width: 390px;
-    max-height: 480px;
+    max-height: 490px;
+    gap: 24px;
+    padding: 24px;
 }
 
 .bookingInfo--wrapper .reservation--section {

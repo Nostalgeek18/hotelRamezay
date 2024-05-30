@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="./css/common.css" />
 <link rel="stylesheet" href="./css/index.css" />
 <link rel="stylesheet" href="./css/contactUs.css" />
+<script type="text/javascript" src="./scripts/booking.js" defer></script>
 
 </head>
 <body>
@@ -33,13 +34,12 @@
 		<div class="card card--header contactUs">
 			<div class="logoManoirRamezay"></div>
 			<p class="word-per-line">
-				CONTACTEZ-NOUS
+				WE'RE HERE ALWAYS HERE TO HELP
 			</p>
-			<p class="subtext">We're always there to help</p>
 		</div>
 		<div class="card contact--form__wrapper">
 			<div class="form--snippet">CONTACT US</div>
-			<form name="form1" class="form--email" method="post" onSubmit="sendEmail(event)">
+			<form name="form1" class="form--email bottom" method="post" onSubmit="sendEmail(event)">
 				<input type="hidden" name="langue" id="langue" value="fr">
 	
 				<label>
@@ -74,31 +74,36 @@
 			</div>
 		</div>
 		<div class="card card--reservation">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.min.js"></script>
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.min.css" rel="stylesheet">
 			<div class="reservation">BOOK YOUR STAY NOW</div>
-			<div class="reservationOptions--container">
+			<form target="_blank" action="https://portal.freetobook.com/reservations" class="reservationOptions--container">
+				<input type="hidden" name="w_id" value="38767">
+				<input type="hidden" name="w_tkn" value="z8KkiVFuHdD7JgQowDVjWQtfCxL4WVm4pSgwftAaDUA9dpnUnNYnpZBCLQQ2W">
+				<input type="hidden" id="check-in-date-to-send" name="check_in_date">
+				<input type="hidden" id="check-out-date-to-send" name="check_out_date">
+				<input id="stay-length" type="hidden" name="stay_length" value="1">
 				<div class="reservationContainers">
 					<div class="reservation--section">
 						<div>Check-in:</div>
-						<div class="reservation--row">
-							<p>20 Mar 2023</p>
-							<img alt="calendarIcon" src="./images/icons/calendarIcon.png"/>
-						</div>
+						<div class="reservation--row" id="check-in-date" data-toggle="datepicker"></div>
 					</div>
 					<div class="reservation--section">
 						<div>Check-out:</div>
-						<div class="reservation--row">
-							<p>26 Mar 2023</p>
-							<img alt="calendarIcon" src="./images/icons/calendarIcon.png"/>
-						</div>
+						<div class="reservation--row" id="check-out-date" data-toggle="datepicker"></div>
 					</div>
-				</div><!--calendarContainer-->
-				<button class="btn btnCheckAvail">Check Availibity</button>
-			</div>
+				</div>
+				<button class="btn btnCheckAvail" type="submit">Check Availability</button>
+			</form>
 			<div class="phone--section">
-				<div><b>TELEPHONE :</b> 450 460 3251</div>
-				<div><b>TOLL FREE :</b> 1 866 460 3251</div>
+				<div>TELEPHONE : 450 460 3251</div>
+				<div>TOLL FREE : 1 866 460 3251</div>
 			</div>
-		</div><!-- card reservation-->
+			<div class="infos--section">
+				<div class="creditCard">*All reservations require a credit card number.</div>
+				<div class="registration">REGISTRATION NUMBER : 211094</div>
+			</div>
+		</div> <!-- Card reservation -->
 	
 		<div class="card card--location">
 			<div class="text--wrapper">

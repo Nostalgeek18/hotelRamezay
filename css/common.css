@@ -197,10 +197,11 @@ a {
     gap: 10px;
     color: var(--brown-80, #2B0000);
     font-family: Helvetica;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .banner--mostBeautiful {
@@ -213,7 +214,6 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: 170%; /* 20.4px */
-    text-transform: uppercase;
     color: #FFF;
     display: flex;
     gap: 10px;
@@ -255,6 +255,7 @@ a {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: pointer;
 }
 
 .reservation--row img {
@@ -345,13 +346,34 @@ a {
     color: #BDBDBD;
 }
 
+.sideMenu .menu--container--links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #BDBDBD;
+}
+
+.sideMenu .menu--container--links a:hover {
+    color: #ECECEC;
+}
+
+form.reservationOptions--container {
+    width: 100%;
+}
+
+form .btnCheckAvail {
+    margin: 40px auto 0;
+}
+
 /***********END SIDE MENU MOBILE *******************/
 
 .btnCheckAvail {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px 24px;
     background: #B25C11;
     font-weight: 700;
@@ -360,6 +382,12 @@ a {
     text-align: center;
     color: #FFF;
     margin-top: 40px;
+    width: 250px;
+    height: 72px;
+}
+
+.btnCheckAvail:hover {
+    background-color: #A0530F;
 }
 
 
@@ -466,9 +494,15 @@ div a b {
     padding: 40px 8px 0;
 }
 
-.wrapper-rooom {
-    width: 100%; 
+.wrapper-room {
+    width: 100%;
+    cursor: pointer;
 }
+
+.wrapper-room.mobile .room:hover {
+
+}
+
 
 .wrapper--allRooms.desktop {
     display: none;
@@ -677,6 +711,17 @@ img.breakfast {
     display: none;
 }
 
+/** widget reservation **/
+#check-in-date::after, #check-out-date::after {
+    content: "";
+    position: relative;
+    width:20px;
+    opacity: 0.5;
+    background-image: url('../images/icons/calendarIcon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -8px;
+}
 
 
 /* Screen that are 768px or more (desktop) */
@@ -693,7 +738,6 @@ img.breakfast {
 
     }
     
-
     /** CARD RESERVATION WRAPPER **/
 
     .cardActivities--wrapper {
@@ -940,6 +984,11 @@ img.breakfast {
         cursor: pointer;
     }
 
+    .roomView:hover {
+        color: rgba(0, 0, 0, 0.9); /* Text color with opacity */
+        background-color: #F2F2F2;
+    }
+
     .bannerStar {
         background-color: #22312E;
         padding: 4px 8px;
@@ -985,19 +1034,19 @@ img.breakfast {
     /** New sets of images for rooms **/
     
      .standardGuest {
-        background: url("../images/photos2.0/rooms/standardRoom/standardRoomDesktop.png");
+        background-image: url("../images/photos2.0/rooms/standardRoom/standardRoomDesktop.png");
     }
     
     .deluxeGuest {
-        background: url("../images/photos2.0/rooms/deluxeRoom/deluxeRoomDesktop.png");
+        background-image: url("../images/photos2.0/rooms/deluxeRoom/deluxeRoomDesktop.png");
     }
     
     .suiteFireplace {
-        background: url("../images/photos2.0/rooms/suiteFireplace/suiteFireplaceDesktop.png");
+        background-image: url("../images/photos2.0/rooms/suiteFireplace/suiteFireplaceDesktop.png");
     }
     
     .queenSuite {
-        background: url("../images/photos2.0/rooms/queenSuite/queenSuiteDesktop.png");
+        background-image: url("../images/photos2.0/rooms/queenSuite/queenSuiteDesktop.png");
     }
 
     .familySuite {
@@ -1005,11 +1054,11 @@ img.breakfast {
     }
     
     .kingSuite {
-        background: url("../images/photos2.0/rooms/royalSuite/royalSuiteBannerDesktop.png");
+        background-image: url("../images/photos2.0/rooms/royalSuite/royalSuiteBannerDesktop.png");
     }
     
     .royalSuite {
-        background: url("../images/photos2.0/rooms/royalSuite/royalSuiteDesktop.png");
+        background-image: url("../images/photos2.0/rooms/royalSuite/royalSuiteDesktop.png");
     }
 
     /** END - img romms */
@@ -1057,5 +1106,8 @@ img.breakfast {
         margin: unset;
     }
 
+    form.reservationOptions--container {
+        width: unset;
+    }
 
 }

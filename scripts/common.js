@@ -1,13 +1,12 @@
 
 const ROOMS = {
-	standard : 'standard',
-	deluxe : 'deluxe',
-	queenSuite : 'queenSuite',
-	suiteFireplace : 'suiteFireplace',
-	familySuite : 'familySuite',
-	royalSuite : 'royalSuite',
+	standard          : 'standard',
+	deluxe            : 'deluxe',
+	queenSuite        : 'queenSuite',
+	suiteFireplace    : 'suiteFireplace',
+	familySuite       : 'familySuite',
+	royalSuite        : 'royalSuite',
 	royalSuiteKitchen : 'royalSuiteKitchen'
-
 }
 
 function getDepth() {
@@ -74,7 +73,7 @@ function appendMenuHTML() {
 				<span class="cross"></span>
 				<span class="cross"></span>
 			</div>
-			<div class="container--links">
+			<div class="menu--container--links">
 				<a href="${previous}/${linkChambres}">${labelRoomsSuite}</a>
 				<a href="${previous}/${linkHistorique}">${labelHistorique}</a>
 				<a href="${previous}/${linkContact}">${labelContact}</a>

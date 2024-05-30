@@ -15,6 +15,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="../../../scripts/common.js"></script>
 <script type="text/javascript" src="../../../scripts/room.js"></script>
+<script type="text/javascript" src="../../../scripts/booking.js" defer></script>
 <link rel="stylesheet" href="../../../css/common.css" />
 <link rel="stylesheet" href="../../../css/index.css" />
 <link rel="stylesheet" href="../../../css/roomsPage.css" />
@@ -30,32 +31,12 @@
 			<span class="bar"></span>
 		</div>
 		<div class="page--wrapper">
-			<!-- <div onclick="goBack()" class="arrowBack">
-				<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-					<g filter="url(#filter0_d_111_756)">
-					<rect x="10" y="6" width="44" height="44" rx="22" fill="white"/>
-					<path d="M33.8332 20.6667L27.7962 26.7036C27.0803 27.4196 27.0803 28.5804 27.7962 29.2964L33.8332 35.3333" stroke="#2B0000" stroke-width="2.5" stroke-linecap="round"/>
-					</g>
-					<defs>
-					<filter id="filter0_d_111_756" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-					<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-					<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-					<feOffset dy="4"/>
-					<feGaussianBlur stdDeviation="5"/>
-					<feComposite in2="hardAlpha" operator="out"/>
-					<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-					<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_111_756"/>
-					<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_111_756" result="shape"/>
-					</filter>
-					</defs>
-					</svg>
-			</div> -->
 			<div onclick="goBack()" class="room-goBack">
 				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<rect width="40" height="40" rx="20" fill="white"/>
 					<path d="M21.667 13.3333L16.1788 18.8214C15.528 19.4723 15.528 20.5276 16.1788 21.1784L21.667 26.6666" stroke="#2B0000" stroke-width="2.27273" stroke-linecap="round"/>
 				</svg>
-				<span>All rooms and suites (FRENCH VERSION)</span>
+				<span>All rooms and suites</span>
 			</div>
 			<div class="grid-container">
 				<div class="grid-item grid-item-1">
@@ -83,31 +64,36 @@
 			</div>
 			<main class="bookingInfo--wrapper">
 				<div class="card card--reservation desktop">
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.min.js"></script>
+					<link href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.min.css" rel="stylesheet">
 					<div class="reservation">BOOK YOUR STAY NOW</div>
-					<div class="reservationOptions--container">
+					<form target="_blank" action="https://portal.freetobook.com/reservations" class="reservationOptions--container">
+						<input type="hidden" name="w_id" value="38767">
+						<input type="hidden" name="w_tkn" value="z8KkiVFuHdD7JgQowDVjWQtfCxL4WVm4pSgwftAaDUA9dpnUnNYnpZBCLQQ2W">
+						<input type="hidden" id="check-in-date-to-send" name="check_in_date">
+						<input type="hidden" id="check-out-date-to-send" name="check_out_date">
+						<input id="stay-length" type="hidden" name="stay_length" value="1">
 						<div class="reservationContainers">
 							<div class="reservation--section">
 								<div>Check-in:</div>
-								<div class="reservation--row">
-									<p>20 Mar 2023</p>
-									<img alt="calendarIcon" src="/images/icons/calendarIcon.png"/>
-								</div>
+								<div class="reservation--row" id="check-in-date" data-toggle="datepicker"></div>
 							</div>
 							<div class="reservation--section">
 								<div>Check-out:</div>
-								<div class="reservation--row">
-									<p>26 Mar 2023</p>
-									<img alt="calendarIcon" src="/images/icons/calendarIcon.png"/>
-								</div>
+								<div class="reservation--row" id="check-out-date" data-toggle="datepicker"></div>
 							</div>
-						</div><!--calendarContainer-->
-						<button class="btn btnCheckAvail">Check Availibity</button>
-					</div>
+						</div>
+						<button class="btn btnCheckAvail" type="submit">Check Availability</button>
+					</form>
 					<div class="phone--section">
 						<div>TELEPHONE : 450 460 3251</div>
 						<div>TOLL FREE : 1 866 460 3251</div>
 					</div>
-				</div><!-- card reservation-->
+					<div class="infos--section">
+						<div class="creditCard">*All reservations require a credit card number.</div>
+						<div class="registration">REGISTRATION NUMBER : 211094</div>
+					</div>
+				</div> <!-- Card reservation -->
 				<div class="card card--roomDescription">
 					<h1>STANDARD GUEST ROOM</h1>
 					<p>5 standard guestrooms with one double bed.</p>
@@ -115,13 +101,21 @@
 					<div class="whatOffers">
 						<p>WHAT OFFERS</p>
 						<ul class="policies--list">
-							<li>Private bathroom</li>
-							<li>Television with cable</li>
-							<li>Television with cable</li>
-							<li>A/C</li>
-							<li>Free wireless high speed Internet</li>
-							<li>Access to the rooftop terrace living room and 4 seasons spa</li>
+							<li>Heating (winter)</li>
+							<li>Air conditioning (summer)</li>
+							<li>Private bathroom (shower / tub)</li>
 							<li>Hair dryer</li>
+							<li>Free toiletries</li>
+							<li>Free Wi-Fi</li>
+							<li>Cable TV</li>
+							<li>Refrigerator</li>
+							<li>Free self-parking</li>
+							<li>Access to rooftop terrace living room and 4 seasons spa</li>
+							<li>Free coffee and tea (in the living room)</li>
+							<li>Microwave (in the living room)</li>
+							<li>Newspaper (in the living room)</li>
+							<li>Iron and iron board (on demand)</li>
+							<li>Breakfast is included for reservations booked after 2024 May 1st.</li>
 						</ul>
 					</div>
 		
@@ -134,22 +128,18 @@
 					<li>Quebec hospitality tax of 3.5% per day per room not included.</li>
 					<li>All rates are in Canadian dollars and do not include federal and provincial taxes.</li>
 					<li>All rates are subject to change without prior notice.</li>
-					<li>All prices are based double occupancy, $20.00 plus tax for each additonal person based on availability.</li>
+					<li>All prices are based double occupancy, $30.00 plus tax for each additonal person based on availability.</li>
 					<li>All reservations require a credit card number.</li>
+					<li>No smoking. No candle. No pets ( service dog is accepted, will charge $ 30.00 - $ 50.00 for extra cleaning).</li>
 				</ul>
 		</div><!-- page wrapper -->
 		<div class="delimiter"></div>
-		<div class="bottom--wrapper">
-			<div class="section-title">ALL ROOMS AND SUITES</div>
-			<div class="img--wrapper">
-				<img src="../../../images/photos2.0/rooms/deluxeRoom/deluxeRoom.png" />
-				<img src="../../../images/photos2.0/rooms/deluxeRoom/deluxeRoom.png" />
-				<img src="../../../images/photos2.0/rooms/deluxeRoom/deluxeRoom.png" />
-				<img src="../../../images/photos2.0/rooms/deluxeRoom/deluxeRoom.png" />
-				<img src="../../../images/photos2.0/rooms/deluxeRoom/deluxeRoom.png" />
-			</div>
 		</div>
-		</div>
+
+		<div class="section-title">TOUTE LES CHAMBRES ET SUITES</div>
+		<div class="wrapper--allRooms--standAlone preview">
+			<!-- HTML will be generated from room.js -->
+		</div> <!--wrapper all Rooms-->
 	
 		<div id="footer">
 		</div>
