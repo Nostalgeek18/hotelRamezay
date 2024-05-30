@@ -253,25 +253,50 @@ function goBack(page = 'index') {
 	
 }
 
-function getRoomsImgs(roomName) {
+function getRoomsImgs(roomName, dirImages) {
 
+	const device = checkDeviceType();	
 
 	let roomsHtml = '';
-	for (let i =1; i<= 5 ; i ++) {
-		roomsHtml+= `<div class="card card--header ${roomName}Room room${i}"></div>`
+	if(device === "mobile") {
+		for (let i =1; i<= 5 ; i ++) {
+			roomsHtml+= `
+			<div class="">
+				<img class="" src="../../images/photos2.0/rooms/${dirImages}/carousel/carousel${i}.png">
+			</div>
+			`
+		}
+	
+	}else {
+		
+		for (let i =1; i<= 5 ; i ++) {
+			roomsHtml+= `
+			<div class="global">
+				<img class="" src="../../images/photos2.0/rooms/${dirImages}/carousel/carousel${i}.png">
+			</div>
+			`
+		}
+
 	}
 
-	return roomsHtml;
+	const globalWrapper = `
+	<div class="global--imgExpand ${device}">
+		${roomsHtml}
+	</div>
+`
+
+return globalWrapper;
+
 }
 
 function checkRoom(element){
 
-	console.log('check device type : ', checkDeviceType())
+
 	const terminaison = checkDeviceType() === "desktop" ? '_d' : ''
 	const { id : room } = element || "standard"
 
 
-	location.href = `./rooms/${room}/room${terminaison}.html`
+	location.href = `/rooms/${room}/room${terminaison}.html`
 
 	// switch (room) {
 	// 	case ROOMS.standard:
@@ -284,7 +309,10 @@ function checkRoom(element){
 }
 
 
-function expandImages(version, roomName = 'standard') {
+function expandImages(roomName = 'standard', dirImages = 'standardRoom') {
+
+	const device = checkDeviceType();
+
 
 	const goBackIcon = `
 	<div onclick="toggleRoomWrapper()" class="arrowBack roomWrapper">
@@ -308,15 +336,15 @@ function expandImages(version, roomName = 'standard') {
 		</svg>
 </div>`
 
-		const roomImgsHTML = getRoomsImgs(roomName);
+		const roomImgsHTML = getRoomsImgs(roomName, dirImages);
 
         //Check first if sideMenu doesnt exist in the page, hidden
         if($(".global--wrapper").length == 0) {
 
 			let wrapperRooms;
-			if(version === "mobile") {
+			if(device === "mobile") {
 				wrapperRooms = `
-				<div class="global--wrapper ${version}">
+				<div class="global--wrapper ${device}">
 					<div class="wrapper--allImg">
 					${goBackIcon}
 					${roomImgsHTML}
@@ -325,9 +353,9 @@ function expandImages(version, roomName = 'standard') {
 				`
 			}else {
 				wrapperRooms = `
-				<div class="global--wrapper ${version}">
+				<div class="global--wrapper ${device}">
 					${goBackIcon}
-					<div class="wrapper--allImg ${version}">
+					<div class="wrapper--allImg ${device}">
 						${roomImgsHTML}
 					</div>
 				</div>

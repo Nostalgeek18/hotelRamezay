@@ -13,9 +13,7 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="./mobile.js"></script>
-<script type="text/javascript" src="../../../scripts/booking.js" defer></script>
-<script type="text/javascript" src="../../../scripts/common.js" defer></script>
+<script type="text/javascript" src="../../../scripts/common.js"></script>
 <link rel="stylesheet" href="../../../css/common.css" />
 <link rel="stylesheet" href="../../../css/index.css" />
 <link rel="stylesheet" href="../../../css/roomsPage.css" />
@@ -24,7 +22,7 @@
 <body>
 	<div id="container" class="no--overflow">
 		<div class="card card--header standardRoom carousel" data-carousel>
-			<!-- <div class="carousel--indicator">
+			<div class="carousel--indicator">
 				<div class="dot" data-active></div>
 				<div class="dot"></div>
 				<div class="dot"></div>
@@ -89,39 +87,34 @@
 					</clipPath>
 					</defs>
 				</svg>
-			</div> -->
-		</div> <!-- End carousel & expand-->
+			</div>
+		</div>
 		<div class="card card--reservation">
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.min.js"></script>
-			<link href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.min.css" rel="stylesheet">
 			<div class="reservation">BOOK YOUR STAY NOW</div>
-			<form target="_blank" action="https://portal.freetobook.com/reservations" class="reservationOptions--container">
-				<input type="hidden" name="w_id" value="38767">
-				<input type="hidden" name="w_tkn" value="z8KkiVFuHdD7JgQowDVjWQtfCxL4WVm4pSgwftAaDUA9dpnUnNYnpZBCLQQ2W">
-				<input type="hidden" id="check-in-date-to-send" name="check_in_date">
-				<input type="hidden" id="check-out-date-to-send" name="check_out_date">
-				<input id="stay-length" type="hidden" name="stay_length" value="1">
+			<div class="reservationOptions--container">
 				<div class="reservationContainers">
 					<div class="reservation--section">
 						<div>Check-in:</div>
-						<div class="reservation--row" id="check-in-date" data-toggle="datepicker"></div>
+						<div class="reservation--row">
+							<p>20 Mar 2023</p>
+							<img alt="calendarIcon" src="/images/icons/calendarIcon.png"/>
+						</div>
 					</div>
 					<div class="reservation--section">
 						<div>Check-out:</div>
-						<div class="reservation--row" id="check-out-date" data-toggle="datepicker"></div>
+						<div class="reservation--row">
+							<p>26 Mar 2023</p>
+							<img alt="calendarIcon" src="/images/icons/calendarIcon.png"/>
+						</div>
 					</div>
-				</div>
-				<button class="btn btnCheckAvail" type="submit">Check Availability</button>
-			</form>
+				</div><!--calendarContainer-->
+				<button class="btn btnCheckAvail">Check Availibity</button>
+			</div>
 			<div class="phone--section">
-				<div>TELEPHONE : 450 460 3251</div>
-				<div>TOLL FREE : 1 866 460 3251</div>
+				<div><b>TELEPHONE :</b> 450 460 3251</div>
+				<div><b>TOLL FREE :</b> 1 866 460 3251</div>
 			</div>
-			<div class="infos--section">
-				<div class="creditCard">*All reservations require a credit card number.</div>
-				<div class="registration">REGISTRATION NUMBER : 211094</div>
-			</div>
-		</div> <!-- Card reservation -->
+		</div><!-- card reservation-->
 		<div class="card card--roomDescription">
 			<h1>STANDARD GUEST ROOM</h1>
 			<p>5 standard guestrooms with one double bed.</p>

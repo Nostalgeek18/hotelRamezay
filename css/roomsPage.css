@@ -2,6 +2,13 @@
     overflow-x: hidden;
 }
 
+.global--imgExpand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: auto;
+}
+
 .card--header.standardRoom {
     background: url("../images/photos2.0/rooms/standardRoom/standard1.png");
     font-weight: 300;
@@ -238,4 +245,11 @@
         background-image: url("../images/photos2.0/rooms/suiteFireplace/suiteFireplace.png");
     }
 
+    .global--imgExpand {
+        width: 100%;
+    }
+
+    .global--imgExpand img {
+        width: 100%;
+    }
 }

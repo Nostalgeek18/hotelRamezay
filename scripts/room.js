@@ -3,45 +3,66 @@ const ROOMS_DATA = [
 		name : 'standard',
 		classImg : 'standardGuest',
 		label : 'Standard Guest Room',
-		labelFR : 'Chambre Standard'
+		labelFR : 'Chambre Régulière',
+		dirImages : 'standardRoom',
+		description : '5 standard guestrooms with one double bed.',
+		descriptionFR : '5 chambres régulières à lit double.'
 	},
 	{
 		name : 'deluxe',
 		classImg : 'deluxeGuest',
 		label : 'Standard Guest Room',
-		labelFR : 'Chambre supérieure'
+		labelFR : 'Chambre supérieure',
+		dirImages : 'deluxeRoom',
+		description : '5 standard guestrooms with one double bed.',
+		descriptionFR : '5 chambres supérieures à lit double.'
 	},
 	{
 		name : 'queenSuite',
 		classImg : 'queenSuite',
 		label : 'Standard Guest Room',
-		labelFR : 'Suite Queen'
+		labelFR : 'Suite Queen',
+		dirImages : 'queenSuite',
+		description : '5 standard guestrooms with one double bed.',
+		descriptionFR : '1 Suite queen à grand lit (Queen) et lit double.'
 	},
 	{
 		name : 'suiteFireplace',
 		classImg : 'suiteFireplace',
 		label : 'Standard Guest Room',
-		labelFR : 'Suite avec foyer'
+		labelFR : 'Suite avec foyer',
+		dirImages : 'suiteFireplace',
+		description : '5 standard guestrooms with one double bed.',
+		descriptionFR : '1 suite avec foyer, avec lit queen et futon.'
 	},
 	{
 		name : 'familySuite',
 		classImg : 'familySuite',
 		label : 'Standard Guest Room',
-		labelFR : 'Suite familiale avec cuisine'
+		labelFR : 'Suite familiale avec cuisine',
+		dirImages : 'familySuite',
+		description : '5 standard guestrooms with one double bed.',
+		descriptionFR : '1 suite familiale douillette avec cuisine, lit queen et futon'
 	},
 	{
 		name : 'royalSuite',
 		classImg : 'kingSuite',
 		label : 'Standard Guest Room',
 		labelFR : 'Suite royale',
-		starBanner : true
+		starBanner : true,
+		dirImages : 'royalSuite',
+		description : '5 standard guestrooms with one double bed.',
+		descriptionFR : '1 suite royale à très grand lit (King).'
 	},
 	{
 		name : 'royalSuiteKitchen',
 		classImg : 'royalSuite',
 		label : 'Standard Guest Room',
 		labelFR : 'Suite Royale avec cuisine',
-		starBanner : true
+		starBanner : true,
+		dirImages : 'royalSuiteKitchen',
+		description : '5 standard guestrooms with one double bed.',
+		descriptionFR : '1 Suite royale avec lit très confortable (Queen) et lit sofa en ahut.'
 	}
 ]
 
@@ -56,22 +77,22 @@ function getLanguageCommon() {
 	return language;
 }
 
-function getRoomsImgs(roomName) {
+// function getRoomsImgs(roomName) {
 
 
-	let roomsHtml = '';
-	for (let i =1; i<= 5 ; i ++) {
-		roomsHtml+= `<div class="card card--header ${roomName}Room room${i}"></div>`
-	}
+// 	let roomsHtml = '';
+// 	for (let i =1; i<= 5 ; i ++) {
+// 		roomsHtml+= `<div class="card card--header ${roomName}Room room${i}"></div>`
+// 	}
 
-	return roomsHtml;
-}
+// 	return roomsHtml;
+// }
 
 function attachEventsImg() {
     const imgContainers = $('.grid-container .grid-item')
 
     imgContainers.click((container)=> {
-        expandImages('desktop')
+        expandImages()
     })
 }
 
@@ -90,16 +111,14 @@ function findRoomTypeInURL() {
 	return null;
 }
 
-
+/** Appears at the bottom of the page */
 function loadOtherRooms() {
 
 	const globalWrapper = $('.wrapper--allRooms--standAlone');
-	console.log(globalWrapper);
 
 	const matchedRoomType = findRoomTypeInURL() || "standard";
 
 	let HTMLRooms = ""
-
 
 	ROOMS_DATA.forEach(({name, classImg, label, labelFR, starBanner}) => {
 
@@ -126,8 +145,63 @@ function loadOtherRooms() {
 	globalWrapper.html(HTMLRooms);
 }
 
+function loadMainImagesRoom() {
+	const wrapperImgSection = $('.grid-container.standalone');
+	const wrapperInfosRoom  = $('.infos--room');
+
+	const matchedRoomType = findRoomTypeInURL() || "standard";
+
+	let HTMLImages = ''
+	ROOMS_DATA.forEach(({name, dirImages, label, labelFR, description, descriptionFR}) => {
+		if(name === matchedRoomType) {
+			HTMLImages +=  `
+			<div class="grid-item grid-item-1">
+				<div class="image-shadow"></div>
+				<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/topMain.png" alt="room image #1"/>
+			</div>
+			<div class="subgrid-container grid-item">
+				<div class="grid-item grid-item-1">
+					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top1.png" alt="room image #2"/>
+					<div class="image-shadow"></div>
+				</div>
+				<div class="grid-item grid-item-2">
+					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top2.png" alt="room image #3"/>
+					<div class="image-shadow"></div>
+				</div>
+				<div class="grid-item grid-item-3">
+					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top3.png" alt="room image #4"/>
+					<div class="image-shadow"></div>
+				</div>
+				<div class="grid-item grid-item-4">
+					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top4.png" alt="room image #5"/>
+					<div class="image-shadow"></div>
+				</div>
+			</div>
+		`
+
+		//add infos of Title
+
+		const finalLabel 	   = getLanguageCommon() === "fr" ? labelFR : label
+		const finalDescription = getLanguageCommon() === "fr" ? descriptionFR : description
+
+		const infosRoomHTML = `
+		<h1>${finalLabel}</h1>
+		<p>${finalDescription}</p>
+		`
+
+		//append infos of the room
+		wrapperInfosRoom.html(infosRoomHTML);
+
+		} //end IF
+	})
+
+	wrapperImgSection.html(HTMLImages);
+}
+
 
 $(document).ready(function() {
+
+	loadMainImagesRoom();
 
     attachEventsImg();
 
