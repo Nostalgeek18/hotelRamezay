@@ -29,7 +29,7 @@
 		<div class="logoManoirRamezay"></div>
 		<div id="header">
 			<div id="header_logo">
-	<a href="index_e.html"><img src="images/logo.jpg"></a>
+	<a href="index_e.html"><img src="./images/logo.jpg"></a>
 			</div>
 			<div id="header_text">
 			<a href="index.html">FRAN&Ccedil;AIS</a>&nbsp;|&nbsp;<a href="index_e.html" class="active">ENGLISH</a>
@@ -279,12 +279,9 @@
 		</div>
 			<div class="card contact--form__wrapper">
 			<div class="form--snippet">contactez-nous</div>
-			<form name="form1" class="form--email" method="post" action="./formulaires/envoiEmail.php">
+			<form name="form1" class="form--email" method="post" action="./formulaires/envoi.php">
 				<input type="hidden" name="langue" id="langue" value="fr">
 	
-				<label>
-				<input name="nom" type="text" id="nom" size="25" placeholder="Votre courriel">
-				</label>
 	
 				<!-- Input not visible in design 
 				<label>
@@ -295,6 +292,11 @@
 				<label>
 				<input name="email" type="text" id="email" size="25" placeholder="Votre courriel">
 				</label>
+
+				<label>
+					<input name="nom" type="text" id="nom" size="25" placeholder="Lea">
+				</label>
+
 				<label>
 				<textarea name="commentaires" cols="30" rows="5" id="commentaires" placeholder="Vos commentaires"></textarea>
 				</label>

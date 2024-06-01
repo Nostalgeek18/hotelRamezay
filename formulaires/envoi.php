@@ -37,7 +37,7 @@ function longeur_texte_mini()
 }
 
 
-if (   (verifie_http() == FALSE)  OR (longeur_texte_mini() == FALSE )   )
+if (  (longeur_texte_mini() == FALSE )   )
 {
 //print "D�sol�, pour des raisons de s�curit�, nous n�acceptons pas les URLs dans les messages. Veuillez r�essayer. <br><br> ";
 // 	print "Desole, pour des raisons de securite, nous n'acceptons pas les URLs dans les messages. Veuillez reessayer. <br><br> "; 
