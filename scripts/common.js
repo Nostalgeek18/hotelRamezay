@@ -42,7 +42,7 @@ function appendMenuHTML() {
 
 	//Retrieve page's name
 	const page 	  = window.location.pathname;
-	const pattern = /en/;
+	const pattern = /\/en\//;;
 
 	const language = pattern.test(page) ? "en" : "fr";
 
@@ -223,7 +223,7 @@ function generateFooter() {
 		<p>&copy ${currentYear} MANOIR RAMEZAY</p>
 	</div>
 	<div class="logo--section">
-		<img class="footerLogo" alt="manoirRamezayLogo" src="/images/photos2.0/ramezayLogo.png">
+		<img class="footerLogo" alt="manoirRamezayLogo" src="./images/photos2.0/ramezayLogo.png">
 		<div class="establishment desktop">REGISTRATION NUMBER 211094</div>
 	</div>
 
