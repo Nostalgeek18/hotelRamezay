@@ -156,7 +156,7 @@ function toggleMenu() {
 function getLanguage() {
 	//Get page's name from url
 	const page 	 		  = window.location.pathname;
-	const pattern 		  = /en/;
+	const pattern 		  = /\/en\//;
 	const language 		  = pattern.test(page) ? "en" : "fr";
 
 	return language;
@@ -205,7 +205,6 @@ function generateFooter() {
 	const linkContact    = `${previous}/contact.html`;
 	const linkFacebook   = `https://www.facebook.com/ManoirRamezay`;
 
-	console.log('linkHistorique : ', linkHistorique);
 
 	const currentYear = new Date().getFullYear();
 
@@ -253,7 +252,7 @@ function goBack(page = 'index') {
 	
 }
 
-function getRoomsImgs(roomName, dirImages) {
+function getRoomsImgs(dirImages) {
 
 	const device = checkDeviceType();	
 
@@ -292,11 +291,12 @@ return globalWrapper;
 function checkRoom(element){
 
 
+	const langFolder = getLanguage() === "fr" ? '' : '/en'
 	const terminaison = checkDeviceType() === "desktop" ? '_d' : ''
 	const { id : room } = element || "standard"
 
 
-	location.href = `/rooms/${room}/room${terminaison}.html`
+	location.href = `${langFolder}/rooms/${room}/room${terminaison}.html`
 
 	// switch (room) {
 	// 	case ROOMS.standard:
@@ -309,10 +309,9 @@ function checkRoom(element){
 }
 
 
-function expandImages(roomName = 'standard', dirImages = 'standardRoom') {
+function expandImages(dirImages = 'standardRoom') {
 
 	const device = checkDeviceType();
-
 
 	const goBackIcon = `
 	<div onclick="toggleRoomWrapper()" class="arrowBack roomWrapper">
@@ -336,7 +335,8 @@ function expandImages(roomName = 'standard', dirImages = 'standardRoom') {
 		</svg>
 </div>`
 
-		const roomImgsHTML = getRoomsImgs(roomName, dirImages);
+
+		const roomImgsHTML = getRoomsImgs(dirImages);
 
         //Check first if sideMenu doesnt exist in the page, hidden
         if($(".global--wrapper").length == 0) {
@@ -435,12 +435,13 @@ function sendEmail(e){
 }
 
 
-//************CAROUSEL SCRIPTS **************/
-function triggerCarousel() {
+//************CAROUSEL SCRIPTS (with dots) **************/
+function triggerCarouselDots() {
+
 	if(!document.getElementsByClassName('carousel')[0]) return; //no carousel
 	const slideIndicator = document.getElementsByClassName('carousel--indicator')[0];
-	const slides = slideIndicator.closest("[data-carousel").querySelector("[data-slides]")
-	const dots = document.getElementsByClassName('carousel--indicator')[0];
+	const slides 		 = slideIndicator.closest("[data-carousel").querySelector("[data-slides]")
+	const dots 			 = document.getElementsByClassName('carousel--indicator')[0];
 
 
 	setInterval(()=>{
@@ -454,7 +455,7 @@ function triggerCarousel() {
 		dots.children[newIndex].dataset.active = true
 		delete activeSlide.dataset.active
 		delete activeDot.dataset.active
-	},5000)
+	},3000)
 }
 
 function appendLinkLogo() {
@@ -475,13 +476,14 @@ window.mobileCheck = function() {
 
 $(document).ready(function() {
 
-
 	appendLinkLogo();
 	
 	generateMenu();
 
-	generateFooter();
+	generateFooter();	
 
-	triggerCarousel();
+	setTimeout(()=>{
+		triggerCarouselDots();
+	}, 1000)
 
 });

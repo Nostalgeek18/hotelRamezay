@@ -1,10 +1,16 @@
+
+//WHYYYYYYYYYYYYYY
+
 function triggerCarousel() {
+
+    console.log('in index.js')
 	if(!document.getElementsByClassName('carousel')[0]) return; //no carousel
 	const slideIndicator = document.getElementsByClassName('carousel--indicator')[0];
 	const slides = slideIndicator.closest("[data-carousel").querySelector("[data-slides]")
 	const dots = document.getElementsByClassName('carousel--indicator')[0];
 
 
+    console.log('ici')
 	setInterval(()=>{
 		const activeSlide = slides.querySelector("[data-active]")
 		let newIndex = [...slides.children].indexOf(activeSlide) + 1

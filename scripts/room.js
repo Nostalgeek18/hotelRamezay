@@ -71,7 +71,8 @@ const ROOMS_DATA = [
 function getLanguageCommon() {
 	//Get page's name from url
 	const page 	 		  = window.location.pathname;
-	const pattern 		  = /en/;
+	const pattern 		  = /\/en\//;
+
 	const language 		  = pattern.test(page) ? "en" : "fr";
 
 	return language;
@@ -88,11 +89,11 @@ function getLanguageCommon() {
 // 	return roomsHtml;
 // }
 
-function attachEventsImg() {
+function attachEventsImg(dirImages) {
     const imgContainers = $('.grid-container .grid-item')
 
     imgContainers.click((container)=> {
-        expandImages()
+        expandImages(dirImages)
     })
 }
 
@@ -111,7 +112,7 @@ function findRoomTypeInURL() {
 	return null;
 }
 
-/** Appears at the bottom of the page */
+/** Appears at the bottom of the page as a preview section*/
 function loadOtherRooms() {
 
 	const globalWrapper = $('.wrapper--allRooms--standAlone');
@@ -122,10 +123,12 @@ function loadOtherRooms() {
 
 	ROOMS_DATA.forEach(({name, classImg, label, labelFR, starBanner}) => {
 
-		if(name === matchedRoomType) return //dont repeat the ream
+		if(name === matchedRoomType) return //avoid showing the same room
 
-		const finalLabel = getLanguageCommon() === "fr" ? labelFR : label
-		const starBannerHTML = starBanner ? `<div class="banner--mostBeautiful"><img src="../../images/icons/star.png"/> One of the most beautiful in Québec</div>` : ''
+		const extraPrevious  = getLanguageCommon() === "fr" ? '' : '../' //one more depth to go back if its in english folder
+		const finalLabel     = getLanguageCommon() === "fr" ? labelFR : label
+		const finalLabelStar = getLanguageCommon() === "fr" ? "Une des plus belles du Québec" : "One of the most beautiful in Québec"
+		const starBannerHTML = starBanner ? `<div class="banner--mostBeautiful"><img src="${extraPrevious}../../images/icons/star.png"/> ${finalLabelStar}</div>` : ''
 
 		HTMLRooms += `
 		<div class="wrapper-room" id="${name}" onClick="checkRoom(this)">
@@ -155,24 +158,24 @@ function loadMainImagesRoom() {
 	ROOMS_DATA.forEach(({name, dirImages, label, labelFR, description, descriptionFR}) => {
 		if(name === matchedRoomType) {
 			HTMLImages +=  `
-			<div class="grid-item grid-item-1">
+			<div class="grid-item grid-item-1" onClick="expandImages('${dirImages}')">
 				<div class="image-shadow"></div>
 				<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/topMain.png" alt="room image #1"/>
 			</div>
-			<div class="subgrid-container grid-item">
+			<div class="subgrid-container grid-item" onClick="expandImages('${dirImages}')">
 				<div class="grid-item grid-item-1">
 					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top1.png" alt="room image #2"/>
 					<div class="image-shadow"></div>
 				</div>
-				<div class="grid-item grid-item-2">
+				<div class="grid-item grid-item-2" onClick="expandImages('${dirImages}')">
 					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top2.png" alt="room image #3"/>
 					<div class="image-shadow"></div>
 				</div>
-				<div class="grid-item grid-item-3">
+				<div class="grid-item grid-item-3" onClick="expandImages('${dirImages}')">
 					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top3.png" alt="room image #4"/>
 					<div class="image-shadow"></div>
 				</div>
-				<div class="grid-item grid-item-4">
+				<div class="grid-item grid-item-4" onClick="expandImages('${dirImages}')">
 					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top4.png" alt="room image #5"/>
 					<div class="image-shadow"></div>
 				</div>
@@ -192,6 +195,8 @@ function loadMainImagesRoom() {
 		//append infos of the room
 		wrapperInfosRoom.html(infosRoomHTML);
 
+
+
 		} //end IF
 	})
 
@@ -202,8 +207,6 @@ function loadMainImagesRoom() {
 $(document).ready(function() {
 
 	loadMainImagesRoom();
-
-    attachEventsImg();
 
 	loadOtherRooms();
 

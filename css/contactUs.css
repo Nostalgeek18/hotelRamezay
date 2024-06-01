@@ -74,6 +74,10 @@
     width: 250px;
 }
 
+.form--email .btnForm:hover {
+    background-color: #303030;
+}
+
 .card--location.contact {
     margin-top: 0;
 }
@@ -110,7 +114,7 @@
     font-weight: 700;
     font-size: 20px;
     color: #FFF;
-    width: 744px;
+    width: 100%;
 }
 
 .facebook--contact img {
@@ -163,4 +167,9 @@
         background-color: rgba(255,255,255,0.2);
         height: 1px;
     }
+
+    
+.facebook--contact {
+    width: 744px;
+}
 }
