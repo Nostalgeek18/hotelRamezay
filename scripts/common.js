@@ -53,9 +53,9 @@ function appendMenuHTML() {
 
 	const previous = language == "fr" ? "" : '/en'
 
-	const linkChambres   = `chambres.html`;
-	const linkHistorique = `historique.html`;
-	const linkContact    = `contact.html`;
+	const linkChambres   = `/chambres.html`;
+	const linkHistorique = `/historique.html`;
+	const linkContact    = `/contact.html`;
 	const linkFacebook   = `https://www.facebook.com/ManoirRamezay`;
 	
 
