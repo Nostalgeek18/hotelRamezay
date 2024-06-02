@@ -198,11 +198,12 @@ function generateFooter() {
 	const labelPhone      = getLabel(language, 'phone');
 
 	
-	const previous = language == "fr" ? '' : '/en'
+	
+	const previous = getPrefixPage();
 
-	const linkChambres   = `${previous}/chambres.html`;
-	const linkHistorique = `${previous}/historique.html`;
-	const linkContact    = `${previous}/contact.html`;
+	const linkChambres   = `${previous}chambres.html`;
+	const linkHistorique = `${previous}historique.html`;
+	const linkContact    = `${previous}contact.html`;
 	const linkFacebook   = `https://www.facebook.com/ManoirRamezay`;
 
 
@@ -223,7 +224,7 @@ function generateFooter() {
 		<p>&copy ${currentYear} MANOIR RAMEZAY</p>
 	</div>
 	<div class="logo--section">
-		<img class="footerLogo" alt="manoirRamezayLogo" src="./images/photos2.0/ramezayLogo.png">
+		<img class="footerLogo" alt="manoirRamezayLogo" src="${previous}images/photos2.0/ramezayLogo.png">
 		<div class="establishment desktop">REGISTRATION NUMBER 211094</div>
 	</div>
 
@@ -458,11 +459,34 @@ function triggerCarouselDots() {
 	},3000)
 }
 
+/**
+ * Use to get accurate relative paths in redirection
+ */
+function getPrefixPage(handleLang = true) {
+	const page = window.location.pathname;
+	// Calculate the relative path depth
+	const depth = page.split('/').length - 2; // -2 because the first element is an empty string and the last one is the page name
+	let prefix = '';
+	for (let i = 0; i < depth; i++) {
+		prefix += '../';
+	}
+
+	if(prefix === "") prefix = "/"
+
+	const language = getLanguage();
+	if(handleLang && language == "en") {
+		prefix += "en/"
+	}
+
+	return prefix;
+
+}
+
 function appendLinkLogo() {
 	$('.logoManoirRamezay').on("click", () => {
-		const language = getLanguage();
 
-		window.location.href = language === "fr" ? `/index.html` : `/en/index.html`
+		const prefix = getPrefixPage(); //handles lang too
+		window.location.href = `${prefix}index.html`;
 
 
 	})
