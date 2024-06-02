@@ -464,6 +464,7 @@ function triggerCarouselDots() {
  */
 function getPrefixPage(handleLang = true) {
 	const page = window.location.pathname;
+	console.log('page : ', page);
 	// Calculate the relative path depth
 	const depth = page.split('/').length - 2; // -2 because the first element is an empty string and the last one is the page name
 	let prefix = '';
