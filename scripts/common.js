@@ -101,14 +101,16 @@ function getLabel(language, keyLabel) {
 			"history" : "HISTORY",
 			"contact_us" : "CONTACT US",
 			"phone"	: "PHONE",
-			"facebook" : "facebook"
+			"facebook" : "facebook",
+			"registration" : "REGISTRATION NUMBER"
  		},
 		"fr" : {
 			"rooms_and_suite": "CHAMBRES & SUITES",
 			"history" : "HISTOIRE",
 			"contact_us" : "NOUS CONTACTER",
 			"phone"	: "TELEPHONE",
-			"facebook" : "facebook"
+			"facebook" : "facebook",
+			"registration" : "NUMÉRO D'ENREGISTREMENT"
 		}
 	}
 
@@ -192,10 +194,11 @@ function generateFooter() {
 
 	const footerContainer = $('#footer');
 
-	const labelRoomsSuite = getLabel(language, 'rooms_and_suite');
-	const labelHistorique = getLabel(language, 'history');
-	const labelContact    = getLabel(language, 'contact_us');
-	const labelPhone      = getLabel(language, 'phone');
+	const labelRoomsSuite   = getLabel(language, 'rooms_and_suite');
+	const labelHistorique   = getLabel(language, 'history');
+	const labelContact      = getLabel(language, 'contact_us');
+	const labelPhone        = getLabel(language, 'phone');
+	const labelRegistration = getLabel(language, 'registration');
 
 	
 	
@@ -220,12 +223,12 @@ function generateFooter() {
 		<p>${labelPhone}: 450 460 3251</p>
 		<p>TOLL FREE: 1 866 460 3251</p>
 		<p class="adresse">492, rue Claude de Ramezay (Route 227) Marieville (Québec) J3M 1J6</p>
-		<div class="establishment mobile">REGISTRATION NUMBER 211094</div>
+		<div class="establishment mobile">${labelRegistration} 211094</div>
 		<p>&copy ${currentYear} MANOIR RAMEZAY</p>
 	</div>
 	<div class="logo--section">
 		<img class="footerLogo" alt="manoirRamezayLogo" src="${previous}images/photos2.0/ramezayLogo.png">
-		<div class="establishment desktop">REGISTRATION NUMBER 211094</div>
+		<div class="establishment desktop">${labelRegistration} 211094</div>
 	</div>
 
 `
@@ -464,7 +467,6 @@ function triggerCarouselDots() {
  */
 function getPrefixPage(handleLang = true) {
 	const page = window.location.pathname;
-	console.log('page : ', page);
 	// Calculate the relative path depth
 	const depth = page.split('/').length - 2; // -2 because the first element is an empty string and the last one is the page name
 	let prefix = '';

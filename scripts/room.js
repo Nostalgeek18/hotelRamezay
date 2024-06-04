@@ -11,57 +11,57 @@ const ROOMS_DATA = [
 	{
 		name : 'deluxe',
 		classImg : 'deluxeGuest',
-		label : 'Standard Guest Room',
+		label : 'Deluxe Room',
 		labelFR : 'Chambre supérieure',
 		dirImages : 'deluxeRoom',
-		description : '5 standard guestrooms with one double bed.',
-		descriptionFR : '5 chambres supérieures à lit double.'
+		description : '4 standard guestrooms with one double bed.',
+		descriptionFR : '4 chambres supérieures à lit double.'
 	},
 	{
 		name : 'queenSuite',
 		classImg : 'queenSuite',
-		label : 'Standard Guest Room',
+		label : 'Queen Suite',
 		labelFR : 'Suite Queen',
 		dirImages : 'queenSuite',
-		description : '5 standard guestrooms with one double bed.',
+		description : '1 queen suite with one Queen size bed and Double bed.',
 		descriptionFR : '1 Suite queen à grand lit (Queen) et lit double.'
 	},
 	{
 		name : 'suiteFireplace',
 		classImg : 'suiteFireplace',
-		label : 'Standard Guest Room',
+		label : 'Suite With Fireplace',
 		labelFR : 'Suite avec foyer',
 		dirImages : 'suiteFireplace',
-		description : '5 standard guestrooms with one double bed.',
+		description : '1 Suite with fireplace, queen size bed and futon.',
 		descriptionFR : '1 suite avec foyer, avec lit queen et futon.'
 	},
 	{
 		name : 'familySuite',
 		classImg : 'familySuite',
-		label : 'Standard Guest Room',
+		label : 'Family Suite with kitchen',
 		labelFR : 'Suite familiale avec cuisine',
 		dirImages : 'familySuite',
-		description : '5 standard guestrooms with one double bed.',
+		description : '1 Cozy family suite with kitchen.',
 		descriptionFR : '1 suite familiale douillette avec cuisine, lit queen et futon'
 	},
 	{
 		name : 'royalSuite',
 		classImg : 'kingSuite',
-		label : 'Standard Guest Room',
+		label : 'Royal Suite',
 		labelFR : 'Suite royale',
 		starBanner : true,
 		dirImages : 'royalSuite',
-		description : '5 standard guestrooms with one double bed.',
+		description : '1 King suite with one King size bed.',
 		descriptionFR : '1 suite royale à très grand lit (King).'
 	},
 	{
 		name : 'royalSuiteKitchen',
 		classImg : 'royalSuite',
-		label : 'Standard Guest Room',
+		label : 'Royal Suite with kitchen',
 		labelFR : 'Suite Royale avec cuisine',
 		starBanner : true,
 		dirImages : 'royalSuiteKitchen',
-		description : '5 standard guestrooms with one double bed.',
+		description : '1 Royal suite with very comfortable queen bed and sofa bed upstairs.',
 		descriptionFR : '1 Suite royale avec lit très confortable (Queen) et lit sofa en ahut.'
 	}
 ]
