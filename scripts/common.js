@@ -258,24 +258,28 @@ function goBack(page = 'index') {
 
 function getRoomsImgs(dirImages) {
 
-	const device = checkDeviceType();	
+	const device   = checkDeviceType();	
+	const prefix   = getLanguage() === "fr" ? '' : '../';
+
+	console.log(dirImages);
+	const endLoop = dirImages === "deluxeRoom" ? 4 : 5; //deluxe has one less image 
 
 	let roomsHtml = '';
 	if(device === "mobile") {
-		for (let i =1; i<= 5 ; i ++) {
+		for (let i =1; i<= endLoop ; i ++) {
 			roomsHtml+= `
 			<div class="">
-				<img class="" src="../../images/photos2.0/rooms/${dirImages}/carousel/carousel${i}.png">
+				<img class="" src="${prefix}../../images/photos2.0/rooms/${dirImages}/carousel/carousel${i}.png">
 			</div>
 			`
 		}
 	
 	}else {
 		
-		for (let i =1; i<= 5 ; i ++) {
+		for (let i =1; i<= endLoop ; i ++) {
 			roomsHtml+= `
 			<div class="global">
-				<img class="" src="../../images/photos2.0/rooms/${dirImages}/carousel/carousel${i}.png">
+				<img class="" src="${prefix}../../images/photos2.0/rooms/${dirImages}/carousel/carousel${i}.png">
 			</div>
 			`
 		}

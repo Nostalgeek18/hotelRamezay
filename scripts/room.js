@@ -157,30 +157,55 @@ function loadMainImagesRoom() {
 	let HTMLImages = ''
 	ROOMS_DATA.forEach(({name, dirImages, label, labelFR, description, descriptionFR}) => {
 		if(name === matchedRoomType) {
-			HTMLImages +=  `
-			<div class="grid-item grid-item-1" onClick="expandImages('${dirImages}')">
-				<div class="image-shadow"></div>
-				<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/topMain.png" alt="room image #1"/>
-			</div>
-			<div class="subgrid-container grid-item" onClick="expandImages('${dirImages}')">
-				<div class="grid-item grid-item-1">
-					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top1.png" alt="room image #2"/>
+			if(name === "deluxe") {
+				HTMLImages +=  `
+				<div class="grid-item grid-item-1" onClick="expandImages('${dirImages}')">
 					<div class="image-shadow"></div>
+					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/topMain.png" alt="room image #1"/>
 				</div>
-				<div class="grid-item grid-item-2" onClick="expandImages('${dirImages}')">
-					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top2.png" alt="room image #3"/>
+				<div class="subgrid-container-deluxe grid-item" onClick="expandImages('${dirImages}')">
+					<div class="grid-item grid-item-1">
+						<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top1.png" alt="room image #2"/>
+						<div class="image-shadow"></div>
+					</div>
+					<div class="grid-item grid-item-2" onClick="expandImages('${dirImages}')">
+						<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top2.png" alt="room image #3"/>
+						<div class="image-shadow"></div>
+					</div>
+					<div class="grid-item grid-item-3" onClick="expandImages('${dirImages}')">
+						<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top3.png" alt="room image #4"/>
+						<div class="image-shadow"></div>
+					</div>
+				</div>
+			`
+	
+			}else {
+
+				HTMLImages +=  `
+				<div class="grid-item grid-item-1" onClick="expandImages('${dirImages}')">
 					<div class="image-shadow"></div>
+					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/topMain.png" alt="room image #1"/>
 				</div>
-				<div class="grid-item grid-item-3" onClick="expandImages('${dirImages}')">
-					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top3.png" alt="room image #4"/>
-					<div class="image-shadow"></div>
+				<div class="subgrid-container grid-item" onClick="expandImages('${dirImages}')">
+					<div class="grid-item grid-item-1">
+						<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top1.png" alt="room image #2"/>
+						<div class="image-shadow"></div>
+					</div>
+					<div class="grid-item grid-item-2" onClick="expandImages('${dirImages}')">
+						<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top2.png" alt="room image #3"/>
+						<div class="image-shadow"></div>
+					</div>
+					<div class="grid-item grid-item-3" onClick="expandImages('${dirImages}')">
+						<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top3.png" alt="room image #4"/>
+						<div class="image-shadow"></div>
+					</div>
+					<div class="grid-item grid-item-4" onClick="expandImages('${dirImages}')">
+						<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top4.png" alt="room image #5"/>
+						<div class="image-shadow"></div>
+					</div>
 				</div>
-				<div class="grid-item grid-item-4" onClick="expandImages('${dirImages}')">
-					<img src="/images/photos2.0/rooms/${dirImages}/topImgDesktop/top4.png" alt="room image #5"/>
-					<div class="image-shadow"></div>
-				</div>
-			</div>
-		`
+			`
+			}
 
 		//add infos of Title
 
