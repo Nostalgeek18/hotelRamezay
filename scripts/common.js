@@ -507,6 +507,7 @@ window.mobileCheck = function() {
 
 $(document).ready(function() {
 
+	console.log('ready');
 	appendLinkLogo();
 	
 	generateMenu();
