@@ -105,7 +105,9 @@ function toggleRoomWrapper() {
 function findRoomTypeInURL() {
 	const url  = window.location.href.toLowerCase();
 	for (const room of ROOMS_DATA) {
-		if (url.includes(room.name.toLowerCase())) {
+		const roomName = room.name.toLowerCase();
+		const exactMatch = new RegExp(`\\b${roomName}\\b`);
+		if (exactMatch.test(url)) {
 			return room.name;
 		}
 	}
