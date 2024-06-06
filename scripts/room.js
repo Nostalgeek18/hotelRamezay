@@ -103,14 +103,15 @@ function toggleRoomWrapper() {
 }
 
 function findRoomTypeInURL() {
-	console.log('room could not be find !');
-	const url  = window.location.href;
+	const url  = window.location.href.toLowerCase();
 	for (const room of ROOMS_DATA) {
 		if (url.includes(room.name.toLowerCase())) {
 			return room.name;
 		}
 	}
-	return null;
+
+	console.log('Room could not be find !');
+	return "standard"; //default if cant find
 }
 
 /** Appears at the bottom of the page as a preview section*/
@@ -119,6 +120,7 @@ function loadOtherRooms() {
 	const globalWrapper = $('.wrapper--allRooms--standAlone');
 
 	const matchedRoomType = findRoomTypeInURL() || "standard";
+	console.log('matched : ', matchedRoomType);
 
 	let HTMLRooms = ""
 
@@ -153,7 +155,7 @@ function loadMainImagesRoom() {
 	const wrapperImgSection = $('.grid-container.standalone');
 	const wrapperInfosRoom  = $('.infos--room');
 
-	const matchedRoomType = findRoomTypeInURL() || "standard";
+	const matchedRoomType = findRoomTypeInURL();
 
 	let HTMLImages = ''
 	ROOMS_DATA.forEach(({name, dirImages, label, labelFR, description, descriptionFR}) => {
