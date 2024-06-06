@@ -103,9 +103,10 @@ function toggleRoomWrapper() {
 }
 
 function findRoomTypeInURL() {
+	console.log('room could not be find !');
 	const url  = window.location.href;
 	for (const room of ROOMS_DATA) {
-		if (url.includes(room.name)) {
+		if (url.includes(room.name.toLowerCase())) {
 			return room.name;
 		}
 	}
