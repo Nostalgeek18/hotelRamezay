@@ -756,6 +756,30 @@ img.breakfast {
     box-shadow: none;
 }
 
+/* only mobile -exception for widget */
+@media screen and (max-width: 768px) {
+    .datepicker-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: fit-content !important;
+        height: auto !important;
+        font-size: 16px !important;
+    }
+
+    .datepicker-container .datepicker-panel ul li[data-view="month current"] {
+        width: fit-content !important;
+    }
+
+    .datepicker-panel>ul>li {
+        width: 50px !important;
+        height: 50px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 
 /* Screen that are 768px or more (desktop) */
