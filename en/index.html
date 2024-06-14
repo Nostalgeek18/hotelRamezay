@@ -98,6 +98,16 @@
 				<button class="indexHistoryBtn" onClick="goTo('history')">Our History</button>
 			</div>
 		</div> <!-- End History section-->
+		<div class="historyIndexWrapper desktop"> <!--History index page-->
+			<div class="historyIndexTextWrapper">
+				<div class="indexHistoryTitle">It all started in <span>1708</span></div>
+				<div class="indexHistoryText">
+					On march 25, 1708, Claude de Ramezay, the governor of Montreal, was awarded the concession of the seigneury of monnoir...
+				</div>
+				<button class="indexHistoryBtn" onClick="goTo('history')">Our History</button>
+			</div>
+			<img class="historyIndex" src="../images/photos2.0/historyIndex.png" alt="history" />
+		</div>
 		<div class="card card--reservation">
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.min.js"></script>
 			<link href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.4/datepicker.min.css" rel="stylesheet">
@@ -118,7 +128,7 @@
 						<div class="reservation--row" id="check-out-date" data-toggle="datepicker"></div>
 					</div>
 				</div>
-				<button class="btn btnCheckAvail" type="submit">Check Availability</button>
+				<button class="btn btnCheckAvail" type="submit">Reserve</button>
 			</form>
 			<div class="phone--section">
 				<div>TELEPHONE : 450 460 3251</div>
@@ -263,27 +273,16 @@
 			</div>
 		</div>
 	</div> <!-- end All rooms Desktop -->
-		<button class="btn btnCheckAvail bottom">Check Availibity</button> <!--Mobile only-->
 	<div class="breakfast--wrapper">
 		<div class="breakfast--text">
 			<div class="breakfastTitle">WE OFFER BREAKFAST</div>
-			<div>Breakfast is included for the reservations booked after 2024 May 1st.</div>
+			<div>Breakfast is included for reservations booked after 2024 May 1st.</div>
 		</div>
 		<img class="breakfast" src="../images/photos2.0/breakfast.png" alt="breakfast"/>
 	</div>
-	<div class="historyIndexWrapper desktop"> <!--History index page-->
-		<div class="historyIndexTextWrapper">
-			<div class="indexHistoryTitle">It all started in <span>1708</span></div>
-			<div class="indexHistoryText">
-				On march 25, 1708, Claude de Ramezay, the governor of Montreal, was awarded the concession of the seigneury of monnoir...
-			</div>
-			<button class="indexHistoryBtn" onClick="goTo('history')">Our History</button>
-		</div>
-		<img class="historyIndex" src="../images/photos2.0/historyIndex.png" alt="history" />
-	</div>
 		<div class="card card--location">
 			<div class="text--wrapper">
-				<span>WE'RE HERE</span>
+				<span>WE'RE HERE TEST</span>
 				<img class="locationIcon" src="../images/icons/location.png" alt="locationIcon"/>
 				<div class="locationInfos">492, rue Claude de Ramezay (Route 227) Marieville (Québec) J3M 1J6</div>
 			</div>
@@ -291,18 +290,13 @@
 		</div>
 			<div class="card contact--form__wrapper">
 			<div class="form--snippet">CONTACT US</div>
-			<form name="form1" class="form--email" method="post" onSubmit="sendEmail(event)">
+			<p class="emailLink">hotelmanoirramezay@gmail.com</p>
+			<!-- <form name="form1" class="form--email" method="post" onSubmit="sendEmail(event)">
 				<input type="hidden" name="langue" id="langue" value="fr">
 	
 				<label>
 				<input name="nom" type="text" id="nom" size="25" placeholder="Subject">
 				</label>
-	
-				<!-- Input not visible in design 
-				<label>
-				<input name="telephone" type="text" id="telephone" size="25">
-				</label> 
-				 -->
 	
 				<label>
 				<input name="email" type="text" id="email" size="25" placeholder="Your email">
@@ -316,7 +310,7 @@
 				<input type="submit" class="button btn btnForm" name="submit" value="ENVOYER">
 				</label>
 				</p>
-			</form>
+			</form> -->
 			<div class="facebook--contact nodesktop">
 				<div class="delimiter"></div>
 				<div class="facebook--infos">

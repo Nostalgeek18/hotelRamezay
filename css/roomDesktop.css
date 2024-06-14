@@ -1,5 +1,5 @@
 .page--wrapper {
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 5% 0 2%;
 }
@@ -130,8 +130,8 @@
 
 .bookingInfo--wrapper .card--reservation.desktop {
     max-width: 390px;
-    max-height: 490px;
-    gap: 24px;
+    max-height: 540px;
+    gap: 40px;
     padding: 24px;
 }
 
@@ -145,7 +145,7 @@
 
 .delimiter {
     width: 120%;
-    height: 1px;
+    height: 0px; /* removed */
     background-color: #F2F2F2;
     margin: 48px -10%;
 }
@@ -180,4 +180,35 @@
 
 .wrapper--allImg.desktop .card--header:first-child {
     height: 387px;
+}
+
+.infos--room {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media screen and (max-width: 992px) {
+    .logoManoirRamezay {
+        width: 50px;
+        height: 50px;
+    }   
+
+    .page--wrapper {
+        padding-top: 12%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+    .logoManoirRamezay {
+        width: 64px;
+        height: 64px; 
+    }
+
+    .page--wrapper {
+        padding-top: 8%;
+    }
 }

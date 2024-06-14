@@ -101,8 +101,6 @@ function loadElements() {
 
         if(name === matchedRoomType) {
 
-            console.log('dirImages in mobile.js : ', dirImages);
-
             //load HTML for data-slides
             for( let i =1; i <= 5 ; i++) {
 

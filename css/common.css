@@ -22,6 +22,11 @@ a {
     color: inherit;
 }
 
+a.active {
+    font-weight: 700;
+    color: #FFF;
+}
+
 #container {
     display:flex;
     flex-direction: column;
@@ -78,7 +83,7 @@ a {
     top: 0px;
     width: 100px;
     height: 100px;
-    background-image: url("../images/photos2.0/manoirRamezay.png");
+    background-image: url("../images/photos2.0/manoirLogo.png");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 10;
@@ -136,7 +141,6 @@ a {
     gap: 16px;
     background: #F6F6F9;
     color: #2B0000;
-    order: 1;
 }
 
 /****BEGINNING HOTEL ROOMS *****/
@@ -224,11 +228,18 @@ a {
 }
 /****END HOTEL ROOMS *****/
 
+.emailLink {
+    color : #E0E0E0;
+    font-weight: 400;
+    font-size: 24px;
+}
+
 
 /** RESERVATION CARD **/
 
 .reservation {
     text-transform: uppercase;
+    font-size: 18px;
 }
 
 .reservationContainers {
@@ -355,7 +366,7 @@ a {
 .sideMenu .menu--container--links {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     font-size: 24px;
     text-transform: uppercase;
     color: #BDBDBD;
@@ -471,7 +482,6 @@ div a b {
 }
 
 .locationInfos {
-    font-weight: 700;
     font-size: 16px;
     line-height: 170%;
 }
@@ -498,6 +508,7 @@ div a b {
 /* Was for index page */
 .wrapper--allRooms.mobile {
     padding: 40px 8px 0;
+    margin-bottom: 40px;
 }
 
 .wrapper-room {
@@ -535,6 +546,8 @@ div a b {
 .creditCard {
     font-weight: 400;
     font-size: 14px;
+    line-height: 25px;
+    text-align: center;
 }
 
 .registration {
@@ -569,6 +582,7 @@ div a b {
     font-size: 32px;
     font-weight: 300;
     line-height: 38px;
+    letter-spacing: 1.6px;
 }
 
 img.breakfast {
@@ -609,6 +623,7 @@ img.breakfast {
     font-weight: 300;
     font-size: 32px;
     text-transform: uppercase;
+    letter-spacing: 1.6px;
 }
 
 .indexHistoryTitle > span {
@@ -625,13 +640,15 @@ img.breakfast {
 .indexHistoryBtn {
     border: 2px solid #FFF;
     padding: 20px 24px;
+    height: 72px;
+    width: 200px;
     display: flex;
+    font-size: 16px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     color: #FFF;
     text-transform: capitalize;
-    width: 200px;
     background-color: #392929;
     margin: 0 auto;
 }
@@ -733,9 +750,21 @@ img.breakfast {
     margin-top: -8px;
 }
 
+/* Date picker widget */
+
+.datepicker-dropdown {
+    box-shadow: none;
+}
+
+
 
 /* Screen that are 768px or more (desktop) */
 @media screen and (min-width: 768px) {
+
+    /* MENU */
+    .sideMenu .menu--container--links {
+        font-size: 28px;
+    }
 
     .delimiter--topFooter {
         position: absolute;
@@ -746,6 +775,11 @@ img.breakfast {
         opacity: 0.5;
         height:1px
 
+    }
+
+    
+    .btn.btnCheckAvail.bottom {
+        display: block;
     }
     
     /** CARD RESERVATION WRAPPER **/
@@ -865,7 +899,6 @@ img.breakfast {
         font-weight: 300;
         letter-spacing: 2.8px;
         width: 40%;
-        white-space: nowrap;
     }
 
     .discover--text span {
@@ -948,7 +981,7 @@ img.breakfast {
         align-items: center;
         justify-content: center;
         background: #FFF;
-        box-shadow: 0px 10px 30px 0px rgba(42, 0, 0, 0.10);
+        box-shadow: 0px 10px 30px 0px rgba(118, 118, 118, 0.10);
         max-width: 1200px;
     }
 
@@ -983,7 +1016,10 @@ img.breakfast {
     .roomView {
         display: flex;
         width: 200px;
-        height: 56px;
+        height: 72px;
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 150%;
         padding: 20px 24px;
         justify-content: center;
         align-items: center;
@@ -1003,7 +1039,7 @@ img.breakfast {
         background-color: #22312E;
         padding: 4px 8px;
         display: flex;
-        gap: 10px;
+        gap: 6px;
         justify-content: space-around;
         align-items: center;
         font-weight: 700;
@@ -1085,7 +1121,7 @@ img.breakfast {
 
     .establishment.desktop {
         display: block;
-        font-size: 14px;
+        font-size: 12px;
         color: #fff;
         margin-top: 30px;
     }

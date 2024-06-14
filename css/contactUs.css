@@ -6,10 +6,6 @@
     height: 700px;
 }
 
-.contactUs .word-per-line{
-    font-weight: 700;
-}
-
 .card--header .subtext {
     font-size: 20px;
     font-family: 'Helvetica';
@@ -121,12 +117,19 @@
     width: 64px;
 }
 
+.contactUs .word-per-line {
+    font-weight: 300;
+}
+
 .facebook--infos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
+    font-weight: 700;
+    color: #F2F2F2;
+    font-size: 24px;
 }
 
 .form--email.bottom {
@@ -138,6 +141,11 @@
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
+
+    .facebook--contact .delimiter {
+        margin: 48px 0;
+    }
+
 
     .form--email.bottom {
         border: unset;

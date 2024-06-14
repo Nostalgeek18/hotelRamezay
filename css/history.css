@@ -51,8 +51,9 @@
     align-items: baseline;
     flex-direction: column;
     justify-content: center;
-    gap:16px;
+    gap: 32px;
     padding: 48px 16px;
+    color: #131313;
 }
 
 p.bold {
@@ -83,7 +84,6 @@ p.bold {
 
 
 .roomAndSuite {
-    text-decoration: underline;
     font-weight: 700;
 }
 
@@ -91,6 +91,29 @@ p.bold {
     display: none;
 }
 
+
+.allStartedIn .word-per-line {
+    font-size: 72px;
+    font-style: italic;
+}
+
+.card--today.mobile button {
+    display: flex;
+    width: 200px;
+    height: 72px;
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 150%;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #FFF;
+    background: transparent;
+    font-weight: 700;
+    cursor: pointer;
+    color: #FFF;
+}
 
 
 /* Screen that are 768px or more */
@@ -187,5 +210,6 @@ p.bold {
     .img.desktop {
         display: block;
     }
+
 
 }
