@@ -144,7 +144,7 @@ function getLabel(language, keyLabel) {
 		"fr" : {
 			"rooms_and_suite": "CHAMBRES & SUITES",
 			"history" : "HISTOIRE",
-			"contact_us" : "NOUS CONTACTER",
+			"contact_us" : "CONTACTEZ-NOUS",
 			"phone"	: "TELEPHONE",
 			"facebook" : "facebook",
 			"registration" : "NUMÉRO D'ENREGISTREMENT",
