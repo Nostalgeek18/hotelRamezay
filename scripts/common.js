@@ -590,6 +590,6 @@ $(document).ready(function() {
 
 	setTimeout(()=>{
 		checkDeviceType() === "desktop" ? triggerCarouselNoDots() : triggerCarouselDots();
-	}, 1000)
+	}, 500)
 
 });

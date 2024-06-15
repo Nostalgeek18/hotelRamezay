@@ -77,20 +77,27 @@ function getLanguageCommon() {
 }
 
 
+
 function findRoomTypeInURL() {
-	const url  = window.location.href;
+	const url  = window.location.href.toLowerCase();
 	for (const room of ROOMS_DATA) {
-		if (url.includes(room.name)) {
+		const roomName = room.name.toLowerCase();
+		const exactMatch = new RegExp(`\\b${roomName}\\b`);
+		if (exactMatch.test(url)) {
 			return room.name;
 		}
 	}
-	return null;
+
+	console.log('Room could not be find !');
+	return null; //default if cant find
 }
 
 function loadElements() {
     const carouselWrapper= $('.carousel[data-carousel]');
     const matchedRoomType = findRoomTypeInURL() || "standard";
     const wrapperOtherRooms = $('.wrapper--allRooms.standAlone')
+
+    console.log('match is : ', matchedRoomType);
     
     let carouselHTML   = "";
     let dataSlidesHTML = "";

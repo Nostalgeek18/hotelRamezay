@@ -159,6 +159,8 @@ a.active {
     color: #FFFFFF;
     position: relative;
     background: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .room span {
@@ -533,7 +535,7 @@ div a b {
     color: var(--white, #FFF);
     text-align: center;
     font-family: Helvetica;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 170%; /* 27.2px */
@@ -545,6 +547,11 @@ div a b {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* not visible on room's pages */
+.infos--section.roomPage {
+    display: none;
 }
 
 .creditCard {
@@ -716,6 +723,7 @@ img.breakfast {
 }
 
 
+
 .slide {
     position: absolute;
     inset: 0;
@@ -762,6 +770,18 @@ img.breakfast {
 
 .bookingInfo--wrapper .contact--infos {
     display: none; /* removed from site */
+}
+
+
+.card--header.index.carousel p {
+    font-weight: 300;
+}
+
+.discover--text {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* only mobile -exception for widget */

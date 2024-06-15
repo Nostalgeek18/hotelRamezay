@@ -1,7 +1,7 @@
 
 
 .card--header.contactUs {
-    background-image: url("../images/photos2.0/ContactUsHeader.png");
+    background-image: url("../images/photos2.0/contact/contactDesktop.png");
     justify-content: center;
     height: 700px;
 }
@@ -78,6 +78,10 @@
     margin-top: 0;
 }
 
+.contactUs p.word-per-line {
+    letter-spacing: 1.6px;
+}
+
 .word-per-line .breakLine::before {
     content: "\A";
     white-space: pre;
@@ -137,10 +141,23 @@
     padding-bottom: 24px;
 }
 
+.facebook--contact.homepage {
+    display: none; /* not on mobile */
+}
+
+.delimiter {
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+    height: 1px;
+}
 
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
+
+    .facebook--contact {
+        display: block;
+    }
 
     .facebook--contact .delimiter {
         margin: 48px 0;
@@ -173,15 +190,10 @@
         display: none;
     }
 
-        
-    .delimiter {
-        width: 100%;
-        background-color: rgba(255,255,255,0.2);
-        height: 1px;
+    
+    .facebook--contact {
+        width: 744px;
     }
 
-    
-.facebook--contact {
-    width: 744px;
-}
+
 }
