@@ -475,6 +475,11 @@ div a b {
 
 /**** END FOOTER ****/
 
+.card.card--staying > img {
+    width: 24px;
+    height: 24px;
+}
+
 /**LOCATION BANNER **/
 
 .card--location span {
