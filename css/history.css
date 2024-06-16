@@ -76,8 +76,7 @@ p.bold {
 .word-per-line b {
     border-bottom: 11px solid #B1602C;
     font-style: italic;
-    font-size: 72px;
-
+    font-size: 80px;
 }
 
 .todayText {
@@ -97,7 +96,7 @@ p.bold {
 
 
 .allStartedIn .word-per-line {
-    font-size: 56px;
+    font-size: 40px;
 }
 
 .card--today.mobile button {
@@ -121,6 +120,17 @@ p.bold {
 
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
+
+    .allStartedIn .word-per-line {
+        font-size: 56px;
+    }
+
+    .word-per-line b {
+        font-size: 72px;
+    }
+
+    
+    
     .card--header.allStartedIn {
         background: url("../images/photos2.0/headerDesktopHistory.png");
         display: flex;
