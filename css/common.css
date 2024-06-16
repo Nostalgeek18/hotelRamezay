@@ -39,6 +39,10 @@ a.active {
     display: none;
 }
 
+button {
+    width: 250px !important;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -233,7 +237,7 @@ a.active {
 .emailLink {
     color : #E0E0E0;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 
@@ -490,6 +494,7 @@ div a b {
 .locationInfos {
     font-size: 16px;
     line-height: 170%;
+    color: #131313;
 }
 
 
@@ -1218,5 +1223,9 @@ img.breakfast {
 
     .contact--form__wrapper .form--snippet{
         font-size: 32px;
+    }
+
+    .emailLink {
+        font-size: 24px;
     }
 }

@@ -5,64 +5,64 @@ const ROOMS_DATA = [
 		label : 'Standard Guest Room',
 		labelFR : 'Chambre Régulière',
 		dirImages : 'standardRoom',
-		description : '5 standard guestrooms with one double bed.',
-		descriptionFR : '5 chambres régulières à lit double.'
+		description : '5 standard guestrooms with one double bed',
+		descriptionFR : '5 chambres régulières à lit double'
 	},
 	{
 		name : 'deluxe',
 		classImg : 'deluxeGuest',
-		label : 'Standard Guest Room',
+		label : 'Deluxe Guest Room',
 		labelFR : 'Chambre supérieure',
 		dirImages : 'deluxeRoom',
-		description : '5 standard guestrooms with one double bed.',
-		descriptionFR : '5 chambres supérieures à lit double.'
+		description : '5 standard guestrooms with one double bed',
+		descriptionFR : '5 chambres supérieures à lit double'
 	},
 	{
 		name : 'queenSuite',
 		classImg : 'queenSuite',
-		label : 'Standard Guest Room',
+		label : 'Queen Suite',
 		labelFR : 'Suite Queen',
 		dirImages : 'queenSuite',
-		description : '5 standard guestrooms with one double bed.',
-		descriptionFR : '1 Suite queen à grand lit (Queen) et lit double.'
+		description : '5 standard guestrooms with one double bed',
+		descriptionFR : '1 Suite queen à grand lit (Queen) et lit double'
 	},
 	{
 		name : 'suiteFireplace',
 		classImg : 'suiteFireplace',
-		label : 'Standard Guest Room',
+		label : 'Suite with Fireplace',
 		labelFR : 'Suite avec foyer',
 		dirImages : 'suiteFireplace',
 		description : '5 standard guestrooms with one double bed.',
-		descriptionFR : '1 suite avec foyer, avec lit queen et futon.'
+		descriptionFR : '1 suite avec foyer, avec lit queen et futon'
 	},
 	{
 		name : 'familySuite',
 		classImg : 'familySuite',
-		label : 'Standard Guest Room',
+		label : 'Family suite with kitchen',
 		labelFR : 'Suite familiale avec cuisine',
 		dirImages : 'familySuite',
-		description : '5 standard guestrooms with one double bed.',
+		description : '5 standard guestrooms with one double bed',
 		descriptionFR : '1 suite familiale douillette avec cuisine, lit queen et futon'
 	},
 	{
 		name : 'royalSuite',
 		classImg : 'kingSuite',
-		label : 'Standard Guest Room',
+		label : 'Royal suite',
 		labelFR : 'Suite royale',
 		starBanner : true,
 		dirImages : 'royalSuite',
-		description : '5 standard guestrooms with one double bed.',
-		descriptionFR : '1 suite royale à très grand lit (King).'
+		description : '5 standard guestrooms with one double bed',
+		descriptionFR : '1 suite royale à très grand lit (King)'
 	},
 	{
 		name : 'royalSuiteKitchen',
 		classImg : 'royalSuite',
-		label : 'Standard Guest Room',
+		label : 'Royal suite with kitchen',
 		labelFR : 'Suite Royale avec cuisine',
 		starBanner : true,
 		dirImages : 'royalSuiteKitchen',
-		description : '5 standard guestrooms with one double bed.',
-		descriptionFR : '1 Suite royale avec lit très confortable (Queen) et lit sofa en ahut.'
+		description : '5 standard guestrooms with one double bed',
+		descriptionFR : '1 Suite royale avec lit très confortable (Queen) et lit sofa en haut'
 	}
 ]
 
@@ -181,7 +181,8 @@ function loadElements() {
 
             const finalLabel 	  = getLanguageCommon() === "fr" ? labelFR : label
             const finalLabelStar  = getLanguageCommon() === "fr" ? "Une des plus belles du Québec" : "One of the most beautiful in Québec"
-		    const starBannerHTML  = starBanner ? `<div class="banner--mostBeautiful"><img src="../../images/icons/star.png"/> ${finalLabelStar}</div>` : ''
+            const extension       = getLanguageCommon() === "fr" ? '' : '../';
+		    const starBannerHTML  = starBanner ? `<div class="banner--mostBeautiful"><img src="${extension}../../images/icons/star.png"/> ${finalLabelStar}</div>` : ''
             //load ONE bottom room here
             otherRoomsHTML += `
             <div class="wrapper-room" id="${name}" onClick="checkRoom(this)">
