@@ -127,6 +127,9 @@ function appendMenuHTML() {
 	$('html, body').addClass('no-scroll');
 }
 
+function goFacebook() {
+	window.open("https://www.facebook.com/ManoirRamezay", "_blank");
+}
 /* Return appropriate string according to page's language and key of the label */
 function getLabel(language, keyLabel) {
 

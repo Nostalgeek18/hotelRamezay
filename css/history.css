@@ -1,6 +1,6 @@
 .card--header.allStartedIn {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/photos2.0/allStartedIn.png");
-    font-weight: 300;
+    font-weight: 300 !important;
     font-size: 56px;
     line-height: 84px;
     text-align: center;
@@ -97,6 +97,7 @@ p.bold {
 
 .allStartedIn .word-per-line {
     font-size: 40px;
+    line-height: 150%;
 }
 
 .card--today.mobile button {
@@ -151,7 +152,7 @@ p.bold {
 
     .card--history {
         background-color: #F2F2F2;
-        padding: 80px 240px;
+        padding: 120px 0;
         text-align: justify;
         display: flex;
         justify-content: center;
@@ -159,6 +160,7 @@ p.bold {
     }
 
     .history--text--container {
+        align-items: baseline;
         max-width: 800px;
         padding: 0px;
     }
@@ -224,5 +226,8 @@ p.bold {
         display: block;
     }
 
+    .card.card--desc.card--today {
+        gap: 56px;
+    }
 
 }

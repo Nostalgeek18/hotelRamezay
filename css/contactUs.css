@@ -155,6 +155,10 @@
 /* Screen that are 768px or more */
 @media screen and (min-width: 768px) {
 
+    .delimiter {
+        width: 70%;
+    }
+
     .facebook--contact {
         display: block;
     }
