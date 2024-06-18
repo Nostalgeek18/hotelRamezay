@@ -63,7 +63,7 @@ button {
     top: 32px;
     right: 4%;
     flex-direction: column;
-    z-index: 1;
+    z-index: 2;
 }
 
 .bar {
@@ -132,7 +132,7 @@ button {
 .expandIcon {
     position: absolute;
     top: 24px;
-    right: 24px;
+    left: 24px;
     cursor: pointer;
 }
 
