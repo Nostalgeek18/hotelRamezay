@@ -195,8 +195,8 @@ button {
     background-image: url("../images/photos2.0/rooms/royalSuite/royalSuiteBanner.png");
 }
 
-.royalSuite {
-    background-image: url("../images/photos2.0/rooms/royalSuite/royalSuite.png");
+.royalSuiteKitchen {
+    background-image: url("../images/photos2.0/rooms/royalSuiteKitchen/royalSuiteKitchen.png");
 }
 
 .roomBannerClick {
@@ -487,7 +487,7 @@ div a b {
     line-height: 150%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #2B0000;
+    color: #131313;
     font-weight: 300;
 }
 
@@ -656,6 +656,7 @@ img.breakfast {
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
+    max-width: 500px;
 }
 
 .indexHistoryBtn {
@@ -772,7 +773,7 @@ img.breakfast {
     margin-top: -8px;
 }
 
-/* Date picker widget */
+/* Date picker widget CUSTOM */
 
 .datepicker-dropdown {
     box-shadow: none;
@@ -791,33 +792,52 @@ img.breakfast {
     margin: 0 auto;
     width: 90%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    gap: 16px;
+    color: #131313;
 }
 
-/* only mobile -exception for widget */
+.discover--text span {
+    letter-spacing: 1.6px;
+}
+
+.bannerStar img {
+    width: 13px;
+    height: 13px;
+}
+
+.datepicker-container.datepicker-dropdown {
+    box-shadow: none !important;
+}
+
+/* only mobile -exception for widget CUSTOM */
 @media screen and (max-width: 768px) {
     .datepicker-container {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         width: fit-content !important;
         height: auto !important;
-        font-size: 16px !important;
+        font-size: 16px !important; */
     }
 
     .datepicker-container .datepicker-panel ul li[data-view="month current"] {
-        width: fit-content !important;
+        /* width: fit-content !important; */
     }
 
     .datepicker-panel>ul>li {
-        width: 50px !important;
+        /* width: 50px !important;
         height: 50px !important;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
     }
 }
 
+.card--header.index.carousel p {
+    letter-spacing: 1.6px;
+}
 
 
 /* Screen that are 768px or more (desktop) */
@@ -998,7 +1018,7 @@ img.breakfast {
         display: flex;
         gap: 48px;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 14px;
         position: relative;
     }
     
@@ -1055,10 +1075,10 @@ img.breakfast {
         gap: 16px;
         width: 100%;
         padding-left: 64px;
+        color: #131313;
     }
 
     .roomTitle {
-        color: var(--brown-80, #2B0000);
         font-size: 32px;
         font-style: normal;
         font-weight: 300;
@@ -1068,7 +1088,6 @@ img.breakfast {
     }
 
     .roomDescription {
-        color: var(--brown-80, #2B0000);
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -1167,14 +1186,14 @@ img.breakfast {
         background-image: url("../images/photos2.0/rooms/royalSuite/royalSuiteBannerDesktop.png");
     }
     
-    .royalSuite {
-        background-image: url("../images/photos2.0/rooms/royalSuite/royalSuiteDesktop.png");
+    .royalSuiteKitchen {
+        background-image: url("../images/photos2.0/rooms/royalSuiteKitchen/royalSuiteDesktopKitchen.png");
     }
 
     /** END - img romms */
     
     .carousel .word-per-line {
-        font-size: 64px;
+        font-size: 56px;
     }
 
     /** FOOTER **/

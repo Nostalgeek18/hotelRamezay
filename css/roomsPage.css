@@ -211,13 +211,29 @@
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
-    color: #2B0000;
+    color: #131313;
 }
 
 .global--imgExpand.mobile img {
-    max-width: 400px;
+    max-width: 100%;
 }
 
+.carousel .arrowBack {
+    display: none;
+}
+
+/* mobile under 768px */
+@media screen and (max-width: 768px) {
+    .card.card--policies {
+        order: 1;
+    }
+
+    .container--RoomsPreview {
+        order: 2;
+    }
+}
+
+/* desktop and more*/
 @media screen and (min-width: 768px) {
     .card--roomDescription {
         padding: 40px 24px 40px 0;

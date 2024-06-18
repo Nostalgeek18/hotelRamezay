@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.card.card--staying p {
+    letter-spacing: 1.6px;
+}
+
 .card.card--staying {
     background-color: #FFF;
     display: flex;

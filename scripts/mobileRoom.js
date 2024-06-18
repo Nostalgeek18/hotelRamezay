@@ -14,8 +14,8 @@ const ROOMS_DATA = [
 		label : 'Deluxe Guest Room',
 		labelFR : 'Chambre supérieure',
 		dirImages : 'deluxeRoom',
-		description : '5 standard guestrooms with one double bed',
-		descriptionFR : '5 chambres supérieures à lit double'
+		description : '4 deluxe guest rooms with one Queen size bed',
+		descriptionFR : '4 chambres supérieures à grand lit (queen)'
 	},
 	{
 		name : 'queenSuite',
@@ -23,7 +23,7 @@ const ROOMS_DATA = [
 		label : 'Queen Suite',
 		labelFR : 'Suite Queen',
 		dirImages : 'queenSuite',
-		description : '5 standard guestrooms with one double bed',
+		description : '1 queen suite with one Queen size bed and Double bed',
 		descriptionFR : '1 Suite queen à grand lit (Queen) et lit double'
 	},
 	{
@@ -32,7 +32,7 @@ const ROOMS_DATA = [
 		label : 'Suite with Fireplace',
 		labelFR : 'Suite avec foyer',
 		dirImages : 'suiteFireplace',
-		description : '5 standard guestrooms with one double bed.',
+		description : '1 Suite with fireplace, queen size bed and futon',
 		descriptionFR : '1 suite avec foyer, avec lit queen et futon'
 	},
 	{
@@ -41,7 +41,7 @@ const ROOMS_DATA = [
 		label : 'Family suite with kitchen',
 		labelFR : 'Suite familiale avec cuisine',
 		dirImages : 'familySuite',
-		description : '5 standard guestrooms with one double bed',
+		description : '1 cozy family suite with kitchen, queen bed and futon',
 		descriptionFR : '1 suite familiale douillette avec cuisine, lit queen et futon'
 	},
 	{
@@ -51,17 +51,17 @@ const ROOMS_DATA = [
 		labelFR : 'Suite royale',
 		starBanner : true,
 		dirImages : 'royalSuite',
-		description : '5 standard guestrooms with one double bed',
+		description : '1 King suite with one King size bed',
 		descriptionFR : '1 suite royale à très grand lit (King)'
 	},
 	{
 		name : 'royalSuiteKitchen',
-		classImg : 'royalSuite',
+		classImg : 'royalSuiteKitchen',
 		label : 'Royal suite with kitchen',
 		labelFR : 'Suite Royale avec cuisine',
 		starBanner : true,
 		dirImages : 'royalSuiteKitchen',
-		description : '5 standard guestrooms with one double bed',
+		description : '1 Royal suite with very comfortable queen bed and sofa bed upstairs',
 		descriptionFR : '1 Suite royale avec lit très confortable (Queen) et lit sofa en haut'
 	}
 ]
