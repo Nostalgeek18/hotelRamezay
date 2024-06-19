@@ -811,6 +811,17 @@ img.breakfast {
     box-shadow: none !important;
 }
 
+.delimiter--topFooter {
+    position: absolute;
+    bottom:0;
+    left: 6%;
+    width: 88%;
+    background-color: rgba(255,255,255,0.2);
+    opacity: 0.5;
+    height:1px
+
+}
+
 /* only mobile -exception for widget CUSTOM */
 @media screen and (max-width: 768px) {
     .datepicker-container {
