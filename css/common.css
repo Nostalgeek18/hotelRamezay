@@ -232,6 +232,11 @@ button {
     align-items: center;
     padding: 16px 24px;
 }
+
+.banner--mostBeautiful img {
+    width: 13px;
+    height: 13px;
+}
 /****END HOTEL ROOMS *****/
 
 .emailLink {

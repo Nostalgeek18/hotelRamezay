@@ -136,6 +136,10 @@
     font-size: 24px;
 }
 
+.facebook--infos img {
+    cursor: pointer;
+}
+
 .form--email.bottom {
     border-bottom: 1px solid grey;
     padding-bottom: 24px;
