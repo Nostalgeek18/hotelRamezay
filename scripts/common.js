@@ -254,6 +254,8 @@ function generateFooter() {
 
 	const currentYear = new Date().getFullYear();
 
+	const Quebec = language === "en" ? "Quebec" : "Québec"
+
 	const footerInnerHTML = `
 	<div class="container--links">
 		<a href="${linkChambres}">${labelRoomsSuite}</a>
@@ -265,7 +267,7 @@ function generateFooter() {
 		<p>${labelPhone}: 450 460 3251</p>
 		<p>${labelToll}: 1 866 460 3251</p>
 		<p>hotelmanoirramezay@gmail.com</p>
-		<p class="adresse">492, rue Claude de Ramezay (Route 227) Marieville (Québec) J3M 1J6</p>
+		<p class="adresse">492, rue Claude de Ramezay (Route 227) Marieville (${Quebec}) J3M 1J6</p>
 		<div class="establishment mobile">${labelRegistration} 211094</div>
 		<p>&copy ${currentYear} MANOIR RAMEZAY</p>
 	</div>
